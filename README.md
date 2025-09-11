@@ -34,11 +34,12 @@ RubyLLM gives you one beautiful API for all of them. Same interface whether you'
 
 Use this gem to get early access to features currently in PR at the main gem.
 
-Initial examples --
+Some examples --
 
 - Prompt caching for Anthropic
 - Image editing for Gemini and OpenAI
 - Responses API for OpenAI
+- xAI provider that supports Grok 2, Grok 3, Grok 4, and Grok Code
 
 This project is intended to be compatible with RubyLLM. I will attempt to keep it up to date as Carmine pushes commits often.
 
