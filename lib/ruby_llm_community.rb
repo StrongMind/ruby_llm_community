@@ -28,6 +28,7 @@ loader.inflector.inflect(
   'version' => 'VERSION',
   'vertexai' => 'VertexAI',
   'xai' => 'XAI'
+  'UI' => 'UI'
 )
 loader.ignore("#{__dir__}/shims")
 loader.ignore("#{__dir__}/tasks")

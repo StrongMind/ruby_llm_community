@@ -42,8 +42,6 @@ http_interactions:
       - 3936:12C06F:5A9BBDB:5B38331:68870618
       Accept-Ranges:
       - bytes
-      Age:
-      - '173'
       Date:
       - Fri, 01 Aug 2025 10:51:41 GMT
       Via:
@@ -55,7 +53,7 @@ http_interactions:
       X-Cache:
       - HIT
       X-Cache-Hits:
-      - '0'
+      - '2'
       X-Timer:
       - S1754045501.478979,VS0,VE2
       Vary:
