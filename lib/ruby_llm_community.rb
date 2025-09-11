@@ -27,7 +27,7 @@ loader.inflector.inflect(
   'pdf' => 'PDF',
   'version' => 'VERSION',
   'vertexai' => 'VertexAI',
-  'xai' => 'XAI'
+  'xai' => 'XAI',
   'UI' => 'UI'
 )
 loader.ignore("#{__dir__}/shims")
