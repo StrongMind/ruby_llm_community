@@ -102,8 +102,29 @@ VCR.configure do |config|
   config.filter_sensitive_data('<MASSIVE_TEXT_FOR_PROMPT_CACHING>') { MASSIVE_TEXT_FOR_PROMPT_CACHING }
   config.filter_sensitive_data('<MASSIVE_TEXT_FOR_PROMPT_CACHE_REPORTING>') { MASSIVE_TEXT_FOR_PROMPT_CACHE_REPORTING }
 
-  # Filter cookies
+  # Filter image data from image generation/edit requests to reduce cassette size
   config.before_record do |interaction|
+    # Filter multipart/form-data containing image files
+    if interaction.request.headers['Content-Type']&.first&.include?('multipart/form-data')
+      interaction.request.body = '<MULTIPART_FORM_DATA_WITH_IMAGE>'
+    end
+
+    # Filter base64 image data in response bodies
+    if interaction.response.body&.include?('"b64_json"')
+      begin
+        response_data = JSON.parse(interaction.response.body)
+        if response_data['data'].is_a?(Array)
+          response_data['data'].each do |item|
+            item['b64_json'] = '<BASE64_IMAGE_DATA>' if item['b64_json']
+          end
+          interaction.response.body = response_data.to_json
+        end
+      rescue JSON::ParserError
+        # If we can't parse JSON, leave it as is
+      end
+    end
+
+    # Filter cookies
     if interaction.response.headers['Set-Cookie']
       interaction.response.headers['Set-Cookie'] = interaction.response.headers['Set-Cookie'].map { '<COOKIE>' }
     end

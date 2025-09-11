@@ -15,7 +15,7 @@ def save_and_verify_image(image)
     expect(File.exist?(temp_path)).to be true
 
     file_size = File.size(temp_path)
-    expect(file_size).to be > 1000 # Any real image should be larger than 1KB
+    expect(file_size).to be > 10
   ensure
     # Clean up
     File.delete(temp_path)
