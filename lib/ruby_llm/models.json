@@ -31641,5 +31641,599 @@
       "supported_actions": null,
       "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/textembedding-gecko@003"
     }
+  },
+  {
+    "id": "x-ai/grok-2-1212",
+    "name": "xAI: Grok 2 1212",
+    "provider": "openrouter",
+    "family": "x-ai",
+    "created_at": "2024-12-15 04:20:14 +0100",
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0
+        }
+      }
+    },
+    "metadata": {
+      "description": "Grok 2 1212 introduces significant enhancements to accuracy, instruction adherence, and multilingual support, making it a powerful and flexible choice for developers seeking a highly steerable, intelligent model.",
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ]
+    }
+  },
+  {
+    "id": "x-ai/grok-2-vision-1212",
+    "name": "xAI: Grok 2 Vision 1212",
+    "provider": "openrouter",
+    "family": "x-ai",
+    "created_at": "2024-12-15 05:35:38 +0100",
+    "context_window": 32768,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0
+        }
+      }
+    },
+    "metadata": {
+      "description": "Grok 2 Vision 1212 advances image-based AI with stronger visual comprehension, refined instruction-following, and multilingual support. From object recognition to style analysis, it empowers developers to build more intuitive, visually aware applications. Its enhanced steerability and reasoning establish a robust foundation for next-generation image solutions.\n\nTo read more about this model, check out [xAI's announcement](https://x.ai/blog/grok-1212).",
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 32768,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "temperature",
+        "top_logprobs",
+        "top_p"
+      ]
+    }
+  },
+  {
+    "id": "x-ai/grok-3",
+    "name": "xAI: Grok 3",
+    "provider": "openrouter",
+    "family": "x-ai",
+    "created_at": "2025-06-10 21:15:08 +0200",
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3.0,
+          "output_per_million": 15.0,
+          "cached_input_per_million": 0.75
+        }
+      }
+    },
+    "metadata": {
+      "description": "Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in finance, healthcare, law, and science.\n\n",
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ]
+    }
+  },
+  {
+    "id": "x-ai/grok-3-beta",
+    "name": "xAI: Grok 3 Beta",
+    "provider": "openrouter",
+    "family": "x-ai",
+    "created_at": "2025-04-10 01:07:48 +0200",
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3.0,
+          "output_per_million": 15.0,
+          "cached_input_per_million": 0.75
+        }
+      }
+    },
+    "metadata": {
+      "description": "Grok 3 is the latest model from xAI. It's their flagship model that excels at enterprise use cases like data extraction, coding, and text summarization. Possesses deep domain knowledge in finance, healthcare, law, and science.\n\nExcels in structured tasks and benchmarks like GPQA, LCB, and MMLU-Pro where it outperforms Grok 3 Mini even on high thinking. \n\nNote: That there are two xAI endpoints for this model. By default when using this model we will always route you to the base endpoint. If you want the fast endpoint you can add `provider: { sort: throughput}`, to sort by throughput instead. \n",
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ]
+    }
+  },
+  {
+    "id": "x-ai/grok-3-mini",
+    "name": "xAI: Grok 3 Mini",
+    "provider": "openrouter",
+    "family": "x-ai",
+    "created_at": "2025-06-10 21:20:45 +0200",
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.3,
+          "output_per_million": 0.5,
+          "cached_input_per_million": 0.075
+        }
+      }
+    },
+    "metadata": {
+      "description": "A lightweight model that thinks before responding. Fast, smart, and great for logic-based tasks that do not require deep domain knowledge. The raw thinking traces are accessible.",
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ]
+    }
+  },
+  {
+    "id": "x-ai/grok-3-mini-beta",
+    "name": "xAI: Grok 3 Mini Beta",
+    "provider": "openrouter",
+    "family": "x-ai",
+    "created_at": "2025-04-10 01:09:55 +0200",
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.3,
+          "output_per_million": 0.5,
+          "cached_input_per_million": 0.075
+        }
+      }
+    },
+    "metadata": {
+      "description": "Grok 3 Mini is a lightweight, smaller thinking model. Unlike traditional models that generate answers immediately, Grok 3 Mini thinks before responding. It’s ideal for reasoning-heavy tasks that don’t demand extensive domain knowledge, and shines in math-specific and quantitative use cases, such as solving challenging puzzles or math problems.\n\nTransparent \"thinking\" traces accessible. Defaults to low reasoning, can boost with setting `reasoning: { effort: \"high\" }`\n\nNote: That there are two xAI endpoints for this model. By default when using this model we will always route you to the base endpoint. If you want the fast endpoint you can add `provider: { sort: throughput}`, to sort by throughput instead. \n",
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 131072,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "seed",
+        "stop",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ]
+    }
+  },
+  {
+    "id": "x-ai/grok-4",
+    "name": "xAI: Grok 4",
+    "provider": "openrouter",
+    "family": "x-ai",
+    "created_at": "2025-07-09 21:01:29 +0200",
+    "context_window": 256000,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3.0,
+          "output_per_million": 15.0,
+          "cached_input_per_million": 0.75
+        }
+      }
+    },
+    "metadata": {
+      "description": "Grok 4 is xAI's latest reasoning model with a 256k context window. It supports parallel tool calling, structured outputs, and both image and text inputs. Note that reasoning is not exposed, reasoning cannot be disabled, and the reasoning effort cannot be specified. Pricing increases once the total tokens in a given request is greater than 128k tokens. See more details on the [xAI docs](https://docs.x.ai/docs/models/grok-4-0709)",
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 256000,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "seed",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ]
+    }
+  },
+  {
+    "id": "x-ai/grok-code-fast-1",
+    "name": "xAI: Grok Code Fast 1",
+    "provider": "openrouter",
+    "family": "x-ai",
+    "created_at": "2025-08-26 22:08:47 +0200",
+    "context_window": 256000,
+    "max_output_tokens": 10000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.19999999999999998,
+          "output_per_million": 1.5,
+          "cached_input_per_million": 0.02
+        }
+      }
+    },
+    "metadata": {
+      "description": "Grok Code Fast 1 is a speedy and economical reasoning model that excels at agentic coding. With reasoning traces visible in the response, developers can steer Grok Code for high-quality work flows.",
+      "architecture": {
+        "modality": "text->text",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 256000,
+        "max_completion_tokens": 10000,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "include_reasoning",
+        "logprobs",
+        "max_tokens",
+        "reasoning",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_logprobs",
+        "top_p"
+      ]
+    }
+  },
+  {
+    "id": "x-ai/grok-vision-beta",
+    "name": "xAI: Grok Vision Beta",
+    "provider": "openrouter",
+    "family": "x-ai",
+    "created_at": "2024-11-19 01:37:04 +0100",
+    "context_window": 8192,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 5.0,
+          "output_per_million": 15.0
+        }
+      }
+    },
+    "metadata": {
+      "description": "Grok Vision Beta is xAI's experimental language model with vision capability.\n\n",
+      "architecture": {
+        "modality": "text+image->text",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "tokenizer": "Grok",
+        "instruct_type": null
+      },
+      "top_provider": {
+        "context_length": 8192,
+        "max_completion_tokens": null,
+        "is_moderated": false
+      },
+      "per_request_limits": null,
+      "supported_parameters": [
+        "frequency_penalty",
+        "logprobs",
+        "max_tokens",
+        "presence_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "temperature",
+        "top_logprobs",
+        "top_p"
+      ]
+    }
   }
 ]
