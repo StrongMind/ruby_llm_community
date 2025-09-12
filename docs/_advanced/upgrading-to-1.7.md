@@ -34,7 +34,9 @@ rails db:migrate
 That's it! The generator:
 - Creates the models table if needed
 - Automatically adds `config.use_new_acts_as = true` to your initializer
+- Automatically updates your existing models' `acts_as` declarations to the new version
 - Migrates your existing data to use foreign keys
+- Loads the models in the db
 - Preserves all your data (old string columns renamed to `model_id_string`)
 
 ### Custom Model Names
@@ -186,6 +188,31 @@ The chat UI works with your existing Chat and Message models and includes:
 - Markdown rendering
 - Code syntax highlighting
 - Responsive design
+
+## Troubleshooting
+
+### "undefined local variable or method 'acts_as_model'" error during migration
+
+If you get this error when running `rails db:migrate`, add the configuration to `config/application.rb` **before** your Application class:
+
+```ruby
+# config/application.rb
+require_relative "boot"
+require "rails/all"
+
+# Configure RubyLLM before Rails::Application is inherited
+RubyLLM.configure do |config|
+  config.use_new_acts_as = true
+end
+
+module YourApp
+  class Application < Rails::Application
+    # ...
+  end
+end
+```
+
+This ensures RubyLLM is configured before ActiveRecord loads your models.
 
 ## New Applications
 

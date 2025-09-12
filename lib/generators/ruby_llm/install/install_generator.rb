@@ -2,11 +2,13 @@
 
 require 'rails/generators'
 require 'rails/generators/active_record'
+require_relative '../generator_helpers'
 
 module RubyLLM
   # Generator for RubyLLM Rails models and migrations
   class InstallGenerator < Rails::Generators::Base
     include Rails::Generators::Migration
+    include RubyLLM::GeneratorHelpers
 
     namespace 'ruby_llm:install'
 
@@ -22,127 +24,6 @@ module RubyLLM
 
     def self.next_migration_number(dirname)
       ::ActiveRecord::Generators::Base.next_migration_number(dirname)
-    end
-
-    def migration_version
-      "[#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}]"
-    end
-
-    def postgresql?
-      ::ActiveRecord::Base.connection.adapter_name.downcase.include?('postgresql')
-    rescue StandardError
-      false
-    end
-
-    def parse_model_mappings
-      @model_names = {
-        chat: 'Chat',
-        message: 'Message',
-        tool_call: 'ToolCall',
-        model: 'Model'
-      }
-
-      model_mappings.each do |mapping|
-        if mapping.include?(':')
-          key, value = mapping.split(':', 2)
-          @model_names[key.to_sym] = value.classify
-        end
-      end
-
-      @model_names
-    end
-
-    %i[chat message tool_call model].each do |type|
-      define_method("#{type}_model_name") do
-        @model_names ||= parse_model_mappings
-        @model_names[type]
-      end
-
-      define_method("#{type}_table_name") do
-        table_name_for(send("#{type}_model_name"))
-      end
-    end
-
-    def acts_as_chat_declaration
-      acts_as_chat_params = []
-      messages_assoc = message_model_name.tableize.to_sym
-      model_assoc = model_model_name.underscore.to_sym
-
-      if messages_assoc != :messages
-        acts_as_chat_params << "messages: :#{messages_assoc}"
-        if message_model_name != messages_assoc.to_s.classify
-          acts_as_chat_params << "message_class: '#{message_model_name}'"
-        end
-      end
-
-      if model_assoc != :model
-        acts_as_chat_params << "model: :#{model_assoc}"
-        acts_as_chat_params << "model_class: '#{model_model_name}'" if model_model_name != model_assoc.to_s.classify
-      end
-
-      if acts_as_chat_params.any?
-        "acts_as_chat #{acts_as_chat_params.join(', ')}"
-      else
-        'acts_as_chat'
-      end
-    end
-
-    def acts_as_message_declaration
-      params = []
-
-      add_message_association_params(params, :chat, chat_model_name)
-      add_message_association_params(params, :tool_calls, tool_call_model_name, tableize: true)
-      add_message_association_params(params, :model, model_model_name)
-
-      params.any? ? "acts_as_message #{params.join(', ')}" : 'acts_as_message'
-    end
-
-    private
-
-    def add_message_association_params(params, default_assoc, model_name, tableize: false)
-      assoc = tableize ? model_name.tableize.to_sym : model_name.underscore.to_sym
-
-      return if assoc == default_assoc
-
-      params << "#{default_assoc}: :#{assoc}"
-      expected_class = assoc.to_s.classify
-      params << "#{default_assoc.to_s.singularize}_class: '#{model_name}'" if model_name != expected_class
-    end
-
-    public
-
-    def acts_as_tool_call_declaration
-      acts_as_tool_call_params = []
-      message_assoc = message_model_name.underscore.to_sym
-
-      if message_assoc != :message
-        acts_as_tool_call_params << "message: :#{message_assoc}"
-        if message_model_name != message_assoc.to_s.classify
-          acts_as_tool_call_params << "message_class: '#{message_model_name}'"
-        end
-      end
-
-      if acts_as_tool_call_params.any?
-        "acts_as_tool_call #{acts_as_tool_call_params.join(', ')}"
-      else
-        'acts_as_tool_call'
-      end
-    end
-
-    def acts_as_model_declaration
-      acts_as_model_params = []
-      chats_assoc = chat_model_name.tableize.to_sym
-
-      if chats_assoc != :chats
-        acts_as_model_params << "chats: :#{chats_assoc}"
-        acts_as_model_params << "chat_class: '#{chat_model_name}'" if chat_model_name != chats_assoc.to_s.classify
-      end
-
-      if acts_as_model_params.any?
-        "acts_as_model #{acts_as_model_params.join(', ')}"
-      else
-        'acts_as_model'
-      end
     end
 
     def create_migration_files
@@ -168,6 +49,8 @@ module RubyLLM
     end
 
     def create_model_files
+      create_namespace_modules
+
       template 'chat_model.rb.tt', "app/models/#{chat_model_name.underscore}.rb"
       template 'message_model.rb.tt', "app/models/#{message_model_name.underscore}.rb"
       template 'tool_call_model.rb.tt', "app/models/#{tool_call_model_name.underscore}.rb"
@@ -184,12 +67,6 @@ module RubyLLM
 
       say '  Installing ActiveStorage for file attachments...', :cyan
       rails_command 'active_storage:install'
-    end
-
-    def table_name_for(model_name)
-      # Convert namespaced model names to proper table names
-      # e.g., "Assistant::Chat" -> "assistant_chats" (not "assistant/chats")
-      model_name.underscore.pluralize.tr('/', '_')
     end
 
     def show_install_info
