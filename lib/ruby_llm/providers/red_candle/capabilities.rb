@@ -69,6 +69,7 @@ module RubyLLM
             output_price_per_million_tokens: 0.0
           }
         end
+
         def default_max_tokens
           512
         end

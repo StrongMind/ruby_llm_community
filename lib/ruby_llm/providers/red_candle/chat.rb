@@ -6,8 +6,9 @@ module RubyLLM
       # Chat implementation for Red Candle provider
       module Chat
         # Override the base complete method to handle local execution
-        def complete(messages, tools:, temperature:, model:, params: {}, headers: {}, schema: nil, &) # rubocop:disable Metrics/ParameterLists
+        def complete(messages, tools:, temperature:, cache_prompts:, model:, params: {}, headers: {}, schema: nil, &) # rubocop:disable Metrics/ParameterLists
           _ = headers # Interface compatibility
+          _ = cache_prompts # Interface compatibility
           payload = Utils.deep_merge(
             render_payload(
               messages,
@@ -140,6 +141,7 @@ module RubyLLM
         def ensure_model_loaded!(model_id)
           @loaded_models[model_id] ||= load_model(model_id)
         end
+        
         def model_options(model_id)
           # Get GGUF file and tokenizer if this is a GGUF model
           # Access the methods from the Models module which is included in the provider
@@ -183,6 +185,7 @@ module RubyLLM
             Original error: #{exception.message}"
           ERROR_MESSAGE
         end
+
         def format_messages(messages)
           messages.map do |msg|
             # Handle both hash and Message objects

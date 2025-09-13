@@ -12,7 +12,6 @@ chat_models = [
   { provider: :openai, model: 'gpt-4.1-nano' },
   { provider: :openrouter, model: 'anthropic/claude-3.5-haiku' },
   { provider: :perplexity, model: 'sonar' },
-  { provider: :vertexai, model: 'gemini-2.5-flash' }
   { provider: :vertexai, model: 'gemini-2.5-flash' },
   { provider: :xai, model: 'grok-3-mini' }
 ]

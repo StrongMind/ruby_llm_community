@@ -70,6 +70,7 @@ RSpec.describe RubyLLM::Providers::RedCandle::Capabilities do
       expect(pricing[:output_price_per_million_tokens]).to eq(0.0)
     end
   end
+
   describe 'generation parameters' do
     it 'provides correct defaults and limits' do
       expect(described_class.default_max_tokens).to eq(512)
