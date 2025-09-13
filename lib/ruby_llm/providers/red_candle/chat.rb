@@ -141,7 +141,7 @@ module RubyLLM
         def ensure_model_loaded!(model_id)
           @loaded_models[model_id] ||= load_model(model_id)
         end
-        
+
         def model_options(model_id)
           # Get GGUF file and tokenizer if this is a GGUF model
           # Access the methods from the Models module which is included in the provider
