@@ -145,9 +145,7 @@ RSpec.describe RubyLLM::Chat do
           skip 'gpustack/qwen3 does not support streaming tool calls properly'
         end
         skip 'Mistral has a bug with tool arguments in multi-turn streaming' if provider == :mistral
-
         skip 'xAI has a bug with tool arguments in multi-turn streaming' if provider == :xai
-
         chat = RubyLLM.chat(model: model, provider: provider)
                       .with_tool(BestLanguageToLearn)
                       .with_instructions('You must use tools whenever possible.')
