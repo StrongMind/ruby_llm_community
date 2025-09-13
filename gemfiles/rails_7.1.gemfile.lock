@@ -290,9 +290,14 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.3.0)
+    rake-compiler-dock (1.9.1)
+    rb_sys (0.9.117)
+      rake-compiler-dock (= 1.9.1)
     rdoc (6.14.2)
       erb
       psych (>= 4.0.0)
+    red-candle (1.2.3)
+      rb_sys
     regexp_parser (2.11.2)
     reline (0.6.2)
       io-console (~> 0.5)
@@ -384,7 +389,7 @@ GEM
     zeitwerk (2.7.3)
 
 PLATFORMS
-  arm64-darwin-22
+  arm64-darwin-24
   x86_64-linux
 
 DEPENDENCIES
@@ -406,6 +411,7 @@ DEPENDENCIES
   pry (>= 0.14)
   rails (~> 7.1.0)
   rake (>= 13.0)
+  red-candle (~> 1.2)
   reline
   rspec (~> 3.12)
   rubocop (>= 1.0)
