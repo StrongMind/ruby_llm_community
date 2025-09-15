@@ -40,6 +40,7 @@ Some examples --
 - Image editing for Gemini and OpenAI
 - Responses API for OpenAI
 - xAI provider that supports Grok 2, Grok 3, Grok 4, and Grok Code
+- Red Candle provider
 
 This project is intended to be compatible with RubyLLM. I will attempt to keep it up to date as Carmine pushes commits often.
 
