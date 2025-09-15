@@ -29,6 +29,7 @@ module RubyLLM
                   # Default models
                   :default_model,
                   :default_embedding_model,
+                  :default_moderation_model,
                   :default_image_model,
                   # Model registry
                   :model_registry_class,
@@ -57,6 +58,7 @@ module RubyLLM
 
       @default_model = 'gpt-4.1-nano'
       @default_embedding_model = 'text-embedding-3-small'
+      @default_moderation_model = 'omni-moderation-latest'
       @default_image_model = 'gpt-image-1'
 
       @model_registry_class = 'Model'

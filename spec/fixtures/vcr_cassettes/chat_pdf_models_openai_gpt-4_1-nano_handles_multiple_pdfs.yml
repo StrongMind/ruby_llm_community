@@ -53,7 +53,7 @@ http_interactions:
       X-Cache:
       - HIT
       X-Cache-Hits:
-      - '2'
+      - '1'
       X-Timer:
       - S1754045501.478979,VS0,VE2
       Vary:

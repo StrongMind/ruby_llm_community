@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 10 Sep 2025 14:43:05 GMT
+      - Sun, 14 Sep 2025 09:50:12 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -35,13 +35,13 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '318'
+      - '230'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
       - '2020-10-01'
       X-Envoy-Upstream-Service-Time:
-      - '427'
+      - '258'
       X-Ratelimit-Limit-Requests:
       - '500'
       X-Ratelimit-Limit-Tokens:
@@ -77,9 +77,9 @@ http_interactions:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-CEGKHPcB2TNIvWe97byA2IbPFgXG6",
+          "id": "chatcmpl-CFdf2mZOgH0nLwogSmaEixMODudpX",
           "object": "chat.completion",
-          "created": 1757515385,
+          "created": 1757843412,
           "model": "gpt-4.1-nano-2025-04-14",
           "choices": [
             {

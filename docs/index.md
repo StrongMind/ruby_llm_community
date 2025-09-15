@@ -135,6 +135,11 @@ RubyLLM.embed "Ruby is elegant and expressive"
 ```
 
 ```ruby
+# Moderate content for safety
+RubyLLM.moderate("Check if this text is safe").flagged? # => false
+```
+
+```ruby
 # Let AI use your code
 class Weather < RubyLLM::Tool
   description "Get current weather"
@@ -171,6 +176,7 @@ response = chat.with_schema(ProductSchema).ask "Analyze this product", with: "pr
 * **Documents:** Extract from PDFs, CSVs, JSON, any file type
 * **Image generation:** Create images with `RubyLLM.paint`
 * **Embeddings:** Vector search with `RubyLLM.embed`
+* **Moderation:** Content safety with `RubyLLM.moderate`
 * **Tools:** Let AI call your Ruby methods
 * **Structured output:** JSON schemas that just work
 * **Streaming:** Real-time responses with blocks
@@ -198,7 +204,11 @@ end
 ## Rails
 
 ```bash
+# Install database models
 rails generate ruby_llm:install
+
+# Add chat UI (optional)
+rails generate ruby_llm:chat_ui
 ```
 
 ```ruby
@@ -206,6 +216,9 @@ class Chat < ApplicationRecord
   acts_as_chat
 end
 
-chat = Chat.create! model_id: "claude-sonnet-4"
+chat = Chat.create! model: "claude-sonnet-4"
 chat.ask "What's in this file?", with: "report.pdf"
 ```
+
+Visit `http://localhost:3000/chats` for a ready-to-use chat interface!
+

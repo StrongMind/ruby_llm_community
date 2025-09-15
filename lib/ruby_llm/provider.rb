@@ -80,6 +80,12 @@ module RubyLLM
       parse_image_response(response, model:)
     end
 
+    def moderate(input, model:)
+      payload = render_moderation_payload(input, model:)
+      response = @connection.post moderation_url, payload
+      parse_moderation_response(response, model:)
+    end
+
     def configured?
       configuration_requirements.all? { |req| @config.send(req) }
     end
