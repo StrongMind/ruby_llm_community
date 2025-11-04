@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.x.ai/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"grok-3-mini","messages":[{"role":"user","content":"Call the
+        object params tool with window start 2025-01-01 and end 2025-01-02 and include
+        the result."}],"stream":false,"tools":[{"type":"function","function":{"name":"object_params","description":"Uses
+        params DSL object support","parameters":{"type":"object","properties":{"window":{"type":"object","properties":{"start":{"type":"string","description":"ISO
+        start"},"end":{"type":"string","description":"ISO end"}},"required":["start","end"],"additionalProperties":false,"description":"Time
+        window to schedule"}},"required":["window"],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.4
+      Authorization:
+      - Bearer <XAI_API_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Nov 2025 05:03:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Zero-Data-Retention:
+      - 'false'
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      Vary:
+      - origin, access-control-request-method, access-control-request-headers
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - "*"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
+      Strict-Transport-Security:
+      - max-age=31536000
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - "<CF_RAY>"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"3dcb723c-dbe0-8c7d-2cba-b01659c0c18f","object":"chat.completion","created":1762232629,"model":"grok-3-mini","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning_content":"First,
+        the user wants me to call the \"object_params\" function with specific parameters:
+        window start as \"2025-01-01\" and end as \"2025-01-02\". They also say \"include
+        the result,\" but I don''t actually get results from functions; I just call
+        them.\n\nThe available function is \"object_params\", which requires a parameter
+        \"window\" that is an object with \"start\" and \"end\", both strings in ISO
+        format.\n\nSo, the function call should look like this:\n\n<function_call>{\"action\":
+        \"object_params\", \"action_input\": {\"window\": {\"start\": \"2025-01-01\",
+        \"end\": \"2025-01-02\"}}}</function_call>\n\nI need to ensure this matches
+        the exact format: within <function_call> tags, and it''s JSON.\n\nThe user
+        said \"include the result.\" In the system prompt, it doesn''t specify how
+        results are handled. I think I just call the function, and presumably, in
+        a multi-turn conversation, the result would come back later. But for now,
+        my response should just be the function call if that''s the next step.\n\nThe
+        system prompt says: \"You can call functions to retrieve information or perform
+        actions.\" And \"trigger a function call in JSON format within <function_call></function_call>
+        tags.\"\n\nIt also says: \"Keep your response to user clear; please do not
+        make your response verbose!\"\n\nSo, I shouldn''t add extra text unless necessary.
+        Since the user''s request directly maps to calling this function, I should
+        just make the function call.\n\nIs there anything unclear? The parameters
+        are provided: start and end are given. No missing info.\n\nFinally, after
+        calling the function, if this is a multi-turn, I might need to respond based
+        on the result, but for now, I just need to call it.\n\nResponse structure:
+        My entire response should just be the <function_call> tag, as per the instructions:
+        \"You are only permitted to use the <function_call> tag in your response only
+        if you have made the decision to call a function.\"\n\nSo, no additional text.","tool_calls":[{"id":"call_54558882","function":{"name":"object_params","arguments":"{\"window\":{\"start\":\"2025-01-01\",\"end\":\"2025-01-02\"}}"},"type":"function"}],"refusal":null},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":349,"completion_tokens":45,"total_tokens":821,"prompt_tokens_details":{"text_tokens":349,"audio_tokens":0,"image_tokens":0,"cached_tokens":231},"completion_tokens_details":{"reasoning_tokens":427,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"system_fingerprint":"fp_4fae27f477"}'
+  recorded_at: Tue, 04 Nov 2025 05:03:57 GMT
+recorded_with: VCR 6.3.1

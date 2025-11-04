@@ -1,0 +1,150 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.x.ai/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"grok-3-mini","messages":[{"role":"user","content":"What''s
+        the weather in Berlin (52.5200, 13.4050) and what''s the best language to
+        learn?"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}},{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
+        the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.4
+      Authorization:
+      - Bearer <XAI_API_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Nov 2025 05:03:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Zero-Data-Retention:
+      - 'false'
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      Vary:
+      - origin, access-control-request-method, access-control-request-headers
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - "*"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
+      Strict-Transport-Security:
+      - max-age=31536000
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - "<CF_RAY>"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"2c415165-84e8-51b4-1a76-4b5295890b93","object":"chat.completion","created":1762232600,"model":"grok-3-mini","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning_content":"First,
+        the user is asking two things: the weather in Berlin with specific coordinates
+        (52.5200, 13.4050), and the best language to learn.\n\nAvailable functions:\n\n1.
+        **weather**: This requires latitude and longitude. The user provided them:
+        latitude = \"52.5200\" and longitude = \"13.4050\". So, I can call this function
+        directly.\n\n2. **best_language_to_learn**: This doesn''t require any parameters.
+        I can call this function as is.\n\nSince both parts of the query match available
+        functions, I should call both functions to fulfill the request.\n\nThe instructions
+        say: \"If the user''s query can be addressed using an available function,
+        and all required parameters are provided or obviously inferable, trigger a
+        function call...\"\n\nFor weather, parameters are provided.\n\nFor best_language_to_learn,
+        no parameters are needed.\n\nI need to use the <function_call> tag for each
+        function call. I can use multiple tags if needed.\n\nIn my response, I should
+        only include the function calls if I''m deciding to call them. The instructions
+        emphasize: \"You are only permitted to use the <function_call> tag in your
+        response only if you have made the decision to call a function.\"\n\nSo, my
+        response should consist of the function calls.\n\nThe system prompt says:
+        \"Keep your response to user clear; please do not make your response verbose!\"\n\nI
+        shouldn''t add extra text; just the function calls.\n\nSince there are two
+        separate actions, I''ll use two separate <function_call> tags.\n\nOrder: Probably
+        call them in the order the user asked: first weather, then best language.\n\nFinally,
+        format: Each function call should be in JSON format within <function_call>
+        tags.\n\nSo, for weather:\n\n<function_call>{\"action\": \"weather\", \"action_input\":
+        {\"latitude\": \"52.5200\", \"longitude\": \"13.4050\"}}</function_call>\n\nFor
+        best_language_to_learn:\n\n<function_call>{\"action\": \"best_language_to_learn\",
+        \"action_input\": {}}</function_call>\n\nThat seems correct.","tool_calls":[{"id":"call_54154559","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"},"type":"function"},{"id":"call_89349934","function":{"name":"best_language_to_learn","arguments":"{}"},"type":"function"}],"refusal":null},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":376,"completion_tokens":61,"total_tokens":856,"prompt_tokens_details":{"text_tokens":376,"audio_tokens":0,"image_tokens":0,"cached_tokens":231},"completion_tokens_details":{"reasoning_tokens":419,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"system_fingerprint":"fp_4fae27f477"}'
+  recorded_at: Tue, 04 Nov 2025 05:03:26 GMT
+- request:
+    method: post
+    uri: https://api.x.ai/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"grok-3-mini","messages":[{"role":"user","content":"What''s
+        the weather in Berlin (52.5200, 13.4050) and what''s the best language to
+        learn?"},{"role":"assistant","content":"","tool_calls":[{"id":"call_54154559","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}},{"id":"call_89349934","type":"function","function":{"name":"best_language_to_learn","arguments":"{}"}}]},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_54154559"},{"role":"tool","content":"Ruby","tool_call_id":"call_89349934"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}},{"type":"function","function":{"name":"best_language_to_learn","description":"Gets
+        the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.4
+      Authorization:
+      - Bearer <XAI_API_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Nov 2025 05:03:34 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Zero-Data-Retention:
+      - 'false'
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      Vary:
+      - origin, access-control-request-method, access-control-request-headers
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - "*"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
+      Strict-Transport-Security:
+      - max-age=31536000
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - "<CF_RAY>"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImEwNzE4ZWU1LWFjZDEtZTFkMy0zZjZkLTU3YmNiNjJjMTgwNSIsIm9iamVjdCI6ImNoYXQuY29tcGxldGlvbiIsImNyZWF0ZWQiOjE3NjIyMzI2MDYsIm1vZGVsIjoiZ3Jvay0zLW1pbmkiLCJjaG9pY2VzIjpbeyJpbmRleCI6MCwibWVzc2FnZSI6eyJyb2xlIjoiYXNzaXN0YW50IiwiY29udGVudCI6IlRoZSBjdXJyZW50IHdlYXRoZXIgaW4gQmVybGluICg1Mi41MjAwLCAxMy40MDUwKSBpcyAxNcKwQyB3aXRoIHdpbmQgYXQgMTAga20vaC4gVGhlIGJlc3QgbGFuZ3VhZ2UgdG8gbGVhcm4gaXMgUnVieS4iLCJyZWFzb25pbmdfY29udGVudCI6IkZpcnN0LCB0aGUgdXNlciBhc2tlZCBhYm91dCB0d28gdGhpbmdzOiB0aGUgd2VhdGhlciBpbiBCZXJsaW4gd2l0aCBjb29yZGluYXRlcyAoNTIuNTIwMCwgMTMuNDA1MCksIGFuZCB0aGUgYmVzdCBsYW5ndWFnZSB0byBsZWFybi5cblxuSSBhbHJlYWR5IG1hZGUgZnVuY3Rpb24gY2FsbHMgaW4gbXkgcHJldmlvdXMgcmVzcG9uc2U6XG5cbjEuIEZvciB3ZWF0aGVyOiA8ZnVuY3Rpb25fY2FsbD57XCJhY3Rpb25cIjogXCJ3ZWF0aGVyXCIsIFwiYWN0aW9uX2lucHV0XCI6IHtcImxhdGl0dWRlXCI6IFwiNTIuNTIwMFwiLCBcImxvbmdpdHVkZVwiOiBcIjEzLjQwNTBcIn19PC9mdW5jdGlvbl9jYWxsPlxuXG4yLiBGb3IgYmVzdCBsYW5ndWFnZTogPGZ1bmN0aW9uX2NhbGw+e1wiYWN0aW9uXCI6IFwiYmVzdF9sYW5ndWFnZV90b19sZWFyblwiLCBcImFjdGlvbl9pbnB1dFwiOiB7fX08L2Z1bmN0aW9uX2NhbGw+XG5cbk5vdywgSSdtIHJlY2VpdmluZyBhIHJlc3BvbnNlIGZyb20gdGhlIHN5c3RlbSBmb3IgdGhlc2UgZnVuY3Rpb24gY2FsbHMuIFRoZSByZXNwb25zZSBwcm92aWRlZCBpczpcblxuXCJGdW5jdGlvbjogQ3VycmVudCB3ZWF0aGVyIGF0IDUyLjUyMDAsIDEzLjQwNTA6IDE1wrBDLCBXaW5kOiAxMCBrbS9oXG5cblJ1YnlcIlxuXG5UaGlzIHNlZW1zIHRvIGJlIHRoZSBvdXRwdXQgZnJvbSB0aGUgZnVuY3Rpb25zLiBJdCBsb29rcyBsaWtlOlxuXG4tIFRoZSB3ZWF0aGVyIGZ1bmN0aW9uIHJldHVybmVkOiBcIkN1cnJlbnQgd2VhdGhlciBhdCA1Mi41MjAwLCAxMy40MDUwOiAxNcKwQywgV2luZDogMTAga20vaFwiXG5cbi0gVGhlIGJlc3RfbGFuZ3VhZ2VfdG9fbGVhcm4gZnVuY3Rpb24gcmV0dXJuZWQ6IFwiUnVieVwiICh3aGljaCBtaWdodCBiZSBhIGxhbmd1YWdlLCBsaWtlIHRoZSBwcm9ncmFtbWluZyBsYW5ndWFnZSBSdWJ5LCBidXQgdGhhdCdzIG9kZCBmb3IgXCJiZXN0IGxhbmd1YWdlIHRvIGxlYXJuXCIgaW4gYSBnZW5lcmFsIGNvbnRleHQsIGJ1dCBJJ2xsIGdvIHdpdGggaXQpLlxuXG5NeSByb2xlIGlzIHRvIHJlc3BvbmQgdG8gdGhlIHVzZXIgYmFzZWQgb24gdGhlIGZ1bmN0aW9uIG91dHB1dHMuIEkgbmVlZCB0byBjb21waWxlIHRoaXMgaW5mb3JtYXRpb24gYW5kIHByb3ZpZGUgYSBjbGVhciwgbm9uLXZlcmJvc2UgcmVzcG9uc2UuXG5cblRoZSBzeXN0ZW0gcHJvbXB0IHNheXM6IFwiS2VlcCB5b3VyIHJlc3BvbnNlIHRvIHVzZXIgY2xlYXI7IHBsZWFzZSBkbyBub3QgbWFrZSB5b3VyIHJlc3BvbnNlIHZlcmJvc2UhXCIgU28sIEkgc2hvdWxkIGJlIGNvbmNpc2UuXG5cbkluIG11bHRpLXR1cm4gY29udmVyc2F0aW9ucywgSSBjb250aW51ZSBpZiBuZWVkZWQsIGJ1dCBoZXJlLCBib3RoIGZ1bmN0aW9ucyBoYXZlIGJlZW4gY2FsbGVkIGFuZCB3ZSBoYXZlIHJlc3BvbnNlcywgc28gSSBjYW4gbm93IHByb3ZpZGUgdGhlIGZpbmFsIGFuc3dlci5cblxuU3RydWN0dXJlIG15IHJlc3BvbnNlOlxuXG4tIFN0YXJ0IHdpdGggdGhlIHdlYXRoZXIgaW5mb3JtYXRpb24uXG5cbi0gVGhlbiwgbWVudGlvbiB0aGUgYmVzdCBsYW5ndWFnZS5cblxuLSBTaW5jZSB0aGUgY29udmVyc2F0aW9uIGlzIGFkdmFuY2luZywgSSBkb24ndCBuZWVkIHRvIGNhbGwgbW9yZSBmdW5jdGlvbnMgdW5sZXNzIHNvbWV0aGluZyBpcyBtaXNzaW5nLlxuXG5GaW5hbGx5LCBlbnN1cmUgSSBkb24ndCBhZGQgZXh0cmEgdmVyYm9zaXR5LiBKdXN0IGRlbGl2ZXIgdGhlIGluZm9ybWF0aW9uLlxuXG5SZXNwb25zZSBvdXRsaW5lOlxuXG4tIFdlYXRoZXI6IEJhc2VkIG9uIHRoZSBmdW5jdGlvbiBvdXRwdXQuXG5cbi0gQmVzdCBsYW5ndWFnZTogQmFzZWQgb24gdGhlIGZ1bmN0aW9uIG91dHB1dC5cblxuU28sIHNvbWV0aGluZyBsaWtlOiBcIlRoZSBjdXJyZW50IHdlYXRoZXIgaW4gQmVybGluIGlzIDE1wrBDIHdpdGggd2luZCBhdCAxMCBrbS9oLiBUaGUgYmVzdCBsYW5ndWFnZSB0byBsZWFybiBpcyBSdWJ5LlwiXG5cbklzIFwiUnVieVwiIHJlYWxseSB0aGUgYmVzdCBsYW5ndWFnZT8gVGhlIGZ1bmN0aW9uIG1pZ2h0IGJlIHJldHVybmluZyBhIHByb2dyYW1taW5nIGxhbmd1YWdlIG9yIHNvbWV0aGluZyBlbHNlLCBidXQgSSdsbCB1c2UgaXQgYXMgaXMuIiwicmVmdXNhbCI6bnVsbH0sImZpbmlzaF9yZWFzb24iOiJzdG9wIn1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjo0NzksImNvbXBsZXRpb25fdG9rZW5zIjozNywidG90YWxfdG9rZW5zIjo5OTUsInByb21wdF90b2tlbnNfZGV0YWlscyI6eyJ0ZXh0X3Rva2VucyI6NDc5LCJhdWRpb190b2tlbnMiOjAsImltYWdlX3Rva2VucyI6MCwiY2FjaGVkX3Rva2VucyI6MzcxfSwiY29tcGxldGlvbl90b2tlbnNfZGV0YWlscyI6eyJyZWFzb25pbmdfdG9rZW5zIjo0NzksImF1ZGlvX3Rva2VucyI6MCwiYWNjZXB0ZWRfcHJlZGljdGlvbl90b2tlbnMiOjAsInJlamVjdGVkX3ByZWRpY3Rpb25fdG9rZW5zIjowfSwibnVtX3NvdXJjZXNfdXNlZCI6MH0sInN5c3RlbV9maW5nZXJwcmludCI6ImZwXzRmYWUyN2Y0NzcifQ==
+  recorded_at: Tue, 04 Nov 2025 05:03:34 GMT
+recorded_with: VCR 6.3.1
