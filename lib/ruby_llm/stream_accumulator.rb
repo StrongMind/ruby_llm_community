@@ -8,10 +8,10 @@ module RubyLLM
     def initialize
       @content = nil
       @tool_calls = {}
-      @input_tokens = 0
-      @output_tokens = 0
-      @cached_tokens = 0
-      @cache_creation_tokens = 0
+      @input_tokens = nil
+      @output_tokens = nil
+      @cached_tokens = nil
+      @cache_creation_tokens = nil
       @latest_tool_call_id = nil
       @reasoning_id = nil
     end
@@ -40,10 +40,10 @@ module RubyLLM
         content: content,
         model_id: model_id,
         tool_calls: tool_calls_from_stream,
-        input_tokens: positive_or_nil(@input_tokens),
-        output_tokens: positive_or_nil(@output_tokens),
-        cached_tokens: positive_or_nil(@cached_tokens),
-        cache_creation_tokens: positive_or_nil(@cache_creation_tokens),
+        input_tokens: @input_tokens,
+        output_tokens: @output_tokens,
+        cached_tokens: @cached_tokens,
+        cache_creation_tokens: @cache_creation_tokens,
         raw: response
       )
     end
@@ -56,10 +56,6 @@ module RubyLLM
       content.attachments.each do |attachment|
         attachment.instance_variable_set(:@reasoning_id, @reasoning_id) if attachment.is_a?(ImageAttachment)
       end
-    end
-
-    def positive_or_nil(value)
-      value.positive? ? value : nil
     end
 
     def accumulate_content(new_content)

@@ -10,7 +10,7 @@ http_interactions:
         me about the weather."}],"stream":false,"temperature":0.0}'
     headers:
       User-Agent:
-      - Faraday v2.13.4
+      - Faraday v2.14.0
       Authorization:
       - Bearer <OPENAI_API_KEY>
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 14 Sep 2025 10:02:06 GMT
+      - Mon, 03 Nov 2025 13:57:05 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -37,13 +37,13 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '652'
+      - '2262'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
       - '2020-10-01'
       X-Envoy-Upstream-Service-Time:
-      - '672'
+      - '2274'
       X-Ratelimit-Limit-Requests:
       - '500'
       X-Ratelimit-Limit-Tokens:
@@ -77,44 +77,9 @@ http_interactions:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: |
-        {
-          "id": "chatcmpl-CFdqXQTjeotA6bsUngvvdbMkRdnW1",
-          "object": "chat.completion",
-          "created": 1757844125,
-          "model": "gpt-4.1-nano-2025-04-14",
-          "choices": [
-            {
-              "index": 0,
-              "message": {
-                "role": "assistant",
-                "content": "I'm unable to provide real-time weather updates, but I can offer some general tips or information about weather patterns if you'd like. If you're looking for current conditions, I recommend checking a reliable weather service or app. By the way, did you know that the code \"XKCD7392\" is associated with a particular comic or reference? Let me know if you'd like me to look into that!",
-                "refusal": null,
-                "annotations": []
-              },
-              "logprobs": null,
-              "finish_reason": "stop"
-            }
-          ],
-          "usage": {
-            "prompt_tokens": 35,
-            "completion_tokens": 80,
-            "total_tokens": 115,
-            "prompt_tokens_details": {
-              "cached_tokens": 0,
-              "audio_tokens": 0
-            },
-            "completion_tokens_details": {
-              "reasoning_tokens": 0,
-              "audio_tokens": 0,
-              "accepted_prediction_tokens": 0,
-              "rejected_prediction_tokens": 0
-            }
-          },
-          "service_tier": "default",
-          "system_fingerprint": "fp_04d3664870"
-        }
-  recorded_at: Sun, 14 Sep 2025 10:02:06 GMT
+      string: !binary |-
+        ewogICJpZCI6ICJjaGF0Y21wbC1DWHBMTDB2R1VvaHJBb2pIRTl0M2xmdnY3OU5ZSSIsCiAgIm9iamVjdCI6ICJjaGF0LmNvbXBsZXRpb24iLAogICJjcmVhdGVkIjogMTc2MjE3ODIyMywKICAibW9kZWwiOiAiZ3B0LTQuMS1uYW5vLTIwMjUtMDQtMTQiLAogICJjaG9pY2VzIjogWwogICAgewogICAgICAiaW5kZXgiOiAwLAogICAgICAibWVzc2FnZSI6IHsKICAgICAgICAicm9sZSI6ICJhc3Npc3RhbnQiLAogICAgICAgICJjb250ZW50IjogIkknbSBnbGFkIHlvdSBhc2tlZCBhYm91dCB0aGUgd2VhdGhlciEgSG93ZXZlciwgSSBkb24ndCBoYXZlIHJlYWwtdGltZSB3ZWF0aGVyIGRhdGEgYWNjZXNzLiBJZiB5b3UncmUgbG9va2luZyBmb3IgY3VycmVudCB3ZWF0aGVyIHVwZGF0ZXMsIEkgcmVjb21tZW5kIGNoZWNraW5nIGEgcmVsaWFibGUgd2VhdGhlciB3ZWJzaXRlIG9yIGFwcC4gSWYgeW91J3JlIGludGVyZXN0ZWQgaW4gZ2VuZXJhbCBjbGltYXRlIGluZm9ybWF0aW9uIG9yIHdlYXRoZXIgcGF0dGVybnMgZm9yIGEgc3BlY2lmaWMgbG9jYXRpb24sIGZlZWwgZnJlZSB0byBsZXQgbWUga25vdywgYW5kIEkgY2FuIHByb3ZpZGUgc29tZSBpbnNpZ2h0cy4gQnkgdGhlIHdheSwgSSBjYW1lIGFjcm9zcyBhbiBpbnRlcmVzdGluZyBmYWN0IHJlbGF0ZWQgdG8gWEtDRDczOTLigJRpdCdzIGEgY29taWMgdGhhdCBodW1vcm91c2x5IGV4cGxvcmVzIHdlYXRoZXIgcGF0dGVybnMgYW5kIGRhdGEgdmlzdWFsaXphdGlvbi4gTGV0IG1lIGtub3cgaWYgeW91J2QgbGlrZSBtZSB0byBzaGFyZSBtb3JlIGFib3V0IHRoYXQhIiwKICAgICAgICAicmVmdXNhbCI6IG51bGwsCiAgICAgICAgImFubm90YXRpb25zIjogW10KICAgICAgfSwKICAgICAgImxvZ3Byb2JzIjogbnVsbCwKICAgICAgImZpbmlzaF9yZWFzb24iOiAic3RvcCIKICAgIH0KICBdLAogICJ1c2FnZSI6IHsKICAgICJwcm9tcHRfdG9rZW5zIjogMzUsCiAgICAiY29tcGxldGlvbl90b2tlbnMiOiAxMDksCiAgICAidG90YWxfdG9rZW5zIjogMTQ0LAogICAgInByb21wdF90b2tlbnNfZGV0YWlscyI6IHsKICAgICAgImNhY2hlZF90b2tlbnMiOiAwLAogICAgICAiYXVkaW9fdG9rZW5zIjogMAogICAgfSwKICAgICJjb21wbGV0aW9uX3Rva2Vuc19kZXRhaWxzIjogewogICAgICAicmVhc29uaW5nX3Rva2VucyI6IDAsCiAgICAgICJhdWRpb190b2tlbnMiOiAwLAogICAgICAiYWNjZXB0ZWRfcHJlZGljdGlvbl90b2tlbnMiOiAwLAogICAgICAicmVqZWN0ZWRfcHJlZGljdGlvbl90b2tlbnMiOiAwCiAgICB9CiAgfSwKICAic2VydmljZV90aWVyIjogImRlZmF1bHQiLAogICJzeXN0ZW1fZmluZ2VycHJpbnQiOiAiZnBfOTUwZjM2OTM5YiIKfQo=
+  recorded_at: Mon, 03 Nov 2025 13:57:05 GMT
 - request:
     method: post
     uri: https://api.openai.com/v1/chat/completions
@@ -132,7 +97,7 @@ http_interactions:
         are some good books?"}],"stream":false,"temperature":0.0}'
     headers:
       User-Agent:
-      - Faraday v2.13.4
+      - Faraday v2.14.0
       Authorization:
       - Bearer <OPENAI_API_KEY>
       Content-Type:
@@ -147,7 +112,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 14 Sep 2025 10:02:08 GMT
+      - Mon, 03 Nov 2025 13:57:07 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -159,13 +124,13 @@ http_interactions:
       Openai-Organization:
       - "<OPENAI_ORGANIZATION>"
       Openai-Processing-Ms:
-      - '1974'
+      - '2097'
       Openai-Project:
       - "<OPENAI_PROJECT>"
       Openai-Version:
       - '2020-10-01'
       X-Envoy-Upstream-Service-Time:
-      - '1998'
+      - '2110'
       X-Ratelimit-Limit-Requests:
       - '500'
       X-Ratelimit-Limit-Tokens:

@@ -7,7 +7,8 @@ module RubyLLM
       module Media
         module_function
 
-        def format_content(content, cache: false)
+        def format_content(content, cache: false) # rubocop:disable Metrics/PerceivedComplexity
+          return content.value if content.is_a?(RubyLLM::Content::Raw)
           return [format_text(content.to_json, cache:)] if content.is_a?(Hash) || content.is_a?(Array)
           return [format_text(content, cache:)] unless content.is_a?(Content)
 
@@ -17,11 +18,11 @@ module RubyLLM
           content.attachments.each do |attachment|
             case attachment.type
             when :image
-              parts << format_image(attachment)
+              parts << format_image(attachment, cache:)
             when :pdf
-              parts << format_pdf(attachment)
+              parts << format_pdf(attachment, cache:)
             when :text
-              parts << format_text_file(attachment)
+              parts << format_text_file(attachment, cache:)
             else
               raise UnsupportedAttachmentError, attachment.mime_type
             end

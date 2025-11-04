@@ -10,7 +10,8 @@ module RubyLLM
 
         module_function
 
-        def format_content(content, cache: false)
+        def format_content(content, cache: false)  # rubocop:disable Metrics/PerceivedComplexity
+          return content.value if content.is_a?(RubyLLM::Content::Raw)
           return [Anthropic::Media.format_text(content.to_json, cache:)] if content.is_a?(Hash) || content.is_a?(Array)
           return [Anthropic::Media.format_text(content, cache:)] unless content.is_a?(Content)
 

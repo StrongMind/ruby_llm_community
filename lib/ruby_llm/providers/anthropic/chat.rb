@@ -74,12 +74,21 @@ module RubyLLM
         end
 
         def build_message(data, content, tool_use_blocks, response)
+          usage = data['usage'] || {}
+          cached_tokens = usage['cache_read_input_tokens']
+          cache_creation_tokens = usage['cache_creation_input_tokens']
+          if cache_creation_tokens.nil? && usage['cache_creation'].is_a?(Hash)
+            cache_creation_tokens = usage['cache_creation'].values.compact.sum
+          end
+
           Message.new(
             role: :assistant,
             content: content,
             tool_calls: Tools.parse_tool_calls(tool_use_blocks),
-            input_tokens: data.dig('usage', 'input_tokens'),
-            output_tokens: data.dig('usage', 'output_tokens'),
+            input_tokens: usage['input_tokens'],
+            output_tokens: usage['output_tokens'],
+            cached_tokens: cached_tokens,
+            cache_creation_tokens: cache_creation_tokens,
             model_id: data['model'],
             cache_creation_tokens: data.dig('usage', 'cache_creation_input_tokens'),
             cached_tokens: data.dig('usage', 'cache_read_input_tokens'),
@@ -98,7 +107,13 @@ module RubyLLM
         end
 
         def format_system_message(msg, cache: false)
-          Media.format_content(msg.content, cache:)
+          content = msg.content
+
+          if content.is_a?(RubyLLM::Content::Raw)
+            content.value
+          else
+            Media.format_content(content, cache:)
+          end
         end
 
         def format_basic_message(msg, cache: false)
