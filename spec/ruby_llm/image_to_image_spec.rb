@@ -3,8 +3,7 @@
 require 'spec_helper'
 require 'tempfile'
 
-# TODO: Update specs with gemini-2.5-flash-image
-RSpec.describe RubyLLM::Image, skip: true do
+RSpec.describe RubyLLM::Image do
   include_context 'with configured RubyLLM'
 
   IMAGE_CHAT_MODELS.each do |model_info|

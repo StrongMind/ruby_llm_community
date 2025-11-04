@@ -46,11 +46,17 @@ module RubyLLM
     end
 
     def to_h
+      content_value = content
+      content_value = content_value.to_h if content_value.is_a?(Content) || content_value.is_a?(Content::Raw)
+
+      tool_calls_value = tool_calls
+      tool_calls_value = tool_calls_value&.transform_values(&:to_h) if tool_calls_value.is_a?(Hash) && tool_calls_value.values.any? { |tc| tc.is_a?(ToolCall) }
+
       {
         role: role,
-        content: content,
+        content: content_value,
         model_id: model_id,
-        tool_calls: tool_calls,
+        tool_calls: tool_calls_value,
         tool_call_id: tool_call_id,
         input_tokens: input_tokens,
         output_tokens: output_tokens,
