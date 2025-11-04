@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-gem 'ruby_llm', path: ENV['RUBYLLM_PATH'] || '../../../..'
+gem 'ruby_llm_community', path: ENV['RUBYLLM_PATH'] || '../../../..'
 
 after_bundle do
   generate 'ruby_llm:install'
