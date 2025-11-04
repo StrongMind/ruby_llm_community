@@ -90,8 +90,6 @@ module RubyLLM
             cached_tokens: cached_tokens,
             cache_creation_tokens: cache_creation_tokens,
             model_id: data['model'],
-            cache_creation_tokens: data.dig('usage', 'cache_creation_input_tokens'),
-            cached_tokens: data.dig('usage', 'cache_read_input_tokens'),
             raw: response
           )
         end

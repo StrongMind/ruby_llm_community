@@ -50,7 +50,9 @@ module RubyLLM
       content_value = content_value.to_h if content_value.is_a?(Content) || content_value.is_a?(Content::Raw)
 
       tool_calls_value = tool_calls
-      tool_calls_value = tool_calls_value&.transform_values(&:to_h) if tool_calls_value.is_a?(Hash) && tool_calls_value.values.any? { |tc| tc.is_a?(ToolCall) }
+      if tool_calls_value.is_a?(Hash) && tool_calls_value.values.any?(ToolCall)
+        tool_calls_value = tool_calls_value&.transform_values(&:to_h)
+      end
 
       {
         role: role,

@@ -5,7 +5,6 @@ require 'event_stream_parser'
 require 'faraday'
 require 'faraday/multipart'
 require 'faraday/retry'
-require 'faraday/multipart'
 
 require 'json'
 require 'logger'

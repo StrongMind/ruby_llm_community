@@ -64,8 +64,8 @@ EMBEDDING_MODELS = [
 ].freeze
 
 IMAGE_CHAT_MODELS = [
-# TODO: Update image-to-image specs to work with gemini-2.5-flash-image
-#  { provider: :gemini, model: 'gemini-2.5-flash-image' },
+  # TODO: Update image-to-image specs to work with gemini-2.5-flash-image
+  #  { provider: :gemini, model: 'gemini-2.5-flash-image' },
   { provider: :openai, model: 'gpt-5' }
 ].freeze
 

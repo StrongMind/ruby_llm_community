@@ -86,7 +86,6 @@ module RubyLLM
       parse_image_response(response, model:)
     end
 
-
     def transcribe(audio_file, model:, language:, **options)
       file_part = build_audio_file_part(audio_file)
       payload = render_transcription_payload(file_part, model:, language:, **options)
