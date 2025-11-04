@@ -3,7 +3,8 @@
 require 'spec_helper'
 
 def supports_functions?(provider, model)
-  skip "#{provider} is a local provider and doesn't support function calling" if RubyLLM::Provider.providers[provider]&.local?
+  skip "#{provider} doesn't support function calling" if provider == :red_candle
+  return false if RubyLLM::Provider.providers[provider]&.local?
 
   model_info = RubyLLM.models.find(model)
   skip "#{model} doesn't support function calling" unless model_info&.supports_functions?
