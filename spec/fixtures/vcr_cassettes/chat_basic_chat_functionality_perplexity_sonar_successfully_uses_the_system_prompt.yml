@@ -10,7 +10,7 @@ http_interactions:
         me about the weather."}],"stream":false,"temperature":0.0}'
     headers:
       User-Agent:
-      - Faraday v2.13.4
+      - Faraday v2.14.0
       Authorization:
       - Bearer <PERPLEXITY_API_KEY>
       Content-Type:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 14 Sep 2025 10:02:46 GMT
+      - Mon, 03 Nov 2025 13:57:27 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -44,71 +44,84 @@ http_interactions:
       - "<CF_RAY>"
     body:
       encoding: ASCII-8BIT
-      string: '{"id": "142a9b3f-2645-4b52-9122-777dade811a8", "model": "sonar", "created":
-        1757844166, "usage": {"prompt_tokens": 24, "completion_tokens": 212, "total_tokens":
-        236, "search_context_size": "low", "cost": {"input_tokens_cost": 0.0, "output_tokens_cost":
-        0.0, "request_cost": 0.005, "total_cost": 0.005}}, "citations": ["https://www.weather25.com/north-america/usa/california?page=month&month=September",
-        "https://en.wikipedia.org/wiki/Weather", "https://www.weather25.com/north-america/usa/california/los-angeles?page=month&month=September",
-        "https://www.theweathernetwork.com/en/city/us/california/whittier/current",
-        "https://weathershogun.com/weather/usa/ca/los-angeles/451/september/2025-09-14",
-        "https://www.youtube.com/watch?v=cd2aYMNqL88", "https://www.accuweather.com/en/us/los-angeles/90012/september-weather/347625",
-        "https://play.google.com/store/apps/details?id=com.weather.Weather&hl=en_US",
-        "https://www.easeweather.com/north-america/united-states/california/los-angeles-county/los-angeles/september",
-        "https://www.youtube.com/watch?v=l68PUPmbVqQ"], "search_results": [{"title":
-        "California weather in September 2025 | Weather25.com", "url": "https://www.weather25.com/north-america/usa/california?page=month&month=September",
-        "date": "2025-09-01", "last_updated": "2025-09-13", "snippet": "The weather
-        in California in September is hot. The average temperatures are between 69\u00b0F
-        and 87\u00b0F. There shouldn''t be any rainy days in in California during
-        ..."}, {"title": "Weather - Wikipedia", "url": "https://en.wikipedia.org/wiki/Weather",
-        "date": "2001-12-11", "last_updated": "2025-09-11", "snippet": "Weather is
-        the state of the atmosphere, describing for example the degree to which it
-        is hot or cold, wet or dry, calm or stormy, clear or cloudy."}, {"title":
-        "Los Angeles weather in September 2025 | Weather25.com", "url": "https://www.weather25.com/north-america/usa/california/los-angeles?page=month&month=September",
-        "date": "2025-09-01", "last_updated": "2025-09-14", "snippet": "The weather
-        in Los Angeles in September is hot. The average temperatures are between 69\u00b0F
-        and 87\u00b0F. There shouldn''t be any rainy days in in Los Angeles ..."},
-        {"title": "Whittier, CA Current Weather", "url": "https://www.theweathernetwork.com/en/city/us/california/whittier/current",
-        "date": "2025-08-22", "last_updated": "2025-08-22", "snippet": "H: 27\u00b0
-        L: 19\u00b0. Hourly. Full 72 hours \u00b7 7am. A mix of sun and clouds. 19\u00b0.
-        Feels 19. POP. 20%. 8am. A mix of sun and clouds. 19\u00b0. Feels 19."}, {"title":
-        "Sunday, September 14, 2025. Los Angeles, CA - Weather Forecast", "url": "https://weathershogun.com/weather/usa/ca/los-angeles/451/september/2025-09-14",
-        "date": "2025-09-14", "last_updated": "2025-09-14", "snippet": "Los Angeles,
-        California Weather: Sunday, September 14, 2025. Day 79\u00b0. Night 66\u00b0.
-        Precipitation 0 %. Wind 5 mph. UV Index (0 - 11+) 11 ..."}, {"title": "Talk
-        about the Weather in English: Advanced Vocabulary for Weather", "url": "https://www.youtube.com/watch?v=cd2aYMNqL88",
-        "date": "2023-08-16", "last_updated": "2025-07-27", "snippet": "Ready to unlock
-        your English fluency? I''m reopening my Fluency School program soon!"}, {"title":
-        "Los Angeles, CA Monthly Weather - AccuWeather", "url": "https://www.accuweather.com/en/us/los-angeles/90012/september-weather/347625",
-        "date": "2025-09-14", "last_updated": "2025-09-14", "snippet": "Get the monthly
+      string: '{"id": "96933ebf-a980-4395-84b1-4db9dbaddc2f", "model": "sonar", "created":
+        1762178247, "usage": {"prompt_tokens": 24, "completion_tokens": 429, "total_tokens":
+        453, "search_context_size": "low", "cost": {"input_tokens_cost": 0.0, "output_tokens_cost":
+        0.0, "request_cost": 0.005, "total_cost": 0.005}}, "citations": ["https://www.youtube.com/watch?v=89DReshuDIA",
+        "https://www.timeanddate.com/weather/usa/new-york", "https://www.weather25.com/north-america/usa/california?page=month&month=November",
+        "https://www.accuweather.com/en/us/new-york/10021/weather-forecast/349727",
+        "https://www.clickondetroit.com/video/weather/video-forecast/2025/11/03/weather-cut-in-nov-3-2025/",
+        "https://www.cbsnews.com/newyork/weather/", "https://www.youtube.com/watch?v=-uGimJnMT-c",
+        "https://www.youtube.com/watch?v=rD6FRDd9Hew", "https://www.accuweather.com/en/us/los-angeles/90012/november-weather/347625",
+        "https://www.weather25.com/north-america/usa?page=date&date=3-11"], "search_results":
+        [{"title": "SF Bay Area weather forecast Monday, November 3, 2025 - YouTube",
+        "url": "https://www.youtube.com/watch?v=89DReshuDIA", "date": "2025-11-03",
+        "last_updated": "2025-11-03", "snippet": "KRON4 Meteorologist John Shrable
+        has the latest weather outlook. https://www.kron4.com.", "source": "web"},
+        {"title": "Weather for New York, New York, USA - Time and Date", "url": "https://www.timeanddate.com/weather/usa/new-york",
+        "date": "2025-11-03", "last_updated": "2025-11-03", "snippet": "Clear. Feels
+        Like: 53 \u00b0F Forecast: 59 / 49 \u00b0F Wind: No wind. Location: New York
+        City - Central ...", "source": "web"}, {"title": "California weather in November
+        2025 | Weather25.com", "url": "https://www.weather25.com/north-america/usa/california?page=month&month=November",
+        "date": "2025-01-01", "last_updated": "2025-10-27", "snippet": "Expect a few
+        rainy days but usually not more than 3. Our weather forecast can give you
+        a great sense of what weather to expect in California in November 2025.",
+        "source": "web"}, {"title": "New York, NY Weather Forecast - AccuWeather",
+        "url": "https://www.accuweather.com/en/us/new-york/10021/weather-forecast/349727",
+        "date": "2025-11-03", "last_updated": "2025-11-03", "snippet": "Today''s Weather.
+        Mon, Nov 3. Some sun, then turning cloudy with a shower in spots this afternoon
+        Hi: 60\u00b0. Tonight: Partly cloudy and breezy Lo: 48\u00b0 \u00b7 Current
+        ...", "source": "web"}, {"title": "Weather cut in -- Nov. 3, 2025 - ClickOnDetroit",
+        "url": "https://www.clickondetroit.com/video/weather/video-forecast/2025/11/03/weather-cut-in-nov-3-2025/",
+        "date": "2025-11-03", "last_updated": "2025-11-03", "snippet": "Metro Detroit
+        weather forecast Nov. 3, 2025 -- 6 a.m. Update ... Current EEO Report \u00b7
+        Terms of Use \u00b7 Privacy Policy \u00b7 Do Not Sell My Info.", "source":
+        "web"}, {"title": "New York metro area weather and First Alert Weather forecasts",
+        "url": "https://www.cbsnews.com/newyork/weather/", "date": "2019-10-20", "last_updated":
+        "2025-11-03", "snippet": "New York City, NY ; Sat. Nov 1. Partly Cloudy. 57\u00b0
+        ; Sun. Nov 2. Mostly Sunny. 59\u00b0 ; Mon. Nov 3. PM Showers. 58\u00b0.",
+        "source": "web"}, {"title": "10 Weather: Monday morning forecast; Nov. 3,
+        2025 - YouTube", "url": "https://www.youtube.com/watch?v=-uGimJnMT-c", "date":
+        "2025-11-03", "last_updated": "2025-11-03", "snippet": "10 Weather: Monday
+        morning forecast; Nov. 3, 2025. 4 views \u00b7 3 minutes ago ...more. 10 Tampa
+        Bay. 530K. Subscribe.", "source": "web"}, {"title": "How''s The Weather? |
+        Learn About Weather | Super Simple Songs", "url": "https://www.youtube.com/watch?v=rD6FRDd9Hew",
+        "date": "2014-01-17", "last_updated": "2025-09-21", "snippet": "Get the Super
+        Simple App! \u25bb http://bit.ly/TheSuperSimpleApp It''s a Super Simple weather
+        song! How''s the weather where you are? Sunny? Rainy?", "source": "web"},
+        {"title": "Los Angeles, CA Monthly Weather - AccuWeather", "url": "https://www.accuweather.com/en/us/los-angeles/90012/november-weather/347625",
+        "date": "2025-11-03", "last_updated": "2025-11-03", "snippet": "Get the monthly
         weather forecast for Los Angeles, CA, including daily high/low, historical
-        averages, to help you plan ahead."}, {"title": "The Weather Channel - Radar
-        - Apps on Google Play", "url": "https://play.google.com/store/apps/details?id=com.weather.Weather&hl=en_US",
-        "date": "2025-09-09", "last_updated": "2025-09-13", "snippet": "Get live hurricane
-        maps, rain radar updates, accurate local weather alerts, allergy tracker,
-        and activities forecasts in a complete weather app. Get severe ..."}, {"title":
-        "Weather in Los Angeles, California for September 2025", "url": "https://www.easeweather.com/north-america/united-states/california/los-angeles-county/los-angeles/september",
-        "date": "2025-09-01", "last_updated": "2025-09-14", "snippet": "Expect cooler
-        weather in the next days in Los Angeles with the forecast suggesting a temperature
-        of 84 \u00b0F, lower than the historical average. In general, the ..."}, {"title":
-        "WPTV First Alert Morning Forecast - September 14, 2025 - YouTube", "url":
-        "https://www.youtube.com/watch?v=l68PUPmbVqQ", "date": "2025-09-14", "last_updated":
-        "2025-09-14", "snippet": "WPTV First Alert Morning Forecast - September 14,
-        2025. No views \u00b7 3 minutes ago ...more. WPTV News - FL Palm Beaches and
-        Treasure Coast."}], "object": "chat.completion", "choices": [{"index": 0,
-        "finish_reason": "stop", "message": {"role": "assistant", "content": "The
-        current weather in Whittier, California, is about **65\u00b0F (18\u00b0C)**
-        with a mix of sun and clouds expected throughout the morning, and temperatures
-        rising to around **36\u00b0C (97\u00b0F)** in the afternoon with clear skies
-        and no precipitation[4]. \n\nIn general, **California in September 2025**
-        experiences hot weather with average temperatures ranging from **69\u00b0F
-        to 87\u00b0F (21\u00b0C to 31\u00b0C)** and typically no rainy days, making
-        afternoons and evenings preferable for outdoor activities due to the heat
-        during the day[1][3]. Specifically, Los Angeles, nearby Whittier, is forecasted
-        to have highs around **79\u00b0F (26\u00b0C)** and lows near **66\u00b0F (19\u00b0C)**
-        with no precipitation and light winds[5][9].\n\nWeather describes the atmospheric
-        conditions such as temperature, cloudiness, and precipitation, which vary
-        by location and season. In California, September is generally dry and warm,
-        consistent with the Mediterranean climate typical of the region[2].\n\nXKCD7392"},
-        "delta": {"role": "assistant", "content": ""}}]}'
-  recorded_at: Sun, 14 Sep 2025 10:02:46 GMT
+        averages, to help you plan ahead.", "source": "web"}, {"title": "United States
+        weather forecast for Monday, 3 November 2025", "url": "https://www.weather25.com/north-america/usa?page=date&date=3-11",
+        "date": "2025-11-03", "last_updated": "2025-11-03", "snippet": "Hourly weather
+        forecast for Monday, 3 November 2025 ; 44\u00b0F \u00b7 42\u00b0F \u00b7 41\u00b0F
+        \u00b7 44\u00b0F ; Clear. Clear. Clear. Sunny.", "source": "web"}], "object":
+        "chat.completion", "choices": [{"index": 0, "finish_reason": "stop", "message":
+        {"role": "assistant", "content": "Here\u2019s a summary of the current weather
+        across several major U.S. cities as of Monday, November 3, 2025:\n\n**New
+        York City:**  \nThe day started off partly sunny with temperatures around
+        54\u00b0F in the morning, expected to rise to a high near 60\u00b0F. There\u2019s
+        a chance of showers later in the afternoon, with a low of about 48\u00b0F
+        tonight. Winds are light, and humidity is moderate. Air quality is currently
+        a concern, with pollution levels high enough to affect sensitive individuals.
+        The forecast for the week ahead includes a few passing showers, breezy conditions,
+        and gradually cooler temperatures by midweek. XKCD7392\n\n**San Francisco
+        Bay Area:**  \nThe region saw some rain over the weekend, with parts of the
+        North Bay receiving over an inch, while San Francisco and Oakland saw closer
+        to a third of an inch. Today is calm and mild, with temperatures in the 60s
+        along the coast and up to the 70s in warmer inland areas like San Jose. However,
+        a storm is expected midweek, bringing strong winds, coastal flood advisories,
+        and beach hazards.\n\n**California (General):**  \nNovember weather in California
+        is typically comfortable, with average highs around 24\u00b0C (75\u00b0F)
+        and lows near 14\u00b0C (57\u00b0F). Rain is possible but usually limited
+        to just a few days in the month. Most days are dry, with plenty of sunshine.\n\n**Other
+        Areas:**  \n- **Tampa Bay, FL:** Temperatures are mild, starting in the upper
+        50s to low 60s, with increasing north winds and gusts up to 20-25 mph during
+        the day.\n- **Los Angeles, CA:** Mild and generally pleasant, with daily highs
+        in the upper 60s to low 70s and lows in the 50s.\n\nOverall, the weather is
+        mild across much of the country, with some rain and wind in the Northeast
+        and California, and generally pleasant conditions elsewhere. XKCD7392"}, "delta":
+        {"role": "assistant", "content": ""}}]}'
+  recorded_at: Mon, 03 Nov 2025 13:57:27 GMT
 recorded_with: VCR 6.3.1

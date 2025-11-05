@@ -86,14 +86,18 @@ module RubyLLM
         end
 
         def build_chat_completions_chunk(data)
+          usage = data['usage'] || {}
+          cached_tokens = usage.dig('prompt_tokens_details', 'cached_tokens')
+
           Chunk.new(
             role: :assistant,
             model_id: data['model'],
             content: data.dig('choices', 0, 'delta', 'content'),
             tool_calls: parse_tool_calls(data.dig('choices', 0, 'delta', 'tool_calls'), parse_arguments: false),
-            input_tokens: data.dig('usage', 'prompt_tokens'),
-            output_tokens: data.dig('usage', 'completion_tokens'),
-            cached_tokens: data.dig('usage', 'cached_tokens')
+            input_tokens: usage['prompt_tokens'],
+            output_tokens: usage['completion_tokens'],
+            cached_tokens: cached_tokens,
+            cache_creation_tokens: 0
           )
         end
 

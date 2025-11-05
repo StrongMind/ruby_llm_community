@@ -3,11 +3,12 @@
 require 'base64'
 require 'event_stream_parser'
 require 'faraday'
-require 'faraday/retry'
 require 'faraday/multipart'
+require 'faraday/retry'
 
 require 'json'
 require 'logger'
+require 'marcel'
 require 'securerandom'
 require 'zeitwerk'
 
@@ -64,6 +65,10 @@ module RubyLLM
 
     def paint(...)
       Image.paint(...)
+    end
+
+    def transcribe(...)
+      Transcription.transcribe(...)
     end
 
     def models

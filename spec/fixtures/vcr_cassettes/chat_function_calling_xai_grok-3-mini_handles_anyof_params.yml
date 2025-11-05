@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.x.ai/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"grok-3-mini","messages":[{"role":"user","content":"Call the
+        any-of params tool for task \"Review PR\" with status \"pending\" and report
+        the result."}],"stream":false,"tools":[{"type":"function","function":{"name":"any_of_params","description":"Uses
+        params DSL any_of support","parameters":{"type":"object","properties":{"task":{"type":"string","description":"Task
+        description"},"status":{"description":"Optional task status","anyOf":[{"type":"string","enum":["pending","done"]},{"type":"null"}]}},"required":["task","status"],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.4
+      Authorization:
+      - Bearer <XAI_API_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Nov 2025 05:03:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Zero-Data-Retention:
+      - 'false'
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      Vary:
+      - origin, access-control-request-method, access-control-request-headers
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - "*"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
+      Strict-Transport-Security:
+      - max-age=31536000
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - "<CF_RAY>"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"da1e4153-7b31-6636-43f6-ea92dc42547b","object":"chat.completion","created":1762232623,"model":"grok-3-mini","choices":[{"index":0,"message":{"role":"assistant","content":"","reasoning_content":"First,
+        the user wants me to call the \"any_of_params\" function for a task \"Review
+        PR\" with status \"pending\" and then report the result.\n\nLooking at the
+        available functions:\n\n- There''s only one function: \"any_of_params\"\n\n-
+        Its description: \"Uses params DSL any_of support\"\n\n- Parameters:\n\n  -
+        \"task\": Required, type string, description: \"Task description\"\n\n  -
+        \"status\": Optional, but it''s an anyOf type: it can be a string with enum
+        [\"pending\", \"done\"] or null.\n\nThe user is providing:\n\n- task: \"Review
+        PR\"\n\n- status: \"pending\"\n\nThis matches perfectly. \"task\" is required
+        and provided. \"status\" is optional, but the user is giving it as \"pending\",
+        which is one of the allowed values.\n\nI need to call this function in the
+        specified JSON format within <function_call> tags.\n\nThe format should be:\n\n<function_call>{\"action\":
+        \"function_name\", \"action_input\": {\"parameter\": \"argument\"}}</function_call>\n\nSo,
+        for this, it would be:\n\n<function_call>{\"action\": \"any_of_params\", \"action_input\":
+        {\"task\": \"Review PR\", \"status\": \"pending\"}}</function_call>\n\nAfter
+        calling the function, I might need to handle the response, but the instructions
+        say to continue the conversation if needed. However, in this case, the user
+        asked to call the tool and report the result, so once I call it, the system
+        might handle the execution.\n\nThe instructions say: \"You can use multiple
+        functions or multiple times the same function, for this use multiple <function_call>
+        tags.\" But here, I only need one.\n\nAlso, \"Do not call a function if no
+        matching functions apply or if parameters are missing/unclear.\" Everything
+        is clear here.\n\nFinally, my response should only include the <function_call>
+        if I''m deciding to call it. I shouldn''t add extra text unless necessary.\n\nThe
+        user said: \"Call the any-of params tool for task \"Review PR\" with status
+        \"pending\" and report the result.\"\n\nI''m calling the function, and presumably,
+        after the function call, I can report the result in a subsequent response.
+        But for now, I just need to make the function call.\n\nSo, my response should
+        just be the <function_call> tag with the appropriate JSON.","tool_calls":[{"id":"call_18065076","function":{"name":"any_of_params","arguments":"{\"task\":\"Review
+        PR\",\"status\":\"pending\"}"},"type":"function"}],"refusal":null},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":336,"completion_tokens":34,"total_tokens":848,"prompt_tokens_details":{"text_tokens":336,"audio_tokens":0,"image_tokens":0,"cached_tokens":231},"completion_tokens_details":{"reasoning_tokens":478,"audio_tokens":0,"accepted_prediction_tokens":0,"rejected_prediction_tokens":0},"num_sources_used":0},"system_fingerprint":"fp_4fae27f477"}'
+  recorded_at: Tue, 04 Nov 2025 05:03:49 GMT
+recorded_with: VCR 6.3.1

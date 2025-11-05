@@ -5,22 +5,22 @@ module RubyLLM
   class Message
     ROLES = %i[system user assistant tool].freeze
 
-    attr_reader :role, :tool_calls, :tool_call_id, :input_tokens, :output_tokens, :model_id, :raw,
-                :cached_tokens, :cache_creation_tokens, :reasoning_id
+    attr_reader :role, :model_id, :tool_calls, :tool_call_id, :input_tokens, :output_tokens,
+                :cached_tokens, :cache_creation_tokens, :raw, :reasoning_id
     attr_writer :content
 
     def initialize(options = {})
       @role = options.fetch(:role).to_sym
       @content = normalize_content(options.fetch(:content))
+      @model_id = options[:model_id]
       @tool_calls = options[:tool_calls]
+      @tool_call_id = options[:tool_call_id]
       @input_tokens = options[:input_tokens]
       @output_tokens = options[:output_tokens]
-      @model_id = options[:model_id]
-      @tool_call_id = options[:tool_call_id]
       @cached_tokens = options[:cached_tokens]
       @cache_creation_tokens = options[:cache_creation_tokens]
-      @reasoning_id = options[:reasoning_id]
       @raw = options[:raw]
+      @reasoning_id = options[:reasoning_id]
 
       ensure_valid_role
     end
@@ -46,16 +46,24 @@ module RubyLLM
     end
 
     def to_h
+      content_value = content
+      content_value = content_value.to_h if content_value.is_a?(Content) || content_value.is_a?(Content::Raw)
+
+      tool_calls_value = tool_calls
+      if tool_calls_value.is_a?(Hash) && tool_calls_value.values.any?(ToolCall)
+        tool_calls_value = tool_calls_value&.transform_values(&:to_h)
+      end
+
       {
         role: role,
-        content: content.is_a?(Content) ? content.to_h : content,
-        tool_calls: tool_calls,
+        content: content_value,
+        model_id: model_id,
+        tool_calls: tool_calls_value,
         tool_call_id: tool_call_id,
         input_tokens: input_tokens,
         output_tokens: output_tokens,
-        model_id: model_id,
-        cache_creation_tokens: cache_creation_tokens,
         cached_tokens: cached_tokens,
+        cache_creation_tokens: cache_creation_tokens,
         reasoning_id: reasoning_id
       }.compact
     end

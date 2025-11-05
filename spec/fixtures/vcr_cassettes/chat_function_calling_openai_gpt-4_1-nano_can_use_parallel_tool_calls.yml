@@ -1,0 +1,378 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4.1-nano","input":[{"type":"message","role":"user","content":"What''s
+        the weather in Berlin (52.5200, 13.4050) and what''s the best language to
+        learn?","status":"completed"}],"stream":false,"tools":[{"type":"function","name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}},{"type":"function","name":"best_language_to_learn","description":"Gets
+        the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.4
+      Authorization:
+      - Bearer <OPENAI_API_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Nov 2025 05:10:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-Requests:
+      - '30000'
+      X-Ratelimit-Limit-Tokens:
+      - '150000000'
+      X-Ratelimit-Remaining-Requests:
+      - '29999'
+      X-Ratelimit-Remaining-Tokens:
+      - '149999675'
+      X-Ratelimit-Reset-Requests:
+      - 2ms
+      X-Ratelimit-Reset-Tokens:
+      - 0s
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION>"
+      Openai-Project:
+      - "<OPENAI_PROJECT>"
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      Openai-Processing-Ms:
+      - '848'
+      X-Envoy-Upstream-Service-Time:
+      - '851'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
+      - "<COOKIE>"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - "<CF_RAY>"
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "resp_07ff4594e247be710069098abe6cbc81a0bdca9c27668299a1",
+          "object": "response",
+          "created_at": 1762233022,
+          "status": "completed",
+          "background": false,
+          "billing": {
+            "payer": "developer"
+          },
+          "error": null,
+          "incomplete_details": null,
+          "instructions": null,
+          "max_output_tokens": null,
+          "max_tool_calls": null,
+          "model": "gpt-4.1-nano-2025-04-14",
+          "output": [
+            {
+              "id": "fc_07ff4594e247be710069098abf010481a08c146772b983ac8d",
+              "type": "function_call",
+              "status": "completed",
+              "arguments": "{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}",
+              "call_id": "call_hH9JRwCr5DcRyuFM2FxdtLrl",
+              "name": "weather"
+            },
+            {
+              "id": "fc_07ff4594e247be710069098abf1dec81a0afe8c7ff674cc312",
+              "type": "function_call",
+              "status": "completed",
+              "arguments": "{}",
+              "call_id": "call_BmLld64RdtfBofuFDyPg7sBa",
+              "name": "best_language_to_learn"
+            }
+          ],
+          "parallel_tool_calls": true,
+          "previous_response_id": null,
+          "prompt_cache_key": null,
+          "prompt_cache_retention": null,
+          "reasoning": {
+            "effort": null,
+            "summary": null
+          },
+          "safety_identifier": null,
+          "service_tier": "default",
+          "store": true,
+          "temperature": 1.0,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tool_choice": "auto",
+          "tools": [
+            {
+              "type": "function",
+              "description": "Gets current weather for a location",
+              "name": "weather",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "latitude": {
+                    "type": "string",
+                    "description": "Latitude (e.g., 52.5200)"
+                  },
+                  "longitude": {
+                    "type": "string",
+                    "description": "Longitude (e.g., 13.4050)"
+                  }
+                },
+                "required": [
+                  "latitude",
+                  "longitude"
+                ],
+                "additionalProperties": false,
+                "strict": true
+              },
+              "strict": true
+            },
+            {
+              "type": "function",
+              "description": "Gets the best language to learn",
+              "name": "best_language_to_learn",
+              "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false,
+                "strict": true
+              },
+              "strict": true
+            }
+          ],
+          "top_logprobs": 0,
+          "top_p": 1.0,
+          "truncation": "disabled",
+          "usage": {
+            "input_tokens": 53,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 54,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 107
+          },
+          "user": null,
+          "metadata": {}
+        }
+  recorded_at: Tue, 04 Nov 2025 05:10:23 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/responses
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-4.1-nano","input":[{"type":"message","role":"user","content":"What''s
+        the weather in Berlin (52.5200, 13.4050) and what''s the best language to
+        learn?","status":"completed"},{"type":"function_call","call_id":"call_hH9JRwCr5DcRyuFM2FxdtLrl","name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}","status":"completed"},{"type":"function_call","call_id":"call_BmLld64RdtfBofuFDyPg7sBa","name":"best_language_to_learn","arguments":"{}","status":"completed"},{"type":"function_call_output","call_id":"call_hH9JRwCr5DcRyuFM2FxdtLrl","output":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","status":"completed"},{"type":"function_call_output","call_id":"call_BmLld64RdtfBofuFDyPg7sBa","output":"Ruby","status":"completed"}],"stream":false,"tools":[{"type":"function","name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude
+        (e.g., 52.5200)"},"longitude":{"type":"string","description":"Longitude (e.g.,
+        13.4050)"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}},{"type":"function","name":"best_language_to_learn","description":"Gets
+        the best language to learn","parameters":{"type":"object","properties":{},"required":[],"additionalProperties":false,"strict":true}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.13.4
+      Authorization:
+      - Bearer <OPENAI_API_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Nov 2025 05:10:24 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-Requests:
+      - '30000'
+      X-Ratelimit-Limit-Tokens:
+      - '150000000'
+      X-Ratelimit-Remaining-Requests:
+      - '29999'
+      X-Ratelimit-Remaining-Tokens:
+      - '149999600'
+      X-Ratelimit-Reset-Requests:
+      - 2ms
+      X-Ratelimit-Reset-Tokens:
+      - 0s
+      Openai-Version:
+      - '2020-10-01'
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION>"
+      Openai-Project:
+      - "<OPENAI_PROJECT>"
+      X-Request-Id:
+      - "<X_REQUEST_ID>"
+      Openai-Processing-Ms:
+      - '792'
+      X-Envoy-Upstream-Service-Time:
+      - '795'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - "<COOKIE>"
+      - "<COOKIE>"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - "<CF_RAY>"
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "id": "resp_062232651b60d2970069098abff0288195ac6489f7b56b0a4d",
+          "object": "response",
+          "created_at": 1762233024,
+          "status": "completed",
+          "background": false,
+          "billing": {
+            "payer": "developer"
+          },
+          "error": null,
+          "incomplete_details": null,
+          "instructions": null,
+          "max_output_tokens": null,
+          "max_tool_calls": null,
+          "model": "gpt-4.1-nano-2025-04-14",
+          "output": [
+            {
+              "id": "msg_062232651b60d2970069098ac077b881958af5b48f3868e258",
+              "type": "message",
+              "status": "completed",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "The current weather in Berlin is 15\u00b0C with a wind speed of 10 km/h. The best language to learn right now is Ruby."
+                }
+              ],
+              "role": "assistant"
+            }
+          ],
+          "parallel_tool_calls": true,
+          "previous_response_id": null,
+          "prompt_cache_key": null,
+          "prompt_cache_retention": null,
+          "reasoning": {
+            "effort": null,
+            "summary": null
+          },
+          "safety_identifier": null,
+          "service_tier": "default",
+          "store": true,
+          "temperature": 1.0,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tool_choice": "auto",
+          "tools": [
+            {
+              "type": "function",
+              "description": "Gets current weather for a location",
+              "name": "weather",
+              "parameters": {
+                "type": "object",
+                "properties": {
+                  "latitude": {
+                    "type": "string",
+                    "description": "Latitude (e.g., 52.5200)"
+                  },
+                  "longitude": {
+                    "type": "string",
+                    "description": "Longitude (e.g., 13.4050)"
+                  }
+                },
+                "required": [
+                  "latitude",
+                  "longitude"
+                ],
+                "additionalProperties": false,
+                "strict": true
+              },
+              "strict": true
+            },
+            {
+              "type": "function",
+              "description": "Gets the best language to learn",
+              "name": "best_language_to_learn",
+              "parameters": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false,
+                "strict": true
+              },
+              "strict": true
+            }
+          ],
+          "top_logprobs": 0,
+          "top_p": 1.0,
+          "truncation": "disabled",
+          "usage": {
+            "input_tokens": 183,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 31,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 214
+          },
+          "user": null,
+          "metadata": {}
+        }
+  recorded_at: Tue, 04 Nov 2025 05:10:24 GMT
+recorded_with: VCR 6.3.1

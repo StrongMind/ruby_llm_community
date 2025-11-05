@@ -11,21 +11,21 @@ module RubyLLM
         super
         # Monkey-patch Models to use database when ActsAs is active
         RubyLLM::Models.class_eval do
-          def load_models
+          def self.load_models
             read_from_database
           rescue StandardError => e
             RubyLLM.logger.debug "Failed to load models from database: #{e.message}, falling back to JSON"
             read_from_json
           end
 
-          def load_from_database!
-            @models = read_from_database
-          end
-
-          def read_from_database
+          def self.read_from_database
             model_class = RubyLLM.config.model_registry_class
             model_class = model_class.constantize if model_class.is_a?(String)
             model_class.all.map(&:to_llm)
+          end
+
+          def load_from_database!
+            @models = self.class.read_from_database
           end
         end
       end
@@ -45,10 +45,12 @@ module RubyLLM
           has_many messages,
                    -> { order(created_at: :asc) },
                    class_name: self.message_class,
+                   foreign_key: ActiveSupport::Inflector.foreign_key(table_name.singularize),
                    dependent: :destroy
 
           belongs_to model,
                      class_name: self.model_class,
+                     foreign_key: ActiveSupport::Inflector.foreign_key(model.to_s.singularize),
                      optional: true
 
           delegate :add_message, to: :to_llm
@@ -78,7 +80,9 @@ module RubyLLM
           validates :provider, presence: true
           validates :name, presence: true
 
-          has_many chats, class_name: self.chat_class
+          has_many chats,
+                   class_name: self.chat_class,
+                   foreign_key: ActiveSupport::Inflector.foreign_key(table_name.singularize)
 
           define_method :chats_association do
             send(chats_association_name)
@@ -102,10 +106,12 @@ module RubyLLM
 
           belongs_to chat,
                      class_name: self.chat_class,
+                     foreign_key: ActiveSupport::Inflector.foreign_key(chat.to_s.singularize),
                      touch: touch_chat
 
           has_many tool_calls,
                    class_name: self.tool_call_class,
+                   foreign_key: ActiveSupport::Inflector.foreign_key(table_name.singularize),
                    dependent: :destroy
 
           belongs_to :parent_tool_call,
@@ -120,6 +126,7 @@ module RubyLLM
 
           belongs_to model,
                      class_name: self.model_class,
+                     foreign_key: ActiveSupport::Inflector.foreign_key(model.to_s.singularize),
                      optional: true
 
           delegate :tool_call?, :tool_result?, to: :to_llm
@@ -147,10 +154,12 @@ module RubyLLM
           self.result_class = (result_class || self.message_class).to_s
 
           belongs_to message,
-                     class_name: self.message_class
+                     class_name: self.message_class,
+                     foreign_key: ActiveSupport::Inflector.foreign_key(message.to_s.singularize)
 
           has_one result,
                   class_name: self.result_class,
+                  foreign_key: ActiveSupport::Inflector.foreign_key(table_name.singularize),
                   dependent: :nullify
 
           define_method :message_association do
