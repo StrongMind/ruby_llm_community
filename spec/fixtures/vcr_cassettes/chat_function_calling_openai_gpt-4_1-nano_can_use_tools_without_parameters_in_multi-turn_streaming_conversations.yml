@@ -315,7 +315,7 @@ http_interactions:
         the best language to learn","parameters":{"type":"object","properties":{},"required":[]}}]}'
     headers:
       User-Agent:
-      - Faraday v2.13.4
+      - Faraday v2.14.0
       Authorization:
       - Bearer <OPENAI_API_KEY>
       Content-Type:

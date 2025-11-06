@@ -254,7 +254,7 @@ http_interactions:
         expression to evaluate"}},"required":["expression"]}}]}'
     headers:
       User-Agent:
-      - Faraday v2.13.4
+      - Faraday v2.14.0
       Authorization:
       - Bearer <OPENAI_API_KEY>
       Content-Type:
