@@ -36,8 +36,7 @@ Use this gem to get early access to features currently in PR at the main gem.
 
 Some examples --
 
-- Prompt caching for Anthropic
-- Image editing for Gemini and OpenAI
+- Image editing for OpenAI
 - Responses API for OpenAI
 - xAI provider that supports Grok 2, Grok 3, Grok 4, and Grok Code
 - Red Candle provider
