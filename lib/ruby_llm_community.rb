@@ -37,6 +37,10 @@ loader.ignore("#{__dir__}/generators")
 loader.ignore("#{__dir__}/ruby_llm/railtie.rb")
 loader.setup
 
+# Entry point defines both the `RubyLlmCommunity` naming shim and the main
+# `RubyLLM` module, so OneClassPerFile is intentionally relaxed here.
+# rubocop:disable Style/OneClassPerFile
+
 # This is a shim for the RubyLLM gem.
 module RubyLlmCommunity
 end
@@ -143,3 +147,5 @@ if defined?(Rails::Railtie)
   require 'ruby_llm/railtie'
   require 'ruby_llm/active_record/acts_as'
 end
+
+# rubocop:enable Style/OneClassPerFile
