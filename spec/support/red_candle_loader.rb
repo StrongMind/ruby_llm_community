@@ -5,16 +5,8 @@ begin
   require 'candle'
 
   # Red Candle gem is installed
-  if ENV['RED_CANDLE_REAL_INFERENCE'] == 'true'
-    # Use real inference - don't load the test helper
-    RSpec.configure do |config|
-      config.before(:suite) do
-        puts "\n🔥 Red Candle: Using REAL inference (this will be slow)"
-        puts "   To use mocked responses, unset RED_CANDLE_REAL_INFERENCE\n\n"
-      end
-    end
-  else
-    # Use stubs (default when gem is installed)
+  unless ENV['RED_CANDLE_REAL_INFERENCE'] == 'true'
+    # Use stubs (default when gem is installed); real inference runs unconfigured.
     require_relative 'red_candle_test_helper'
   end
 rescue LoadError
@@ -28,11 +20,6 @@ rescue LoadError
          test_description.include?('red_candle/')
         skip 'Red Candle not installed (run: bundle config set --local with red_candle && bundle install)'
       end
-    end
-
-    config.before(:suite) do
-      puts "\n⚠️  Red Candle: Provider not available (gem not installed)"
-      puts "   To enable: bundle config set --local with red-candle && bundle install\n\n"
     end
   end
 end

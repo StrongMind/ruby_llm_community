@@ -94,7 +94,7 @@ RSpec.describe RubyLLM::Image do
         expect(content_chunks).not_to be_empty
 
         expect(response.content.attachments).to be_an(Array)
-        puts response.content.attachments.count
+
         expect(response.content.attachments.count).to eq(2) if provider == :openai
         expect(response.content.attachments.count).to eq(1) if provider == :gemini
 
