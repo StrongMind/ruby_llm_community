@@ -79,6 +79,7 @@ RSpec.describe RubyLLM::Generators::ChatUIGenerator, :generator, type: :generato
         # Check the acts_as_message declaration
         expect(message_content).to include('acts_as_message')
 
+        # rubocop:disable Lint/InterpolationCheck -- literal text asserted against generated ERB-like output
         # Check broadcasting setup
         expect(message_content).to include('broadcasts_to ->(message) { "chat_#{message.chat_id}" }')
 
@@ -86,6 +87,7 @@ RSpec.describe RubyLLM::Generators::ChatUIGenerator, :generator, type: :generato
         expect(message_content).to include('def broadcast_append_chunk(content)')
         expect(message_content).to include('broadcast_append_to "chat_#{chat_id}"')
         expect(message_content).to include('target: "message_#{id}_content"')
+        # rubocop:enable Lint/InterpolationCheck
         expect(message_content).to include('partial: "messages/content"')
       end
     end
@@ -203,6 +205,7 @@ RSpec.describe RubyLLM::Generators::ChatUIGenerator, :generator, type: :generato
         expect(message_content).to include("tool_calls: :llm_tool_calls, tool_call_class: 'Llm::ToolCall'")
         expect(message_content).to include("model: :llm_model, model_class: 'Llm::Model'")
 
+        # rubocop:disable Lint/InterpolationCheck -- literal text asserted against generated ERB-like output
         # Check broadcasting setup
         expect(message_content).to include('broadcasts_to ->(llm_message) { "llm_chat_#{llm_message.llm_chat_id}" }')
         expect(message_content).to include('partial: "llm/messages/message"')
@@ -212,6 +215,7 @@ RSpec.describe RubyLLM::Generators::ChatUIGenerator, :generator, type: :generato
         expect(message_content).to include('def broadcast_append_chunk(content)')
         expect(message_content).to include('broadcast_append_to "llm_chat_#{llm_chat_id}"')
         expect(message_content).to include('target: "llm_message_#{id}_content"')
+        # rubocop:enable Lint/InterpolationCheck
         expect(message_content).to include('partial: "llm/messages/content"')
       end
     end
