@@ -51,11 +51,7 @@ module RubyLLM
         process_attachments_array_or_string attachments
       end
     end
-  end
-end
 
-module RubyLLM
-  class Content
     # Represents provider-specific payloads that should bypass RubyLLM formatting.
     class Raw
       attr_reader :value
