@@ -356,8 +356,7 @@ def generate_aliases # rubocop:disable Metrics/PerceivedComplexity
   end
 
   models['bedrock'].each do |bedrock_model|
-    next unless bedrock_model.start_with?('anthropic.')
-    next unless bedrock_model =~ /anthropic\.(claude-[\d.]+-[a-z]+)/
+    next unless bedrock_model =~ /anthropic\.(claude-[\d.-]+-[a-z]+)/
 
     base_name = Regexp.last_match(1)
     anthropic_name = base_name.tr('.', '-')
@@ -366,13 +365,18 @@ def generate_aliases # rubocop:disable Metrics/PerceivedComplexity
 
     openrouter_variants = [
       "anthropic/#{anthropic_name}",
-      "anthropic/#{base_name}"
+      "anthropic/#{base_name}",
+      "anthropic/#{anthropic_name.gsub(/claude-(\d+)-(\d+)/, 'claude-\1.\2')}",
+      "anthropic/#{anthropic_name.gsub(/(\d+)-(\d+)/, '\1.\2')}"
     ]
 
     openrouter_model = openrouter_variants.find { |v| models['openrouter'].include?(v) }
 
+    # Find the full Anthropic model id when only the short base_name is known
+    anthropic_model = models['anthropic'].find { |m| m == anthropic_name || m.start_with?("#{anthropic_name}-") }
+
     aliases[anthropic_name] = { 'bedrock' => bedrock_model }
-    aliases[anthropic_name]['anthropic'] = anthropic_name if models['anthropic'].include?(anthropic_name)
+    aliases[anthropic_name]['anthropic'] = anthropic_model if anthropic_model
     aliases[anthropic_name]['openrouter'] = openrouter_model if openrouter_model
   end
 

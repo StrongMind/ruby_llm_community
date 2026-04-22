@@ -8,7 +8,7 @@ RSpec.describe RubyLLM::Chat do
   it 'finds models by alias name' do
     # Core test - can we find a model using just its alias?
     chat = RubyLLM.chat(model: 'claude-haiku-4-5')
-    expect(chat.model.id).to eq('claude-haiku-4-5')
+    expect(chat.model.id).to eq('claude-haiku-4-5-20251001')
     expect(chat.model.provider).to eq('anthropic')
   end
 
