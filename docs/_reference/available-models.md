@@ -30,7 +30,7 @@ redirect_from:
 ## Last Updated
 {: .d-inline-block }
 
-2026-04-21
+2026-04-22
 {: .label .label-green }
 
 ## Models by Provider
@@ -251,7 +251,7 @@ redirect_from:
 | text-moderation-stable | openai | - | 32768 | - |
 
 
-### OpenRouter (346)
+### OpenRouter (349)
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
@@ -286,6 +286,7 @@ redirect_from:
 | arcee-ai/coder-large | openrouter | 32768 | - | In: $0.50, Out: $0.80 |
 | arcee-ai/maestro-reasoning | openrouter | 131072 | 32000 | In: $0.90, Out: $3.30 |
 | arcee-ai/spotlight | openrouter | 131072 | 65537 | In: $0.18, Out: $0.18 |
+| arcee-ai/trinity-large-preview | openrouter | 131000 | - | In: $0.15, Out: $0.45 |
 | arcee-ai/trinity-large-preview:free | openrouter | 131000 | - | - |
 | arcee-ai/trinity-large-thinking | openrouter | 262144 | 262144 | In: $0.22, Out: $0.85, Cache: $0.06 |
 | arcee-ai/trinity-mini | openrouter | 131072 | 131072 | In: $0.04, Out: $0.15 |
@@ -321,7 +322,7 @@ redirect_from:
 | essentialai/rnj-1-instruct | openrouter | 32768 | - | In: $0.15, Out: $0.15 |
 | openrouter/free | openrouter | 200000 | - | - |
 | alpindale/goliath-120b | openrouter | 6144 | 1024 | In: $3.75, Out: $7.50 |
-| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -414,7 +415,7 @@ redirect_from:
 | moonshotai/kimi-k2-0905 | openrouter | 262144 | 262144 | In: $0.40, Out: $2.00 |
 | moonshotai/kimi-k2-thinking | openrouter | 262144 | 262144 | In: $0.60, Out: $2.50, Cache: $0.15 |
 | moonshotai/kimi-k2.5 | openrouter | 262144 | 65535 | In: $0.44, Out: $2.00, Cache: $0.22 |
-| moonshotai/kimi-k2.6 | openrouter | 262144 | 262144 | In: $0.60, Out: $2.80, Cache: $0.20 |
+| moonshotai/kimi-k2.6 | openrouter | 262144 | 262144 | In: $0.80, Out: $3.50, Cache: $0.20 |
 | morph/morph-v3-fast | openrouter | 81920 | 38000 | In: $0.80, Out: $1.20 |
 | morph/morph-v3-large | openrouter | 262144 | 131072 | In: $0.90, Out: $1.90 |
 | gryphe/mythomax-l2-13b | openrouter | 4096 | 4096 | In: $0.06, Out: $0.06 |
@@ -577,6 +578,8 @@ redirect_from:
 | xiaomi/mimo-v2-flash | openrouter | 262144 | 65536 | In: $0.09, Out: $0.29, Cache: $0.04 |
 | xiaomi/mimo-v2-omni | openrouter | 262144 | 65536 | In: $0.40, Out: $2.00, Cache: $0.08 |
 | xiaomi/mimo-v2-pro | openrouter | 1048576 | 131072 | In: $1.00, Out: $3.00, Cache: $0.20 |
+| xiaomi/mimo-v2.5 | openrouter | 1048576 | 131072 | In: $0.40, Out: $2.00, Cache: $0.08 |
+| xiaomi/mimo-v2.5-pro | openrouter | 1048576 | 131072 | In: $1.00, Out: $3.00, Cache: $0.20 |
 | z-ai/glm-4-32b | openrouter | 128000 | - | In: $0.10, Out: $0.10 |
 | z-ai/glm-4.5 | openrouter | 131072 | 98304 | In: $0.60, Out: $2.20, Cache: $0.11 |
 | z-ai/glm-4.5-air | openrouter | 131072 | 98304 | In: $0.13, Out: $0.85, Cache: $0.02 |
@@ -605,16 +608,16 @@ redirect_from:
 
 ## Models by Capability
 
-### Function Calling (361)
+### Function Calling (364)
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
-| anthropic.claude-3-haiku-20240307-v1:0:200k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
-| anthropic.claude-3-haiku-20240307-v1:0:48k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-haiku-20240307-v1:0 | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
-| anthropic.claude-3-sonnet-20240229-v1:0:200k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
+| anthropic.claude-3-haiku-20240307-v1:0:48k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
+| anthropic.claude-3-haiku-20240307-v1:0:200k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-sonnet-20240229-v1:0:28k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-sonnet-20240229-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
+| anthropic.claude-3-sonnet-20240229-v1:0:200k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-5-haiku-20241022-v1:0 | bedrock | 200000 | 4096 | In: $0.80, Out: $4.00 |
 | us.anthropic.claude-3-7-sonnet-20250219-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | us.anthropic.claude-haiku-4-5-20251001-v1:0 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
@@ -699,8 +702,8 @@ redirect_from:
 | codex-mini-latest | openai | 200000 | 100000 | In: $1.50, Out: $6.00, Cache: $0.38 |
 | computer-use-preview-2025-03-11 | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
 | computer-use-preview | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
-| gpt-audio | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-audio-2025-08-28 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
+| gpt-audio | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-audio-mini | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
 | gpt-audio-mini-2025-10-06 | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
 | gpt-oss-120b | openai | 131072 | 131072 | - |
@@ -745,6 +748,7 @@ redirect_from:
 | anthropic/claude-sonnet-4 | openrouter | 1000000 | 64000 | In: $3.00, Out: $15.00, Cache: $0.30 |
 | anthropic/claude-sonnet-4.5 | openrouter | 1000000 | 64000 | In: $3.00, Out: $15.00, Cache: $0.30 |
 | anthropic/claude-sonnet-4.6 | openrouter | 1000000 | 128000 | In: $3.00, Out: $15.00, Cache: $0.30 |
+| arcee-ai/trinity-large-preview | openrouter | 131000 | - | In: $0.15, Out: $0.45 |
 | arcee-ai/trinity-large-preview:free | openrouter | 131000 | - | - |
 | arcee-ai/trinity-large-thinking | openrouter | 262144 | 262144 | In: $0.22, Out: $0.85, Cache: $0.06 |
 | arcee-ai/trinity-mini | openrouter | 131072 | 131072 | In: $0.04, Out: $0.15 |
@@ -768,7 +772,7 @@ redirect_from:
 | deepseek/deepseek-r1-0528 | openrouter | 163840 | - | In: $0.50, Out: $2.15, Cache: $0.35 |
 | essentialai/rnj-1-instruct | openrouter | 32768 | - | In: $0.15, Out: $0.15 |
 | openrouter/free | openrouter | 200000 | - | - |
-| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -824,7 +828,7 @@ redirect_from:
 | moonshotai/kimi-k2-0905 | openrouter | 262144 | 262144 | In: $0.40, Out: $2.00 |
 | moonshotai/kimi-k2-thinking | openrouter | 262144 | 262144 | In: $0.60, Out: $2.50, Cache: $0.15 |
 | moonshotai/kimi-k2.5 | openrouter | 262144 | 65535 | In: $0.44, Out: $2.00, Cache: $0.22 |
-| moonshotai/kimi-k2.6 | openrouter | 262144 | 262144 | In: $0.60, Out: $2.80, Cache: $0.20 |
+| moonshotai/kimi-k2.6 | openrouter | 262144 | 262144 | In: $0.80, Out: $3.50, Cache: $0.20 |
 | nvidia/llama-3.1-nemotron-70b-instruct | openrouter | 131072 | 16384 | In: $1.20, Out: $1.20 |
 | nvidia/llama-3.3-nemotron-super-49b-v1.5 | openrouter | 131072 | - | In: $0.10, Out: $0.40 |
 | nvidia/nemotron-3-nano-30b-a3b | openrouter | 262144 | - | In: $0.05, Out: $0.20 |
@@ -947,6 +951,8 @@ redirect_from:
 | xiaomi/mimo-v2-flash | openrouter | 262144 | 65536 | In: $0.09, Out: $0.29, Cache: $0.04 |
 | xiaomi/mimo-v2-omni | openrouter | 262144 | 65536 | In: $0.40, Out: $2.00, Cache: $0.08 |
 | xiaomi/mimo-v2-pro | openrouter | 1048576 | 131072 | In: $1.00, Out: $3.00, Cache: $0.20 |
+| xiaomi/mimo-v2.5 | openrouter | 1048576 | 131072 | In: $0.40, Out: $2.00, Cache: $0.08 |
+| xiaomi/mimo-v2.5-pro | openrouter | 1048576 | 131072 | In: $1.00, Out: $3.00, Cache: $0.20 |
 | z-ai/glm-4-32b | openrouter | 128000 | - | In: $0.10, Out: $0.10 |
 | z-ai/glm-4.5 | openrouter | 131072 | 98304 | In: $0.60, Out: $2.20, Cache: $0.11 |
 | z-ai/glm-4.5-air | openrouter | 131072 | 98304 | In: $0.13, Out: $0.85, Cache: $0.02 |
@@ -972,7 +978,7 @@ redirect_from:
 | x-ai/grok-code-fast-1 | openrouter | 256000 | 10000 | In: $0.20, Out: $1.50, Cache: $0.02 |
 
 
-### Structured Output (351)
+### Structured Output (354)
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
@@ -1048,14 +1054,14 @@ redirect_from:
 | gpt-oss-20b | openai | 131072 | 131072 | - |
 | o1 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-2024-12-17 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
-| o1-preview-2024-09-12 | openai | 128000 | 32768 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-preview | openai | 128000 | 32768 | In: $15.00, Out: $60.00, Cache: $7.50 |
+| o1-preview-2024-09-12 | openai | 128000 | 32768 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-pro | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
 | o1-pro-2025-03-19 | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
 | o3 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | o3-2025-04-16 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
-| o3-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
 | o3-mini-2025-01-31 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
+| o3-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
 | o3-pro-2025-06-10 | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o3-pro | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o4-mini-2025-04-16 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
@@ -1072,6 +1078,7 @@ redirect_from:
 | ~anthropic/claude-opus-latest | openrouter | 1000000 | 128000 | In: $5.00, Out: $25.00, Cache: $0.50 |
 | anthropic/claude-sonnet-4.5 | openrouter | 1000000 | 64000 | In: $3.00, Out: $15.00, Cache: $0.30 |
 | anthropic/claude-sonnet-4.6 | openrouter | 1000000 | 128000 | In: $3.00, Out: $15.00, Cache: $0.30 |
+| arcee-ai/trinity-large-preview | openrouter | 131000 | - | In: $0.15, Out: $0.45 |
 | arcee-ai/trinity-large-preview:free | openrouter | 131000 | - | - |
 | arcee-ai/trinity-large-thinking | openrouter | 262144 | 262144 | In: $0.22, Out: $0.85, Cache: $0.06 |
 | arcee-ai/trinity-mini | openrouter | 131072 | 131072 | In: $0.04, Out: $0.15 |
@@ -1099,7 +1106,7 @@ redirect_from:
 | essentialai/rnj-1-instruct | openrouter | 32768 | - | In: $0.15, Out: $0.15 |
 | openrouter/free | openrouter | 200000 | - | - |
 | alpindale/goliath-120b | openrouter | 6144 | 1024 | In: $3.75, Out: $7.50 |
-| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -1171,7 +1178,7 @@ redirect_from:
 | moonshotai/kimi-k2-0905 | openrouter | 262144 | 262144 | In: $0.40, Out: $2.00 |
 | moonshotai/kimi-k2-thinking | openrouter | 262144 | 262144 | In: $0.60, Out: $2.50, Cache: $0.15 |
 | moonshotai/kimi-k2.5 | openrouter | 262144 | 65535 | In: $0.44, Out: $2.00, Cache: $0.22 |
-| moonshotai/kimi-k2.6 | openrouter | 262144 | 262144 | In: $0.60, Out: $2.80, Cache: $0.20 |
+| moonshotai/kimi-k2.6 | openrouter | 262144 | 262144 | In: $0.80, Out: $3.50, Cache: $0.20 |
 | gryphe/mythomax-l2-13b | openrouter | 4096 | 4096 | In: $0.06, Out: $0.06 |
 | nvidia/llama-3.1-nemotron-70b-instruct | openrouter | 131072 | 16384 | In: $1.20, Out: $1.20 |
 | nvidia/llama-3.3-nemotron-super-49b-v1.5 | openrouter | 131072 | - | In: $0.10, Out: $0.40 |
@@ -1307,6 +1314,8 @@ redirect_from:
 | xiaomi/mimo-v2-flash | openrouter | 262144 | 65536 | In: $0.09, Out: $0.29, Cache: $0.04 |
 | xiaomi/mimo-v2-omni | openrouter | 262144 | 65536 | In: $0.40, Out: $2.00, Cache: $0.08 |
 | xiaomi/mimo-v2-pro | openrouter | 1048576 | 131072 | In: $1.00, Out: $3.00, Cache: $0.20 |
+| xiaomi/mimo-v2.5 | openrouter | 1048576 | 131072 | In: $0.40, Out: $2.00, Cache: $0.08 |
+| xiaomi/mimo-v2.5-pro | openrouter | 1048576 | 131072 | In: $1.00, Out: $3.00, Cache: $0.20 |
 | z-ai/glm-4.5 | openrouter | 131072 | 98304 | In: $0.60, Out: $2.20, Cache: $0.11 |
 | z-ai/glm-4.6 | openrouter | 204800 | 204800 | In: $0.39, Out: $1.90 |
 | z-ai/glm-4.6v | openrouter | 131072 | 131072 | In: $0.30, Out: $0.90 |
@@ -1329,7 +1338,7 @@ redirect_from:
 | x-ai/grok-code-fast-1 | openrouter | 256000 | 10000 | In: $0.20, Out: $1.50, Cache: $0.02 |
 
 
-### Streaming (407)
+### Streaming (410)
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
@@ -1425,6 +1434,7 @@ redirect_from:
 | arcee-ai/coder-large | openrouter | 32768 | - | In: $0.50, Out: $0.80 |
 | arcee-ai/maestro-reasoning | openrouter | 131072 | 32000 | In: $0.90, Out: $3.30 |
 | arcee-ai/spotlight | openrouter | 131072 | 65537 | In: $0.18, Out: $0.18 |
+| arcee-ai/trinity-large-preview | openrouter | 131000 | - | In: $0.15, Out: $0.45 |
 | arcee-ai/trinity-large-preview:free | openrouter | 131000 | - | - |
 | arcee-ai/trinity-large-thinking | openrouter | 262144 | 262144 | In: $0.22, Out: $0.85, Cache: $0.06 |
 | arcee-ai/trinity-mini | openrouter | 131072 | 131072 | In: $0.04, Out: $0.15 |
@@ -1460,7 +1470,7 @@ redirect_from:
 | essentialai/rnj-1-instruct | openrouter | 32768 | - | In: $0.15, Out: $0.15 |
 | openrouter/free | openrouter | 200000 | - | - |
 | alpindale/goliath-120b | openrouter | 6144 | 1024 | In: $3.75, Out: $7.50 |
-| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -1553,7 +1563,7 @@ redirect_from:
 | moonshotai/kimi-k2-0905 | openrouter | 262144 | 262144 | In: $0.40, Out: $2.00 |
 | moonshotai/kimi-k2-thinking | openrouter | 262144 | 262144 | In: $0.60, Out: $2.50, Cache: $0.15 |
 | moonshotai/kimi-k2.5 | openrouter | 262144 | 65535 | In: $0.44, Out: $2.00, Cache: $0.22 |
-| moonshotai/kimi-k2.6 | openrouter | 262144 | 262144 | In: $0.60, Out: $2.80, Cache: $0.20 |
+| moonshotai/kimi-k2.6 | openrouter | 262144 | 262144 | In: $0.80, Out: $3.50, Cache: $0.20 |
 | morph/morph-v3-fast | openrouter | 81920 | 38000 | In: $0.80, Out: $1.20 |
 | morph/morph-v3-large | openrouter | 262144 | 131072 | In: $0.90, Out: $1.90 |
 | gryphe/mythomax-l2-13b | openrouter | 4096 | 4096 | In: $0.06, Out: $0.06 |
@@ -1716,6 +1726,8 @@ redirect_from:
 | xiaomi/mimo-v2-flash | openrouter | 262144 | 65536 | In: $0.09, Out: $0.29, Cache: $0.04 |
 | xiaomi/mimo-v2-omni | openrouter | 262144 | 65536 | In: $0.40, Out: $2.00, Cache: $0.08 |
 | xiaomi/mimo-v2-pro | openrouter | 1048576 | 131072 | In: $1.00, Out: $3.00, Cache: $0.20 |
+| xiaomi/mimo-v2.5 | openrouter | 1048576 | 131072 | In: $0.40, Out: $2.00, Cache: $0.08 |
+| xiaomi/mimo-v2.5-pro | openrouter | 1048576 | 131072 | In: $1.00, Out: $3.00, Cache: $0.20 |
 | z-ai/glm-4-32b | openrouter | 128000 | - | In: $0.10, Out: $0.10 |
 | z-ai/glm-4.5 | openrouter | 131072 | 98304 | In: $0.60, Out: $2.20, Cache: $0.11 |
 | z-ai/glm-4.5-air | openrouter | 131072 | 98304 | In: $0.13, Out: $0.85, Cache: $0.02 |
@@ -1816,7 +1828,7 @@ redirect_from:
 
 ## Models by Modality
 
-### Vision Models (270)
+### Vision Models (271)
 
 Models that can process images:
 
@@ -1972,7 +1984,7 @@ Models that can process images:
 | bytedance-seed/seed-2.0-mini | openrouter | 262144 | 131072 | In: $0.10, Out: $0.40 |
 | bytedance/ui-tars-1.5-7b | openrouter | 128000 | 2048 | In: $0.10, Out: $0.20, Cache: $0.10 |
 | openrouter/free | openrouter | 200000 | - | - |
-| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -2015,7 +2027,7 @@ Models that can process images:
 | mistralai/mistral-small-2603 | openrouter | 262144 | - | In: $0.15, Out: $0.60, Cache: $0.02 |
 | mistralai/pixtral-large-2411 | openrouter | 131072 | - | In: $2.00, Out: $6.00, Cache: $0.20 |
 | moonshotai/kimi-k2.5 | openrouter | 262144 | 65535 | In: $0.44, Out: $2.00, Cache: $0.22 |
-| moonshotai/kimi-k2.6 | openrouter | 262144 | 262144 | In: $0.60, Out: $2.80, Cache: $0.20 |
+| moonshotai/kimi-k2.6 | openrouter | 262144 | 262144 | In: $0.80, Out: $3.50, Cache: $0.20 |
 | nvidia/nemotron-nano-12b-v2-vl | openrouter | 131072 | - | In: $0.20, Out: $0.60 |
 | nvidia/nemotron-nano-12b-v2-vl:free | openrouter | 128000 | 128000 | - |
 | openai/gpt-4-turbo | openrouter | 128000 | 4096 | In: $10.00, Out: $30.00 |
@@ -2084,6 +2096,7 @@ Models that can process images:
 | qwen/qwen3.6-plus | openrouter | 1000000 | 65536 | In: $0.32, Out: $1.95 |
 | rekaai/reka-edge | openrouter | 16384 | 16384 | In: $0.10, Out: $0.10 |
 | xiaomi/mimo-v2-omni | openrouter | 262144 | 65536 | In: $0.40, Out: $2.00, Cache: $0.08 |
+| xiaomi/mimo-v2.5 | openrouter | 1048576 | 131072 | In: $0.40, Out: $2.00, Cache: $0.08 |
 | z-ai/glm-4.5v | openrouter | 65536 | 16384 | In: $0.60, Out: $1.80, Cache: $0.11 |
 | z-ai/glm-4.6v | openrouter | 131072 | 131072 | In: $0.30, Out: $0.90 |
 | z-ai/glm-5v-turbo | openrouter | 202752 | 131072 | In: $1.20, Out: $4.00, Cache: $0.24 |
@@ -2094,7 +2107,7 @@ Models that can process images:
 | x-ai/grok-4.20-multi-agent | openrouter | 2000000 | - | In: $2.00, Out: $6.00, Cache: $0.20 |
 
 
-### Audio Input Models (57)
+### Audio Input Models (58)
 
 Models that can process audio:
 
@@ -2105,8 +2118,8 @@ Models that can process audio:
 | gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gemini-2.0-flash-lite | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | gemini-2.5-flash | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | gemini-2.5-flash-lite | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | gemini-2.5-pro | gemini | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
@@ -2116,12 +2129,12 @@ Models that can process audio:
 | gpt-4o-realtime-preview | openai | 32000 | 4096 | In: $5.00, Out: $20.00, Cache: $2.50 |
 | gpt-4o-transcribe | openai | 16000 | 2000 | In: $2.50, Out: $10.00 |
 | gpt-4o-transcribe-diarize | openai | 16000 | 2000 | In: $2.50, Out: $10.00 |
-| gpt-4o-mini-audio-preview | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
 | gpt-4o-mini-audio-preview-2024-12-17 | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
+| gpt-4o-mini-audio-preview | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
 | gpt-4o-mini-realtime-preview | openai | 16000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.30 |
 | gpt-4o-mini-realtime-preview-2024-12-17 | openai | 16000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.30 |
-| gpt-4o-mini-transcribe | openai | 16000 | 2000 | - |
 | gpt-4o-mini-transcribe-2025-12-15 | openai | 16000 | 2000 | - |
+| gpt-4o-mini-transcribe | openai | 16000 | 2000 | - |
 | gpt-4o-audio-preview-2024-12-17 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-audio-preview-2025-06-03 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-mini-transcribe-2025-03-20 | openai | 16000 | 2000 | In: $1.25, Out: $5.00 |
@@ -2131,16 +2144,16 @@ Models that can process audio:
 | tts-1-1106 | openai | - | - | In: $15.00, Out: $15.00 |
 | tts-1-hd-1106 | openai | - | - | In: $30.00, Out: $30.00 |
 | whisper-1 | openai | - | - | In: $0.01 |
-| gpt-audio-2025-08-28 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-audio | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
-| gpt-audio-mini-2025-10-06 | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
+| gpt-audio-2025-08-28 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-audio-mini | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
+| gpt-audio-mini-2025-10-06 | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
 | gpt-realtime-2025-08-28 | openai | 32000 | 4096 | In: $4.00, Out: $16.00, Cache: $0.40 |
 | gpt-realtime | openai | 32000 | 4096 | In: $4.00, Out: $16.00, Cache: $0.40 |
 | gpt-realtime-mini-2025-10-06 | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
 | gpt-realtime-mini | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
 | openrouter/auto | openrouter | 2000000 | - | - |
-| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -2157,6 +2170,7 @@ Models that can process audio:
 | openai/gpt-audio-mini | openrouter | 128000 | 16384 | In: $0.60, Out: $2.40 |
 | openai/gpt-4o-audio-preview | openrouter | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | xiaomi/mimo-v2-omni | openrouter | 262144 | 65536 | In: $0.40, Out: $2.00, Cache: $0.08 |
+| xiaomi/mimo-v2.5 | openrouter | 1048576 | 131072 | In: $0.40, Out: $2.00, Cache: $0.08 |
 
 
 ### PDF Models (41)
