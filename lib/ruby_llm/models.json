@@ -1,5 +1,6000 @@
 [
   {
+    "id": "deepseek-chat",
+    "name": "deepseek-chat",
+    "provider": "deepseek",
+    "family": "deepseek-chat",
+    "created_at": null,
+    "context_window": 128000,
+    "max_output_tokens": 8000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.28,
+          "cached_input_per_million": 0.028,
+          "output_per_million": 0.42
+        }
+      }
+    },
+    "metadata": {
+      "object": "model",
+      "owned_by": "deepseek"
+    }
+  },
+  {
+    "id": "deepseek-reasoner",
+    "name": "deepseek-reasoner",
+    "provider": "deepseek",
+    "family": "deepseek-reasoner",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": 64000,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "deepseek"
+    }
+  },
+  {
+    "id": "aqa",
+    "name": "Model that performs Attributed Question Answering.",
+    "provider": "gemini",
+    "family": "aqa",
+    "created_at": null,
+    "context_window": 7168,
+    "max_output_tokens": 1024,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version": "001",
+      "description": "Model trained to return answers to questions that are grounded in provided sources, along with estimating answerable probability.",
+      "supported_generation_methods": [
+        "generateAnswer"
+      ]
+    }
+  },
+  {
+    "id": "embedding-001",
+    "name": "Embedding 001",
+    "provider": "gemini",
+    "family": "embedding1",
+    "created_at": null,
+    "context_window": 2048,
+    "max_output_tokens": 1,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text",
+        "embeddings"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "batch"
+    ],
+    "pricing": {
+      "embeddings": {
+        "standard": {
+          "input_per_million": 0.002
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": "Obtain a distributed representation of a text.",
+      "supported_generation_methods": [
+        "embedContent"
+      ]
+    }
+  },
+  {
+    "id": "embedding-gecko-001",
+    "name": "Embedding Gecko",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1024,
+    "max_output_tokens": 1,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text",
+        "embeddings"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "batch"
+    ],
+    "pricing": {
+      "embeddings": {
+        "standard": {
+          "input_per_million": 0.002
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": "Obtain a distributed representation of a text.",
+      "supported_generation_methods": [
+        "embedText",
+        "countTextTokens"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash",
+    "name": "Gemini 2.0 Flash",
+    "provider": "gemini",
+    "family": "gemini-2.0-flash",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "audio",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "batch",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.1,
+          "cached_input_per_million": 0.025,
+          "output_per_million": 0.4
+        },
+        "batch": {
+          "input_per_million": 0.05,
+          "output_per_million": 0.2
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.0",
+      "description": "Gemini 2.0 Flash",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-001",
+    "name": "Gemini 2.0 Flash 001",
+    "provider": "gemini",
+    "family": "gemini20_flash",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.1,
+          "output_per_million": 0.4
+        },
+        "batch": {
+          "input_per_million": 0.05,
+          "output_per_million": 0.2
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.0",
+      "description": "Stable version of Gemini 2.0 Flash, our fast and versatile multimodal model for scaling across diverse tasks, released in January of 2025.",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-exp",
+    "name": "Gemini 2.0 Flash Experimental",
+    "provider": "gemini",
+    "family": "gemini20_flash",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.1,
+          "output_per_million": 0.4
+        },
+        "batch": {
+          "input_per_million": 0.05,
+          "output_per_million": 0.2
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.0",
+      "description": "Gemini 2.0 Flash Experimental",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "bidiGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-exp-image-generation",
+    "name": "Gemini 2.0 Flash (Image Generation) Experimental",
+    "provider": "gemini",
+    "family": "gemini20_flash",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.1,
+          "output_per_million": 0.4
+        },
+        "batch": {
+          "input_per_million": 0.05,
+          "output_per_million": 0.2
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.0",
+      "description": "Gemini 2.0 Flash (Image Generation) Experimental",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "bidiGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-lite",
+    "name": "Gemini 2.0 Flash-Lite",
+    "provider": "gemini",
+    "family": "gemini-2.0-flash-lite",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "audio",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "batch",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.1,
+          "cached_input_per_million": 0.025,
+          "output_per_million": 0.4
+        },
+        "batch": {
+          "input_per_million": 0.05,
+          "output_per_million": 0.2
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.0",
+      "description": "Gemini 2.0 Flash-Lite",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-lite-001",
+    "name": "Gemini 2.0 Flash-Lite 001",
+    "provider": "gemini",
+    "family": "gemini20_flash_lite",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "batch"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.0",
+      "description": "Stable version of Gemini 2.0 Flash-Lite",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-lite-preview",
+    "name": "Gemini 2.0 Flash-Lite Preview",
+    "provider": "gemini",
+    "family": "gemini20_flash_lite",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "batch"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "preview-02-05",
+      "description": "Preview release (February 5th, 2025) of Gemini 2.0 Flash-Lite",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-lite-preview-02-05",
+    "name": "Gemini 2.0 Flash-Lite Preview 02-05",
+    "provider": "gemini",
+    "family": "gemini20_flash_lite",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "batch"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "preview-02-05",
+      "description": "Preview release (February 5th, 2025) of Gemini 2.0 Flash-Lite",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-thinking-exp",
+    "name": "Gemini 2.5 Flash Preview 05-20",
+    "provider": "gemini",
+    "family": "gemini20_flash",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.1,
+          "output_per_million": 0.4
+        },
+        "batch": {
+          "input_per_million": 0.05,
+          "output_per_million": 0.2
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5-preview-05-20",
+      "description": "Preview release (April 17th, 2025) of Gemini 2.5 Flash",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-thinking-exp-01-21",
+    "name": "Gemini 2.5 Flash Preview 05-20",
+    "provider": "gemini",
+    "family": "gemini20_flash",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.1,
+          "output_per_million": 0.4
+        },
+        "batch": {
+          "input_per_million": 0.05,
+          "output_per_million": 0.2
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5-preview-05-20",
+      "description": "Preview release (April 17th, 2025) of Gemini 2.5 Flash",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-thinking-exp-1219",
+    "name": "Gemini 2.5 Flash Preview 05-20",
+    "provider": "gemini",
+    "family": "gemini20_flash",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.1,
+          "output_per_million": 0.4
+        },
+        "batch": {
+          "input_per_million": 0.05,
+          "output_per_million": 0.2
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5-preview-05-20",
+      "description": "Preview release (April 17th, 2025) of Gemini 2.5 Flash",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-pro-exp",
+    "name": "Gemini 2.0 Pro Experimental",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5-exp-03-25",
+      "description": "Experimental release (March 25th, 2025) of Gemini 2.5 Pro",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.0-pro-exp-02-05",
+    "name": "Gemini 2.0 Pro Experimental 02-05",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5-exp-03-25",
+      "description": "Experimental release (March 25th, 2025) of Gemini 2.5 Pro",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-computer-use-preview-10-2025",
+    "name": "Gemini 2.5 Computer Use Preview 10-2025",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "Gemini 2.5 Computer Use Preview 10-2025",
+      "description": "Gemini 2.5 Computer Use Preview 10-2025",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-flash",
+    "name": "Gemini 2.5 Flash",
+    "provider": "gemini",
+    "family": "gemini-2.5-flash",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "audio",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "batch",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.3,
+          "cached_input_per_million": 0.03,
+          "output_per_million": 2.5
+        },
+        "batch": {
+          "input_per_million": 0.15,
+          "output_per_million": 1.25
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": "Stable version of Gemini 2.5 Flash, our mid-size multimodal model that supports up to 1 million tokens, released in June of 2025.",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-flash-image",
+    "name": "Nano Banana",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 32768,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.0",
+      "description": "Gemini 2.5 Flash Preview Image",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-flash-image-preview",
+    "name": "Nano Banana",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 32768,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.0",
+      "description": "Gemini 2.5 Flash Preview Image",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-flash-lite",
+    "name": "Gemini 2.5 Flash-Lite",
+    "provider": "gemini",
+    "family": "gemini-2.5-flash-lite",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "audio",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "batch",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.3,
+          "cached_input_per_million": 0.03,
+          "output_per_million": 2.5
+        },
+        "batch": {
+          "input_per_million": 0.15,
+          "output_per_million": 1.25
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": "Stable version of Gemini 2.5 Flash-Lite, released in July of 2025",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-flash-lite-preview-09-2025",
+    "name": "Gemini 2.5 Flash-Lite Preview Sep 2025",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "structured_output",
+      "batch"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5-preview-09-25",
+      "description": "Preview release (Septempber 25th, 2025) of Gemini 2.5 Flash-Lite",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-flash-preview-09-2025",
+    "name": "Gemini 2.5 Flash Preview Sep 2025",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "Gemini 2.5 Flash Preview 09-2025",
+      "description": "Gemini 2.5 Flash Preview Sep 2025",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-flash-preview-tts",
+    "name": "Gemini 2.5 Flash Preview TTS",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 8192,
+    "max_output_tokens": 16384,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "gemini-2.5-flash-exp-tts-2025-05-19",
+      "description": "Gemini 2.5 Flash Preview TTS",
+      "supported_generation_methods": [
+        "countTokens",
+        "generateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-pro",
+    "name": "Gemini 2.5 Pro",
+    "provider": "gemini",
+    "family": "gemini-2.5-pro",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "audio",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "batch",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 1.25,
+          "cached_input_per_million": 0.125,
+          "output_per_million": 10.0
+        },
+        "batch": {
+          "input_per_million": 0.625,
+          "output_per_million": 5.0
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5",
+      "description": "Stable release (June 17th, 2025) of Gemini 2.5 Pro",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-pro-preview-03-25",
+    "name": "Gemini 2.5 Pro Preview 03-25",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5-preview-03-25",
+      "description": "Gemini 2.5 Pro Preview 03-25",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-pro-preview-05-06",
+    "name": "Gemini 2.5 Pro Preview 05-06",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5-preview-05-06",
+      "description": "Preview release (May 6th, 2025) of Gemini 2.5 Pro",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-pro-preview-06-05",
+    "name": "Gemini 2.5 Pro Preview",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5-preview-06-05",
+      "description": "Preview release (June 5th, 2025) of Gemini 2.5 Pro",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-2.5-pro-preview-tts",
+    "name": "Gemini 2.5 Pro Preview TTS",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 8192,
+    "max_output_tokens": 16384,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "gemini-2.5-pro-preview-tts-2025-05-19",
+      "description": "Gemini 2.5 Pro Preview TTS",
+      "supported_generation_methods": [
+        "countTokens",
+        "generateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-3-pro-preview",
+    "name": "Gemini 3 Pro Preview",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "3-pro-preview-11-2025",
+      "description": "Gemini 3 Pro Preview",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-embedding-001",
+    "name": "Gemini Embedding 001",
+    "provider": "gemini",
+    "family": "embedding1",
+    "created_at": null,
+    "context_window": 2048,
+    "max_output_tokens": 1,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "video"
+      ],
+      "output": [
+        "text",
+        "embeddings"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "batch"
+    ],
+    "pricing": {
+      "embeddings": {
+        "standard": {
+          "input_per_million": 0.002
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": "Obtain a distributed representation of a text.",
+      "supported_generation_methods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens",
+        "asyncBatchEmbedContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-embedding-exp",
+    "name": "Gemini Embedding Experimental",
+    "provider": "gemini",
+    "family": "gemini_embedding_exp",
+    "created_at": null,
+    "context_window": 8192,
+    "max_output_tokens": 1,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text",
+        "embeddings"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.002,
+          "output_per_million": 0.004
+        },
+        "batch": {
+          "input_per_million": 0.001,
+          "output_per_million": 0.002
+        }
+      },
+      "embeddings": {
+        "standard": {
+          "input_per_million": 0.002
+        }
+      }
+    },
+    "metadata": {
+      "version": "exp-03-07",
+      "description": "Obtain a distributed representation of a text.",
+      "supported_generation_methods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "gemini-embedding-exp-03-07",
+    "name": "Gemini Embedding Experimental 03-07",
+    "provider": "gemini",
+    "family": "gemini_embedding_exp",
+    "created_at": null,
+    "context_window": 8192,
+    "max_output_tokens": 1,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text",
+        "embeddings"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.002,
+          "output_per_million": 0.004
+        },
+        "batch": {
+          "input_per_million": 0.001,
+          "output_per_million": 0.002
+        }
+      },
+      "embeddings": {
+        "standard": {
+          "input_per_million": 0.002
+        }
+      }
+    },
+    "metadata": {
+      "version": "exp-03-07",
+      "description": "Obtain a distributed representation of a text.",
+      "supported_generation_methods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "gemini-exp-1206",
+    "name": "Gemini Experimental 1206",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.5-exp-03-25",
+      "description": "Experimental release (March 25th, 2025) of Gemini 2.5 Pro",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-flash-latest",
+    "name": "Gemini Flash Latest",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "Gemini Flash Latest",
+      "description": "Latest release of Gemini Flash",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-flash-lite-latest",
+    "name": "Gemini Flash-Lite Latest",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "structured_output",
+      "batch"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "Gemini Flash-Lite Latest",
+      "description": "Latest release of Gemini Flash-Lite",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-pro-latest",
+    "name": "Gemini Pro Latest",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "Gemini Pro Latest",
+      "description": "Latest release of Gemini Pro",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ]
+    }
+  },
+  {
+    "id": "gemini-robotics-er-1.5-preview",
+    "name": "Gemini Robotics-ER 1.5 Preview",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "1.5-preview",
+      "description": "Gemini Robotics-ER 1.5 Preview",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "gemma-3-12b-it",
+    "name": "Gemma 3 12B",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": null,
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "gemma-3-1b-it",
+    "name": "Gemma 3 1B",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": null,
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "gemma-3-27b-it",
+    "name": "Gemma 3 27B",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": null,
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "gemma-3-4b-it",
+    "name": "Gemma 3 4B",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": null,
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "gemma-3n-e2b-it",
+    "name": "Gemma 3n E2B",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 8192,
+    "max_output_tokens": 2048,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": null,
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "gemma-3n-e4b-it",
+    "name": "Gemma 3n E4B",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 8192,
+    "max_output_tokens": 2048,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "001",
+      "description": null,
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "imagen-4.0-generate-001",
+    "name": "Imagen 4",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 480,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version": "001",
+      "description": "Vertex served Imagen 4.0 model",
+      "supported_generation_methods": [
+        "predict"
+      ]
+    }
+  },
+  {
+    "id": "imagen-4.0-generate-preview-06-06",
+    "name": "Imagen 4 (Preview)",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 480,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version": "01",
+      "description": "Vertex served Imagen 4.0 model",
+      "supported_generation_methods": [
+        "predict"
+      ]
+    }
+  },
+  {
+    "id": "imagen-4.0-ultra-generate-001",
+    "name": "Imagen 4 Ultra",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 480,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version": "001",
+      "description": "Vertex served Imagen 4.0 ultra model",
+      "supported_generation_methods": [
+        "predict"
+      ]
+    }
+  },
+  {
+    "id": "imagen-4.0-ultra-generate-preview-06-06",
+    "name": "Imagen 4 Ultra (Preview)",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 480,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "image"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version": "01",
+      "description": "Vertex served Imagen 4.0 ultra model",
+      "supported_generation_methods": [
+        "predict"
+      ]
+    }
+  },
+  {
+    "id": "learnlm-2.0-flash-experimental",
+    "name": "LearnLM 2.0 Flash Experimental",
+    "provider": "gemini",
+    "family": "other",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 32768,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.075,
+          "output_per_million": 0.3
+        },
+        "batch": {
+          "input_per_million": 0.0375,
+          "output_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "version": "2.0",
+      "description": "LearnLM 2.0 Flash Experimental",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens"
+      ]
+    }
+  },
+  {
+    "id": "text-embedding-004",
+    "name": "Text Embedding 004",
+    "provider": "gemini",
+    "family": "embedding4",
+    "created_at": null,
+    "context_window": 2048,
+    "max_output_tokens": 1,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text",
+        "embeddings"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "batch"
+    ],
+    "pricing": {
+      "embeddings": {
+        "standard": {
+          "input_per_million": 0.002
+        }
+      }
+    },
+    "metadata": {
+      "version": "004",
+      "description": "Obtain a distributed representation of a text.",
+      "supported_generation_methods": [
+        "embedContent"
+      ]
+    }
+  },
+  {
+    "id": "codestral-2411-rc5",
+    "name": "Codestral",
+    "provider": "mistral",
+    "family": "codestral",
+    "created_at": "2024-11-26 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "predicted_outputs"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "codestral-2412",
+    "name": "Codestral",
+    "provider": "mistral",
+    "family": "codestral",
+    "created_at": "2024-12-17 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "predicted_outputs"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "codestral-2501",
+    "name": "Codestral",
+    "provider": "mistral",
+    "family": "codestral",
+    "created_at": "2025-01-14 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "predicted_outputs"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "codestral-2508",
+    "name": "Codestral",
+    "provider": "mistral",
+    "family": "codestral",
+    "created_at": "2025-08-30 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "predicted_outputs"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "codestral-embed",
+    "name": "Codestral",
+    "provider": "mistral",
+    "family": "codestral",
+    "created_at": "2025-05-21 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "embeddings"
+      ]
+    },
+    "capabilities": [
+      "predicted_outputs"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "codestral-embed-2505",
+    "name": "Codestral",
+    "provider": "mistral",
+    "family": "codestral",
+    "created_at": "2025-05-21 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "embeddings"
+      ]
+    },
+    "capabilities": [
+      "predicted_outputs"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "codestral-latest",
+    "name": "Codestral",
+    "provider": "mistral",
+    "family": "codestral",
+    "created_at": "2025-08-30 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "predicted_outputs"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "devstral-medium-2507",
+    "name": "Devstral Medium 2507",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2025-07-09 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "devstral-medium-latest",
+    "name": "Devstral Medium Latest",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2025-07-09 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "devstral-small-2505",
+    "name": "Devstral Small 2505",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2025-05-28 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "devstral-small-2507",
+    "name": "Devstral Small 2507",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2025-07-09 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "devstral-small-latest",
+    "name": "Devstral Small Latest",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2025-07-09 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "magistral-medium-2506",
+    "name": "Magistral Medium 2506",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2025-06-10 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "magistral-medium-2507",
+    "name": "Magistral Medium 2507",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "magistral-medium-2509",
+    "name": "Magistral Medium 2509",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "magistral-medium-latest",
+    "name": "Magistral Medium Latest",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2025-06-10 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "magistral-small-2506",
+    "name": "Magistral Small 2506",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "magistral-small-2507",
+    "name": "Magistral Small 2507",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "magistral-small-2509",
+    "name": "Magistral Small 2509",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "magistral-small-latest",
+    "name": "Magistral Small Latest",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "ministral-3b-2410",
+    "name": "Ministral 3B",
+    "provider": "mistral",
+    "family": "ministral",
+    "created_at": "2024-10-16 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "distillation"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "ministral-3b-latest",
+    "name": "Ministral 3B",
+    "provider": "mistral",
+    "family": "ministral",
+    "created_at": "2024-10-16 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "distillation"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "ministral-8b-2410",
+    "name": "Ministral 8B",
+    "provider": "mistral",
+    "family": "ministral",
+    "created_at": "2024-10-16 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "distillation"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "ministral-8b-latest",
+    "name": "Ministral 8B",
+    "provider": "mistral",
+    "family": "ministral",
+    "created_at": "2024-10-16 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "distillation"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-embed",
+    "name": "Mistral Embed",
+    "provider": "mistral",
+    "family": "mistral-embed",
+    "created_at": "2024-01-11 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "embeddings"
+      ]
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-embed-2312",
+    "name": "Mistral Embed",
+    "provider": "mistral",
+    "family": "mistral-embed",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "embeddings"
+      ]
+    },
+    "capabilities": [],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-large-2411",
+    "name": "Mistral Large",
+    "provider": "mistral",
+    "family": "mistral-large",
+    "created_at": "2024-11-20 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-large-latest",
+    "name": "Mistral Large",
+    "provider": "mistral",
+    "family": "mistral-large",
+    "created_at": "2024-11-20 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-large-pixtral-2411",
+    "name": "Mistral Large",
+    "provider": "mistral",
+    "family": "mistral-large",
+    "created_at": "2024-11-12 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-medium",
+    "name": "Mistral Medium",
+    "provider": "mistral",
+    "family": "mistral-medium",
+    "created_at": "2025-05-06 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-medium-2505",
+    "name": "Mistral Medium",
+    "provider": "mistral",
+    "family": "mistral-medium",
+    "created_at": "2025-05-06 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-medium-2508",
+    "name": "Mistral Medium",
+    "provider": "mistral",
+    "family": "mistral-medium",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-medium-latest",
+    "name": "Mistral Medium",
+    "provider": "mistral",
+    "family": "mistral-medium",
+    "created_at": "2025-05-06 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-moderation-2411",
+    "name": "Mistral Moderation",
+    "provider": "mistral",
+    "family": "mistral-moderation",
+    "created_at": "2024-11-26 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "moderation"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-moderation-latest",
+    "name": "Mistral Moderation",
+    "provider": "mistral",
+    "family": "mistral-moderation",
+    "created_at": "2024-11-26 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "moderation"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-ocr-2503",
+    "name": "Mistral Ocr 2503",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2025-03-21 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "vision"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-ocr-2505",
+    "name": "Mistral Ocr 2505",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2025-05-23 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "vision"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-ocr-latest",
+    "name": "Mistral Ocr Latest",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2025-05-23 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "vision"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-small-2409",
+    "name": "Mistral Small",
+    "provider": "mistral",
+    "family": "mistral-small",
+    "created_at": "2024-09-18 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-small-2501",
+    "name": "Mistral Small",
+    "provider": "mistral",
+    "family": "mistral-small",
+    "created_at": "2025-01-13 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-small-2503",
+    "name": "Mistral Small",
+    "provider": "mistral",
+    "family": "mistral-small",
+    "created_at": "2025-03-03 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-small-2506",
+    "name": "Mistral Small",
+    "provider": "mistral",
+    "family": "mistral-small",
+    "created_at": "2025-06-10 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-small-latest",
+    "name": "Mistral Small",
+    "provider": "mistral",
+    "family": "mistral-small",
+    "created_at": "2025-06-10 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch",
+      "fine_tuning"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-tiny",
+    "name": "Mistral Tiny",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2023-09-27 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-tiny-2312",
+    "name": "Mistral Tiny 2312",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2023-12-11 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-tiny-2407",
+    "name": "Mistral Tiny 2407",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2024-07-18 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "mistral-tiny-latest",
+    "name": "Mistral Tiny Latest",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2024-07-18 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "open-mistral-7b",
+    "name": "Open Mistral 7b",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2023-09-27 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "open-mistral-nemo",
+    "name": "Open Mistral Nemo",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2024-07-18 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "open-mistral-nemo-2407",
+    "name": "Open Mistral Nemo 2407",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": "2024-07-18 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "pixtral-12b",
+    "name": "Pixtral 12B",
+    "provider": "mistral",
+    "family": "pixtral",
+    "created_at": "2024-09-17 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "pixtral-12b-2409",
+    "name": "Pixtral 12B",
+    "provider": "mistral",
+    "family": "pixtral",
+    "created_at": "2024-09-17 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "pixtral-12b-latest",
+    "name": "Pixtral 12B",
+    "provider": "mistral",
+    "family": "pixtral",
+    "created_at": "2024-09-17 00:00:00 -0700",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "pixtral-large-2411",
+    "name": "Pixtral Large",
+    "provider": "mistral",
+    "family": "pixtral",
+    "created_at": "2024-11-12 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "pixtral-large-latest",
+    "name": "Pixtral Large",
+    "provider": "mistral",
+    "family": "pixtral",
+    "created_at": "2024-11-12 00:00:00 -0800",
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output",
+      "vision",
+      "batch"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "voxtral-mini-2507",
+    "name": "Voxtral Mini 2507",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "voxtral-mini-latest",
+    "name": "Voxtral Mini Latest",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "voxtral-mini-transcribe-2507",
+    "name": "Voxtral Mini Transcribe 2507",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "transcription"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "voxtral-small-2507",
+    "name": "Voxtral Small 2507",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "voxtral-small-latest",
+    "name": "Voxtral Small Latest",
+    "provider": "mistral",
+    "family": "mistral",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "object": "model",
+      "owned_by": "mistralai"
+    }
+  },
+  {
+    "id": "sonar",
+    "name": "Sonar",
+    "provider": "perplexity",
+    "family": "sonar",
+    "created_at": "2025-11-18 17:35:00 -0800",
+    "context_window": 128000,
+    "max_output_tokens": 4096,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "json_mode",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 1.0,
+          "output_per_million": 1.0
+        }
+      }
+    },
+    "metadata": {}
+  },
+  {
+    "id": "sonar-deep-research",
+    "name": "Sonar Deep Research",
+    "provider": "perplexity",
+    "family": "sonar_deep_research",
+    "created_at": "2025-11-18 17:35:00 -0800",
+    "context_window": 128000,
+    "max_output_tokens": 4096,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "json_mode",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 8.0,
+          "citation_per_million": 2.0,
+          "reasoning_per_million": 3.0,
+          "search_per_thousand": 5.0
+        }
+      }
+    },
+    "metadata": {}
+  },
+  {
+    "id": "sonar-pro",
+    "name": "Sonar Pro",
+    "provider": "perplexity",
+    "family": "sonar_pro",
+    "created_at": "2025-11-18 17:35:00 -0800",
+    "context_window": 200000,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "json_mode",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3.0,
+          "output_per_million": 15.0
+        }
+      }
+    },
+    "metadata": {}
+  },
+  {
+    "id": "sonar-reasoning",
+    "name": "Sonar Reasoning",
+    "provider": "perplexity",
+    "family": "sonar_reasoning",
+    "created_at": "2025-11-18 17:35:00 -0800",
+    "context_window": 128000,
+    "max_output_tokens": 4096,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "json_mode",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 1.0,
+          "output_per_million": 5.0
+        }
+      }
+    },
+    "metadata": {}
+  },
+  {
+    "id": "sonar-reasoning-pro",
+    "name": "Sonar Reasoning Pro",
+    "provider": "perplexity",
+    "family": "sonar_reasoning_pro",
+    "created_at": "2025-11-18 17:35:00 -0800",
+    "context_window": 128000,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "json_mode",
+      "vision"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 8.0
+        }
+      }
+    },
+    "metadata": {}
+  },
+  {
+    "id": "chat-bison",
+    "name": "chat-bison",
+    "provider": "vertexai",
+    "family": "palm",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "002",
+      "open_source_category": "PROPRIETARY",
+      "launch_stage": "GA",
+      "supported_actions": {
+        "openGenie": {
+          "references": {
+            "us-central1": {
+              "uri": "https://console.cloud.google.com/vertex-ai/generative/language/create/chat"
+            }
+          },
+          "title": "Open Prompt Design"
+        }
+      },
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/chat-bison@002"
+    }
+  },
+  {
+    "id": "code-bison",
+    "name": "code-bison",
+    "provider": "vertexai",
+    "family": "palm",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "002",
+      "open_source_category": null,
+      "launch_stage": "GA",
+      "supported_actions": null,
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/code-bison@002"
+    }
+  },
+  {
+    "id": "code-gecko",
+    "name": "code-gecko",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "002",
+      "open_source_category": null,
+      "launch_stage": "GA",
+      "supported_actions": null,
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/code-gecko@002"
+    }
+  },
+  {
+    "id": "codechat-bison",
+    "name": "codechat-bison",
+    "provider": "vertexai",
+    "family": "palm",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "002",
+      "open_source_category": null,
+      "launch_stage": "GA",
+      "supported_actions": null,
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/codechat-bison@002"
+    }
+  },
+  {
+    "id": "gemini-1.5-flash",
+    "name": "gemini-1.5-flash",
+    "provider": "vertexai",
+    "family": "gemini-1.5",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-1.5-flash-002",
+    "name": "gemini-1.5-flash-002",
+    "provider": "vertexai",
+    "family": "gemini-1.5",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-1.5-flash-8b",
+    "name": "gemini-1.5-flash-8b",
+    "provider": "vertexai",
+    "family": "gemini-1.5",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-1.5-pro",
+    "name": "gemini-1.5-pro",
+    "provider": "vertexai",
+    "family": "gemini-1.5",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-1.5-pro-002",
+    "name": "gemini-1.5-pro-002",
+    "provider": "vertexai",
+    "family": "gemini-1.5",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-2.0-flash",
+    "name": "Gemini 2.0 Flash",
+    "provider": "vertexai",
+    "family": "gemini-2.0-flash",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "audio",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "batch",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.1,
+          "cached_input_per_million": 0.025,
+          "output_per_million": 0.4
+        },
+        "batch": {
+          "input_per_million": 0.05,
+          "output_per_million": 0.2
+        }
+      }
+    },
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-001",
+    "name": "gemini-2.0-flash-001",
+    "provider": "vertexai",
+    "family": "gemini-2",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-exp",
+    "name": "gemini-2.0-flash-exp",
+    "provider": "vertexai",
+    "family": "gemini-2",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-2.0-flash-lite-001",
+    "name": "gemini-2.0-flash-lite-001",
+    "provider": "vertexai",
+    "family": "gemini-2",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-2.5-flash",
+    "name": "Gemini 2.5 Flash",
+    "provider": "vertexai",
+    "family": "gemini-2.5-flash",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "audio",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "batch",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.3,
+          "cached_input_per_million": 0.03,
+          "output_per_million": 2.5
+        },
+        "batch": {
+          "input_per_million": 0.15,
+          "output_per_million": 1.25
+        }
+      }
+    },
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-2.5-flash-lite",
+    "name": "Gemini 2.5 Flash-Lite",
+    "provider": "vertexai",
+    "family": "gemini-2.5-flash-lite",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "audio",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "batch",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.3,
+          "cached_input_per_million": 0.03,
+          "output_per_million": 2.5
+        },
+        "batch": {
+          "input_per_million": 0.15,
+          "output_per_million": 1.25
+        }
+      }
+    },
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-2.5-pro",
+    "name": "Gemini 2.5 Pro",
+    "provider": "vertexai",
+    "family": "gemini-2.5-pro",
+    "created_at": null,
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "audio",
+        "image",
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "batch",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 1.25,
+          "cached_input_per_million": 0.125,
+          "output_per_million": 10.0
+        },
+        "batch": {
+          "input_per_million": 0.625,
+          "output_per_million": 5.0
+        }
+      }
+    },
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-embedding-001",
+    "name": "gemini-embedding-001",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-exp-1121",
+    "name": "gemini-exp-1121",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-exp-1206",
+    "name": "gemini-exp-1206",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-pro",
+    "name": "gemini-pro",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "gemini-pro-vision",
+    "name": "gemini-pro-vision",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "image-segmentation-001",
+    "name": "image-segmentation-001",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "default",
+      "open_source_category": null,
+      "launch_stage": "PUBLIC_PREVIEW",
+      "supported_actions": {
+        "openNotebook": {
+          "references": {
+            "europe-west1": {
+              "uri": "https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/vision/getting-started/image_segmentation.ipynb"
+            }
+          },
+          "title": "Open Notebook"
+        },
+        "requestAccess": {
+          "references": {
+            "europe-west1": {
+              "uri": "https://docs.google.com/forms/d/e/1FAIpQLSdzIR1EeQGFcMsqd9nPip5e9ovDKSjfWRd58QVjo1zLpfdvEg/viewform?resourcekey=0-Pvqc66u-0Z1QmuzHq4wLKg"
+            }
+          }
+        },
+        "openNotebooks": {
+          "notebooks": [
+            {
+              "references": {
+                "europe-west1": {
+                  "uri": "https://colab.research.google.com/github/GoogleCloudPlatform/generative-ai/blob/main/vision/getting-started/image_segmentation.ipynb"
+                }
+              },
+              "title": "Open Notebook"
+            }
+          ]
+        }
+      },
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/image-segmentation-001@default"
+    }
+  },
+  {
+    "id": "imagegeneration",
+    "name": "imagegeneration",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "006",
+      "open_source_category": "PROPRIETARY",
+      "launch_stage": "PUBLIC_PREVIEW",
+      "supported_actions": {
+        "openGenerationAiStudio": {
+          "references": {
+            "europe-west1": {
+              "uri": "https://cloud.google.com/console/vertex-ai/generative/vision"
+            }
+          },
+          "title": "Open Vertex AI Studio"
+        }
+      },
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/imagegeneration@006"
+    }
+  },
+  {
+    "id": "imagen-3.0-capability-002",
+    "name": "imagen-3.0-capability-002",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "default",
+      "open_source_category": null,
+      "launch_stage": "GA",
+      "supported_actions": null,
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/imagen-3.0-capability-002@default"
+    }
+  },
+  {
+    "id": "imagen-4.0-fast-generate-001",
+    "name": "imagen-4.0-fast-generate-001",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "default",
+      "open_source_category": null,
+      "launch_stage": "GA",
+      "supported_actions": {
+        "openGenerationAiStudio": {
+          "references": {
+            "europe-west1": {
+              "uri": "https://console.cloud.google.com/vertex-ai/studio/media/generate"
+            }
+          },
+          "title": "Open Vertex AI Studio"
+        }
+      },
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/imagen-4.0-fast-generate-001@default"
+    }
+  },
+  {
+    "id": "imagen-4.0-generate-001",
+    "name": "imagen-4.0-generate-001",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "default",
+      "open_source_category": null,
+      "launch_stage": "GA",
+      "supported_actions": {
+        "openGenerationAiStudio": {
+          "references": {
+            "europe-west1": {
+              "uri": "https://console.cloud.google.com/vertex-ai/studio/media/generate"
+            }
+          },
+          "title": "Open Vertex AI Studio"
+        }
+      },
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/imagen-4.0-generate-001@default"
+    }
+  },
+  {
+    "id": "imagen-4.0-ultra-generate-001",
+    "name": "imagen-4.0-ultra-generate-001",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "default",
+      "open_source_category": null,
+      "launch_stage": "GA",
+      "supported_actions": {
+        "openGenerationAiStudio": {
+          "references": {
+            "europe-west1": {
+              "uri": "https://console.cloud.google.com/vertex-ai/studio/media/generate"
+            }
+          },
+          "title": "Open Vertex AI Studio"
+        }
+      },
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/imagen-4.0-ultra-generate-001@default"
+    }
+  },
+  {
+    "id": "imagetext",
+    "name": "imagetext",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "001",
+      "open_source_category": "PROPRIETARY",
+      "launch_stage": "GA",
+      "supported_actions": {
+        "openGenerationAiStudio": {
+          "references": {
+            "us-central1": {
+              "uri": "https://cloud.google.com/console/vertex-ai/generative/vision"
+            }
+          },
+          "title": "Open Vertex AI Studio"
+        }
+      },
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/imagetext@001"
+    }
+  },
+  {
+    "id": "multimodalembedding",
+    "name": "multimodalembedding",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "001",
+      "open_source_category": "PROPRIETARY",
+      "launch_stage": "GA",
+      "supported_actions": null,
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/multimodalembedding@001"
+    }
+  },
+  {
+    "id": "text-bison",
+    "name": "text-bison",
+    "provider": "vertexai",
+    "family": "palm",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "002",
+      "open_source_category": "PROPRIETARY",
+      "launch_stage": "GA",
+      "supported_actions": {
+        "openGenie": {
+          "references": {
+            "us-central1": {
+              "uri": "https://console.cloud.google.com/vertex-ai/generative/language/create/text"
+            }
+          },
+          "title": "Open Prompt Design"
+        },
+        "openEvaluationPipeline": {
+          "references": {
+            "us-central1": {
+              "uri": "https://console.cloud.google.com/vertex-ai/pipelines/vertex-ai-templates/evaluation-llm-text-generation-pipeline"
+            }
+          },
+          "title": "Evaluate"
+        }
+      },
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/text-bison@002"
+    }
+  },
+  {
+    "id": "text-embedding-004",
+    "name": "text-embedding-004",
+    "provider": "vertexai",
+    "family": "text-embedding",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "text-embedding-005",
+    "name": "text-embedding-005",
+    "provider": "vertexai",
+    "family": "text-embedding",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "text-multilingual-embedding-002",
+    "name": "text-multilingual-embedding-002",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling"
+    ],
+    "pricing": {},
+    "metadata": {
+      "source": "known_models"
+    }
+  },
+  {
+    "id": "text-unicorn",
+    "name": "text-unicorn",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "001",
+      "open_source_category": "PROPRIETARY",
+      "launch_stage": "GA",
+      "supported_actions": {
+        "openGenie": {
+          "references": {
+            "europe-west1": {
+              "uri": "https://console.cloud.google.com/vertex-ai/generative/language/create/text"
+            }
+          },
+          "title": "Open in Vertex AI Studio"
+        },
+        "openEvaluationPipeline": {
+          "references": {
+            "europe-west1": {
+              "uri": "https://console.cloud.google.com/vertex-ai/pipelines/vertex-ai-templates/evaluation-llm-text-generation-pipeline"
+            }
+          },
+          "title": "Evaluate"
+        }
+      },
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/text-unicorn@001"
+    }
+  },
+  {
+    "id": "textembedding-gecko",
+    "name": "textembedding-gecko",
+    "provider": "vertexai",
+    "family": "gemini",
+    "created_at": null,
+    "context_window": null,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [],
+      "output": []
+    },
+    "capabilities": [
+      "streaming"
+    ],
+    "pricing": {},
+    "metadata": {
+      "version_id": "003",
+      "open_source_category": "PROPRIETARY",
+      "launch_stage": "GA",
+      "supported_actions": null,
+      "publisher_model_template": "projects/{project}/locations/{location}/publishers/google/models/textembedding-gecko@003"
+    }
+  },
+  {
+    "id": "grok-2-1212",
+    "name": "Grok-2 1212",
+    "provider": "xai",
+    "family": "grok_2",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-2",
+        "grok-2-latest"
+      ]
+    }
+  },
+  {
+    "id": "grok-2-image-1212",
+    "name": "Grok-2 Image 1212",
+    "provider": "xai",
+    "family": "grok_2",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image",
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-2-image",
+        "grok-2-image-latest"
+      ]
+    }
+  },
+  {
+    "id": "grok-2-vision-1212",
+    "name": "Grok-2 Vision 1212",
+    "provider": "xai",
+    "family": "grok_2_vision",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-2-vision",
+        "grok-2-vision-latest"
+      ]
+    }
+  },
+  {
+    "id": "grok-3",
+    "name": "Grok-3",
+    "provider": "xai",
+    "family": "grok_3",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3.0,
+          "output_per_million": 15.0,
+          "cached_input_per_million": 0.75
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-3-latest",
+        "grok-3-beta"
+      ]
+    }
+  },
+  {
+    "id": "grok-3-fast",
+    "name": "Grok-3 Fast",
+    "provider": "xai",
+    "family": "grok_3_fast",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 5.0,
+          "output_per_million": 25.0,
+          "cached_input_per_million": 1.25
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-3-fast-latest",
+        "grok-3-fast-beta"
+      ]
+    }
+  },
+  {
+    "id": "grok-3-mini",
+    "name": "Grok-3 Mini",
+    "provider": "xai",
+    "family": "grok_3_mini",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.3,
+          "output_per_million": 0.5,
+          "cached_input_per_million": 0.075
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-3-mini-latest",
+        "grok-3-mini-beta"
+      ]
+    }
+  },
+  {
+    "id": "grok-3-mini-fast",
+    "name": "Grok-3 Mini Fast",
+    "provider": "xai",
+    "family": "grok_3_mini_fast",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.6,
+          "output_per_million": 4.0,
+          "cached_input_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-3-mini-fast-latest",
+        "grok-3-mini-fast-beta"
+      ]
+    }
+  },
+  {
+    "id": "grok-4-0709",
+    "name": "Grok-4 0709",
+    "provider": "xai",
+    "family": "grok_4",
+    "created_at": null,
+    "context_window": 256000,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3.0,
+          "output_per_million": 15.0,
+          "cached_input_per_million": 0.75
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-4",
+        "grok-4-latest"
+      ]
+    }
+  },
+  {
+    "id": "grok-4-0709-eu",
+    "name": "Grok-4 0709 Eu",
+    "provider": "xai",
+    "family": "grok_4",
+    "created_at": null,
+    "context_window": 256000,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3.0,
+          "output_per_million": 15.0,
+          "cached_input_per_million": 0.75
+        }
+      }
+    },
+    "metadata": {
+      "aliases": []
+    }
+  },
+  {
+    "id": "grok-code-fast-1",
+    "name": "Grok-Code Fast 1",
+    "provider": "xai",
+    "family": "other",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-code-fast",
+        "grok-code-fast-1-0825"
+      ]
+    }
+  },
+  {
+    "id": "grok-2-1212",
+    "name": "Grok-2 1212",
+    "provider": "xai",
+    "family": "grok_2",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-2",
+        "grok-2-latest"
+      ]
+    }
+  },
+  {
+    "id": "grok-2-image-1212",
+    "name": "Grok-2 Image 1212",
+    "provider": "xai",
+    "family": "grok_2",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image",
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-2-image",
+        "grok-2-image-latest"
+      ]
+    }
+  },
+  {
+    "id": "grok-2-vision-1212",
+    "name": "Grok-2 Vision 1212",
+    "provider": "xai",
+    "family": "grok_2_vision",
+    "created_at": null,
+    "context_window": 32768,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-2-vision",
+        "grok-2-vision-latest"
+      ]
+    }
+  },
+  {
+    "id": "grok-3",
+    "name": "Grok-3",
+    "provider": "xai",
+    "family": "grok_3",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3.0,
+          "output_per_million": 15.0,
+          "cached_input_per_million": 0.75
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-3-latest",
+        "grok-3-beta"
+      ]
+    }
+  },
+  {
+    "id": "grok-3-fast",
+    "name": "Grok-3 Fast",
+    "provider": "xai",
+    "family": "grok_3_fast",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 5.0,
+          "output_per_million": 25.0,
+          "cached_input_per_million": 1.25
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-3-fast-latest",
+        "grok-3-fast-beta"
+      ]
+    }
+  },
+  {
+    "id": "grok-3-mini",
+    "name": "Grok-3 Mini",
+    "provider": "xai",
+    "family": "grok_3_mini",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.3,
+          "output_per_million": 0.5,
+          "cached_input_per_million": 0.075
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-3-mini-latest",
+        "grok-3-mini-beta"
+      ]
+    }
+  },
+  {
+    "id": "grok-3-mini-fast",
+    "name": "Grok-3 Mini Fast",
+    "provider": "xai",
+    "family": "grok_3_mini_fast",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.6,
+          "output_per_million": 4.0,
+          "cached_input_per_million": 0.15
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-3-mini-fast-latest",
+        "grok-3-mini-fast-beta"
+      ]
+    }
+  },
+  {
+    "id": "grok-4-0709",
+    "name": "Grok-4 0709",
+    "provider": "xai",
+    "family": "grok_4",
+    "created_at": null,
+    "context_window": 256000,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3.0,
+          "output_per_million": 15.0,
+          "cached_input_per_million": 0.75
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-4",
+        "grok-4-latest"
+      ]
+    }
+  },
+  {
+    "id": "grok-4-0709-eu",
+    "name": "Grok-4 0709 Eu",
+    "provider": "xai",
+    "family": "grok_4",
+    "created_at": null,
+    "context_window": 256000,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 3.0,
+          "output_per_million": 15.0,
+          "cached_input_per_million": 0.75
+        }
+      }
+    },
+    "metadata": {
+      "aliases": []
+    }
+  },
+  {
+    "id": "grok-code-fast-1",
+    "name": "Grok-Code Fast 1",
+    "provider": "xai",
+    "family": "other",
+    "created_at": null,
+    "context_window": 131072,
+    "max_output_tokens": null,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "structured_output"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 2.0,
+          "output_per_million": 10.0
+        }
+      }
+    },
+    "metadata": {
+      "aliases": [
+        "grok-code-fast",
+        "grok-code-fast-1-0825"
+      ]
+    }
+  },
+  {
     "id": "claude-haiku-4-5-20251001",
     "name": "Claude Haiku 4.5",
     "provider": "anthropic",
@@ -1221,538 +7216,6 @@
         "TEXT"
       ]
     }
-  },
-  {
-    "id": "deepseek-chat",
-    "name": "deepseek-chat",
-    "provider": "deepseek",
-    "family": "deepseek-chat",
-    "created_at": null,
-    "context_window": 128000,
-    "max_output_tokens": 8000,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.28,
-          "cached_input_per_million": 0.028,
-          "output_per_million": 0.42
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "deepseek-reasoner",
-    "name": "deepseek-reasoner",
-    "provider": "deepseek",
-    "family": "deepseek-reasoner",
-    "created_at": null,
-    "context_window": 128000,
-    "max_output_tokens": 64000,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.28,
-          "cached_input_per_million": 0.028,
-          "output_per_million": 0.42
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-2.0-flash",
-    "name": "Gemini 2.0 Flash",
-    "provider": "gemini",
-    "family": "gemini-2.0-flash",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 8192,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.1,
-          "cached_input_per_million": 0.025,
-          "output_per_million": 0.4
-        },
-        "batch": {
-          "input_per_million": 0.05,
-          "output_per_million": 0.2
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-2.0-flash-001",
-    "name": "Gemini 2.0 Flash",
-    "provider": "gemini",
-    "family": "gemini-2.0-flash",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 8192,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.1,
-          "cached_input_per_million": 0.025,
-          "output_per_million": 0.4
-        },
-        "batch": {
-          "input_per_million": 0.05,
-          "output_per_million": 0.2
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-2.0-flash-exp",
-    "name": "Gemini 2.0 Flash",
-    "provider": "gemini",
-    "family": "gemini-2.0-flash",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 8192,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.1,
-          "cached_input_per_million": 0.025,
-          "output_per_million": 0.4
-        },
-        "batch": {
-          "input_per_million": 0.05,
-          "output_per_million": 0.2
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-2.0-flash-lite",
-    "name": "Gemini 2.0 Flash-Lite",
-    "provider": "gemini",
-    "family": "gemini-2.0-flash-lite",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 8192,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.1,
-          "cached_input_per_million": 0.025,
-          "output_per_million": 0.4
-        },
-        "batch": {
-          "input_per_million": 0.05,
-          "output_per_million": 0.2
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-2.0-flash-lite-001",
-    "name": "Gemini 2.0 Flash-Lite",
-    "provider": "gemini",
-    "family": "gemini-2.0-flash-lite",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 8192,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.1,
-          "cached_input_per_million": 0.025,
-          "output_per_million": 0.4
-        },
-        "batch": {
-          "input_per_million": 0.05,
-          "output_per_million": 0.2
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-2.5-flash",
-    "name": "Gemini 2.5 Flash",
-    "provider": "gemini",
-    "family": "gemini-2.5-flash",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 65536,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.3,
-          "cached_input_per_million": 0.03,
-          "output_per_million": 2.5
-        },
-        "batch": {
-          "input_per_million": 0.15,
-          "output_per_million": 1.25
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-2.5-flash-lite",
-    "name": "Gemini 2.5 Flash-Lite",
-    "provider": "gemini",
-    "family": "gemini-2.5-flash-lite",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 65536,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.3,
-          "cached_input_per_million": 0.03,
-          "output_per_million": 2.5
-        },
-        "batch": {
-          "input_per_million": 0.15,
-          "output_per_million": 1.25
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-2.5-flash-lite-preview-09-2025",
-    "name": "Gemini 2.5 Flash-Lite",
-    "provider": "gemini",
-    "family": "gemini-2.5-flash-lite",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 65536,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.3,
-          "cached_input_per_million": 0.03,
-          "output_per_million": 2.5
-        },
-        "batch": {
-          "input_per_million": 0.15,
-          "output_per_million": 1.25
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-2.5-flash-preview-09-2025",
-    "name": "Gemini 2.5 Flash",
-    "provider": "gemini",
-    "family": "gemini-2.5-flash",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 65536,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.3,
-          "cached_input_per_million": 0.03,
-          "output_per_million": 2.5
-        },
-        "batch": {
-          "input_per_million": 0.15,
-          "output_per_million": 1.25
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-2.5-pro",
-    "name": "Gemini 2.5 Pro",
-    "provider": "gemini",
-    "family": "gemini-2.5-pro",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 65536,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 1.25,
-          "cached_input_per_million": 0.125,
-          "output_per_million": 10.0
-        },
-        "batch": {
-          "input_per_million": 0.625,
-          "output_per_million": 5.0
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-3-flash-preview",
-    "name": "Gemini 3 Flash",
-    "provider": "gemini",
-    "family": "gemini-3-flash",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 65536,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 0.5,
-          "cached_input_per_million": 0.05,
-          "output_per_million": 3.0
-        },
-        "batch": {
-          "input_per_million": 0.25,
-          "output_per_million": 1.5
-        }
-      }
-    },
-    "metadata": {}
-  },
-  {
-    "id": "gemini-3-pro-preview",
-    "name": "Gemini 3 Pro",
-    "provider": "gemini",
-    "family": "gemini-3-pro",
-    "created_at": null,
-    "context_window": 1048576,
-    "max_output_tokens": 65536,
-    "knowledge_cutoff": null,
-    "modalities": {
-      "input": [
-        "audio",
-        "image",
-        "text"
-      ],
-      "output": [
-        "text"
-      ]
-    },
-    "capabilities": [
-      "batch",
-      "function_calling",
-      "structured_output"
-    ],
-    "pricing": {
-      "text_tokens": {
-        "standard": {
-          "input_per_million": 2.0,
-          "cached_input_per_million": 0.2,
-          "output_per_million": 12.0
-        },
-        "batch": {
-          "input_per_million": 1.0,
-          "output_per_million": 6.0
-        }
-      }
-    },
-    "metadata": {}
   },
   {
     "id": "babbage-002",

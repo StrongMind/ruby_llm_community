@@ -64,33 +64,80 @@
     "deepseek": "deepseek-chat",
     "openrouter": "deepseek/deepseek-chat"
   },
+  "gemini-2.0-flash": {
+    "gemini": "gemini-2.0-flash",
+    "vertexai": "gemini-2.0-flash"
+  },
   "gemini-2.0-flash-001": {
     "gemini": "gemini-2.0-flash-001",
+    "vertexai": "gemini-2.0-flash-001",
     "openrouter": "google/gemini-2.0-flash-001"
+  },
+  "gemini-2.0-flash-exp": {
+    "gemini": "gemini-2.0-flash-exp",
+    "vertexai": "gemini-2.0-flash-exp"
   },
   "gemini-2.0-flash-lite-001": {
     "gemini": "gemini-2.0-flash-lite-001",
+    "vertexai": "gemini-2.0-flash-lite-001",
     "openrouter": "google/gemini-2.0-flash-lite-001"
   },
   "gemini-2.5-flash": {
     "gemini": "gemini-2.5-flash",
+    "vertexai": "gemini-2.5-flash",
     "openrouter": "google/gemini-2.5-flash"
+  },
+  "gemini-2.5-flash-image": {
+    "gemini": "gemini-2.5-flash-image"
+  },
+  "gemini-2.5-flash-image-preview": {
+    "gemini": "gemini-2.5-flash-image-preview"
   },
   "gemini-2.5-flash-lite": {
     "gemini": "gemini-2.5-flash-lite",
+    "vertexai": "gemini-2.5-flash-lite",
     "openrouter": "google/gemini-2.5-flash-lite"
   },
   "gemini-2.5-flash-lite-preview-09-2025": {
     "gemini": "gemini-2.5-flash-lite-preview-09-2025",
     "openrouter": "google/gemini-2.5-flash-lite-preview-09-2025"
   },
+  "gemini-2.5-flash-preview-09-2025": {
+    "gemini": "gemini-2.5-flash-preview-09-2025"
+  },
   "gemini-2.5-pro": {
     "gemini": "gemini-2.5-pro",
+    "vertexai": "gemini-2.5-pro",
     "openrouter": "google/gemini-2.5-pro"
   },
+  "gemini-2.5-pro-preview-05-06": {
+    "gemini": "gemini-2.5-pro-preview-05-06"
+  },
   "gemini-3-flash-preview": {
-    "gemini": "gemini-3-flash-preview",
     "openrouter": "google/gemini-3-flash-preview"
+  },
+  "gemini-3-pro-preview": {
+    "gemini": "gemini-3-pro-preview"
+  },
+  "gemini-embedding-001": {
+    "gemini": "gemini-embedding-001",
+    "vertexai": "gemini-embedding-001"
+  },
+  "gemini-exp-1206": {
+    "gemini": "gemini-exp-1206",
+    "vertexai": "gemini-exp-1206"
+  },
+  "gemma-3-12b-it": {
+    "gemini": "gemma-3-12b-it"
+  },
+  "gemma-3-27b-it": {
+    "gemini": "gemma-3-27b-it"
+  },
+  "gemma-3-4b-it": {
+    "gemini": "gemma-3-4b-it"
+  },
+  "gemma-3n-e4b-it": {
+    "gemini": "gemma-3n-e4b-it"
   },
   "gpt-3.5-turbo": {
     "openai": "gpt-3.5-turbo",
@@ -248,6 +295,83 @@
     "openai": "gpt-oss-20b",
     "openrouter": "openai/gpt-oss-20b"
   },
+  "grok-2": {
+    "xai": "grok-2-1212"
+  },
+  "grok-2-4": {
+    "xai": "grok-2-4"
+  },
+  "grok-2-image": {
+    "xai": "grok-2-image-1212"
+  },
+  "grok-2-image-latest": {
+    "xai": "grok-2-image-1212"
+  },
+  "grok-2-latest": {
+    "xai": "grok-2-1212"
+  },
+  "grok-2-vision": {
+    "xai": "grok-2-vision-1212"
+  },
+  "grok-2-vision-4": {
+    "xai": "grok-2-vision-4"
+  },
+  "grok-2-vision-latest": {
+    "xai": "grok-2-vision-1212"
+  },
+  "grok-3": {
+    "xai": "grok-3"
+  },
+  "grok-3-beta": {
+    "xai": "grok-3"
+  },
+  "grok-3-fast-beta": {
+    "xai": "grok-3-fast"
+  },
+  "grok-3-fast-latest": {
+    "xai": "grok-3-fast"
+  },
+  "grok-3-latest": {
+    "xai": "grok-3"
+  },
+  "grok-3-mini": {
+    "xai": "grok-3-mini"
+  },
+  "grok-3-mini-beta": {
+    "xai": "grok-3-mini"
+  },
+  "grok-3-mini-fast-beta": {
+    "xai": "grok-3-mini-fast"
+  },
+  "grok-3-mini-fast-latest": {
+    "xai": "grok-3-mini-fast"
+  },
+  "grok-3-mini-latest": {
+    "xai": "grok-3-mini"
+  },
+  "grok-4": {
+    "xai": "grok-4-0709"
+  },
+  "grok-4-latest": {
+    "xai": "grok-4-0709"
+  },
+  "grok-code-fast": {
+    "xai": "grok-code-fast-1"
+  },
+  "grok-code-fast-1": {
+    "xai": "grok-code-fast-1"
+  },
+  "grok-code-fast-1-0825": {
+    "xai": "grok-code-fast-1"
+  },
+  "imagen-4.0-generate-001": {
+    "gemini": "imagen-4.0-generate-001",
+    "vertexai": "imagen-4.0-generate-001"
+  },
+  "imagen-4.0-ultra-generate-001": {
+    "gemini": "imagen-4.0-ultra-generate-001",
+    "vertexai": "imagen-4.0-ultra-generate-001"
+  },
   "o1": {
     "openai": "o1",
     "openrouter": "openai/o1"
@@ -279,5 +403,9 @@
   "o4-mini-deep-research": {
     "openai": "o4-mini-deep-research",
     "openrouter": "openai/o4-mini-deep-research"
+  },
+  "text-embedding-004": {
+    "gemini": "text-embedding-004",
+    "vertexai": "text-embedding-004"
   }
 }
