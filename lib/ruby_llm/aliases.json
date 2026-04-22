@@ -1,7 +1,8 @@
 {
   "claude-3-5-haiku": {
-    "bedrock": "anthropic.claude-3-5-haiku-20241022-v1:0",
-    "openrouter": "anthropic/claude-3.5-haiku"
+    "anthropic": "claude-3-5-haiku-20241022",
+    "openrouter": "anthropic/claude-3.5-haiku",
+    "bedrock": "anthropic.claude-3-5-haiku-20241022-v1:0"
   },
   "claude-3-7-sonnet": {
     "bedrock": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",

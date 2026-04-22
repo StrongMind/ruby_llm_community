@@ -37,6 +37,44 @@
     "metadata": {}
   },
   {
+    "id": "claude-3-5-haiku-20241022",
+    "name": "Claude Haiku 3.5",
+    "provider": "anthropic",
+    "family": "claude-3-5-haiku",
+    "created_at": "2024-10-22 00:00:00 UTC",
+    "context_window": 200000,
+    "max_output_tokens": 8192,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "streaming",
+      "function_calling",
+      "batch"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.8,
+          "output_per_million": 4.0
+        },
+        "batch": {
+          "input_per_million": 0.4,
+          "output_per_million": 2.0
+        }
+      }
+    },
+    "metadata": {}
+  },
+  {
     "id": "claude-opus-4-1-20250805",
     "name": "Claude Opus 4.1",
     "provider": "anthropic",
