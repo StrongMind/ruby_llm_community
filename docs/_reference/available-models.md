@@ -35,10 +35,11 @@ redirect_from:
 
 ## Models by Provider
 
-### Anthropic (9)
+### Anthropic (10)
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
+| claude-3-5-haiku-20241022 | anthropic | 200000 | 8192 | In: $0.80, Out: $4.00 |
 | claude-haiku-4-5-20251001 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-opus-4-20250514 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-opus-4-1-20250805 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
@@ -78,25 +79,129 @@ redirect_from:
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
 | deepseek-chat | deepseek | 128000 | 8000 | In: $0.28, Out: $0.42, Cache: $0.03 |
-| deepseek-reasoner | deepseek | 128000 | 64000 | In: $0.28, Out: $0.42, Cache: $0.03 |
+| deepseek-reasoner | deepseek | - | 64000 | - |
 
 
-### Gemini (12)
+### Gemini (50)
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
-| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| embedding-001 | gemini | 2048 | 1 | - |
+| embedding-gecko-001 | gemini | 1024 | 1 | - |
 | gemini-2.0-flash | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.0-flash-exp-image-generation | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
 | gemini-2.0-flash-lite | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-lite-preview | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-lite-preview-02-05 | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-pro-exp | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.0-pro-exp-02-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-computer-use-preview-10-2025 | gemini | 131072 | 65536 | In: $0.08, Out: $0.30 |
 | gemini-2.5-flash | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.0-flash-thinking-exp-1219 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-01-21 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
 | gemini-2.5-flash-lite | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
-| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
 | gemini-2.5-pro | gemini | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gemini-3-flash-preview | gemini | 1048576 | 65536 | In: $0.50, Out: $3.00, Cache: $0.05 |
-| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $2.00, Out: $12.00, Cache: $0.20 |
+| gemini-2.5-pro-preview-06-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-03-25 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-05-06 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
+| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-embedding-001 | gemini | 2048 | 1 | - |
+| gemini-embedding-exp | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-embedding-exp-03-07 | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-exp-1206 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-lite-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-pro-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-robotics-er-1.5-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemma-3-12b-it | gemini | 32768 | 8192 | In: $0.08, Out: $0.30 |
+| gemma-3-1b-it | gemini | 32768 | 8192 | In: $0.08, Out: $0.30 |
+| gemma-3-27b-it | gemini | 131072 | 8192 | In: $0.08, Out: $0.30 |
+| gemma-3-4b-it | gemini | 32768 | 8192 | In: $0.08, Out: $0.30 |
+| gemma-3n-e2b-it | gemini | 8192 | 2048 | In: $0.08, Out: $0.30 |
+| gemma-3n-e4b-it | gemini | 8192 | 2048 | In: $0.08, Out: $0.30 |
+| imagen-4.0-generate-001 | gemini | 480 | 8192 | - |
+| imagen-4.0-generate-preview-06-06 | gemini | 480 | 8192 | - |
+| imagen-4.0-ultra-generate-001 | gemini | 480 | 8192 | - |
+| imagen-4.0-ultra-generate-preview-06-06 | gemini | 480 | 8192 | - |
+| learnlm-2.0-flash-experimental | gemini | 1048576 | 32768 | In: $0.08, Out: $0.30 |
+| aqa | gemini | 7168 | 1024 | - |
+| gemini-2.5-flash-image-preview | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| text-embedding-004 | gemini | 2048 | 1 | - |
+
+
+### Mistral (60)
+
+| Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
+| :-- | :-- | --: | --: | :-- |
+| codestral-2412 | mistral | 32768 | 8192 | - |
+| codestral-2411-rc5 | mistral | 32768 | 8192 | - |
+| codestral-2501 | mistral | 32768 | 8192 | - |
+| codestral-2508 | mistral | 32768 | 8192 | - |
+| codestral-embed | mistral | 32768 | 8192 | - |
+| codestral-embed-2505 | mistral | 32768 | 8192 | - |
+| codestral-latest | mistral | 32768 | 8192 | - |
+| devstral-medium-2507 | mistral | 32768 | 8192 | - |
+| devstral-medium-latest | mistral | 32768 | 8192 | - |
+| devstral-small-2505 | mistral | 32768 | 8192 | - |
+| devstral-small-2507 | mistral | 32768 | 8192 | - |
+| devstral-small-latest | mistral | 32768 | 8192 | - |
+| magistral-medium-2506 | mistral | 32768 | 8192 | - |
+| magistral-medium-2507 | mistral | 32768 | 8192 | - |
+| magistral-medium-2509 | mistral | 32768 | 8192 | - |
+| magistral-medium-latest | mistral | 32768 | 8192 | - |
+| magistral-small-2506 | mistral | 32768 | 8192 | - |
+| magistral-small-2507 | mistral | 32768 | 8192 | - |
+| magistral-small-2509 | mistral | 32768 | 8192 | - |
+| magistral-small-latest | mistral | 32768 | 8192 | - |
+| ministral-3b-2410 | mistral | 32768 | 8192 | - |
+| ministral-3b-latest | mistral | 32768 | 8192 | - |
+| ministral-8b-2410 | mistral | 32768 | 8192 | - |
+| ministral-8b-latest | mistral | 32768 | 8192 | - |
+| mistral-embed | mistral | 32768 | 8192 | - |
+| mistral-embed-2312 | mistral | 32768 | 8192 | - |
+| mistral-large-2411 | mistral | 32768 | 8192 | - |
+| mistral-large-latest | mistral | 32768 | 8192 | - |
+| mistral-large-pixtral-2411 | mistral | 32768 | 8192 | - |
+| mistral-medium-2505 | mistral | 32768 | 8192 | - |
+| mistral-medium | mistral | 32768 | 8192 | - |
+| mistral-medium-2508 | mistral | 32768 | 8192 | - |
+| mistral-medium-latest | mistral | 32768 | 8192 | - |
+| mistral-moderation-2411 | mistral | 32768 | 8192 | - |
+| mistral-moderation-latest | mistral | 32768 | 8192 | - |
+| mistral-ocr-2503 | mistral | 32768 | 8192 | - |
+| mistral-ocr-2505 | mistral | 32768 | 8192 | - |
+| mistral-ocr-latest | mistral | 32768 | 8192 | - |
+| mistral-small-2409 | mistral | 32768 | 8192 | - |
+| mistral-small-2501 | mistral | 32768 | 8192 | - |
+| mistral-small-2503 | mistral | 32768 | 8192 | - |
+| mistral-small-2506 | mistral | 32768 | 8192 | - |
+| mistral-small-latest | mistral | 32768 | 8192 | - |
+| mistral-tiny | mistral | 32768 | 8192 | - |
+| mistral-tiny-2312 | mistral | 32768 | 8192 | - |
+| mistral-tiny-2407 | mistral | 32768 | 8192 | - |
+| mistral-tiny-latest | mistral | 32768 | 8192 | - |
+| open-mistral-7b | mistral | 32768 | 8192 | - |
+| open-mistral-nemo | mistral | 32768 | 8192 | - |
+| open-mistral-nemo-2407 | mistral | 32768 | 8192 | - |
+| pixtral-12b | mistral | 32768 | 8192 | - |
+| pixtral-12b-2409 | mistral | 32768 | 8192 | - |
+| pixtral-12b-latest | mistral | 32768 | 8192 | - |
+| pixtral-large-2411 | mistral | 32768 | 8192 | - |
+| pixtral-large-latest | mistral | 32768 | 8192 | - |
+| voxtral-mini-2507 | mistral | 32768 | 8192 | - |
+| voxtral-mini-latest | mistral | 32768 | 8192 | - |
+| voxtral-mini-transcribe-2507 | mistral | 32768 | 8192 | - |
+| voxtral-small-2507 | mistral | 32768 | 8192 | - |
+| voxtral-small-latest | mistral | 32768 | 8192 | - |
 
 
 ### OpenAI (146)
@@ -322,7 +427,7 @@ redirect_from:
 | essentialai/rnj-1-instruct | openrouter | 32768 | - | In: $0.15, Out: $0.15 |
 | openrouter/free | openrouter | 200000 | - | - |
 | alpindale/goliath-120b | openrouter | 6144 | 1024 | In: $3.75, Out: $7.50 |
-| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -606,17 +711,96 @@ redirect_from:
 | x-ai/grok-code-fast-1 | openrouter | 256000 | 10000 | In: $0.20, Out: $1.50, Cache: $0.02 |
 
 
-## Models by Capability
-
-### Function Calling (364)
+### Perplexity (5)
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
+| sonar | perplexity | 128000 | 4096 | In: $1.00, Out: $1.00 |
+| sonar-deep-research | perplexity | 128000 | 4096 | In: $2.00, Out: $8.00 |
+| sonar-pro | perplexity | 200000 | 8192 | In: $3.00, Out: $15.00 |
+| sonar-reasoning | perplexity | 128000 | 4096 | In: $1.00, Out: $5.00 |
+| sonar-reasoning-pro | perplexity | 128000 | 8192 | In: $2.00, Out: $8.00 |
+
+
+### VertexAI (35)
+
+| Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
+| :-- | :-- | --: | --: | :-- |
+| gemini-2.0-flash | vertexai | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.5-flash | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-lite | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-pro | vertexai | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
+| chat-bison | vertexai | - | - | - |
+| code-bison | vertexai | - | - | - |
+| code-gecko | vertexai | - | - | - |
+| codechat-bison | vertexai | - | - | - |
+| gemini-1.5-flash | vertexai | - | - | - |
+| gemini-1.5-flash-002 | vertexai | - | - | - |
+| gemini-1.5-flash-8b | vertexai | - | - | - |
+| gemini-1.5-pro | vertexai | - | - | - |
+| gemini-1.5-pro-002 | vertexai | - | - | - |
+| gemini-2.0-flash-001 | vertexai | - | - | - |
+| gemini-2.0-flash-exp | vertexai | - | - | - |
+| gemini-2.0-flash-lite-001 | vertexai | - | - | - |
+| gemini-embedding-001 | vertexai | - | - | - |
+| gemini-exp-1121 | vertexai | - | - | - |
+| gemini-exp-1206 | vertexai | - | - | - |
+| gemini-pro | vertexai | - | - | - |
+| gemini-pro-vision | vertexai | - | - | - |
+| image-segmentation-001 | vertexai | - | - | - |
+| imagegeneration | vertexai | - | - | - |
+| imagen-3.0-capability-002 | vertexai | - | - | - |
+| imagen-4.0-fast-generate-001 | vertexai | - | - | - |
+| imagen-4.0-generate-001 | vertexai | - | - | - |
+| imagen-4.0-ultra-generate-001 | vertexai | - | - | - |
+| imagetext | vertexai | - | - | - |
+| multimodalembedding | vertexai | - | - | - |
+| text-bison | vertexai | - | - | - |
+| text-embedding-004 | vertexai | - | - | - |
+| text-embedding-005 | vertexai | - | - | - |
+| text-multilingual-embedding-002 | vertexai | - | - | - |
+| text-unicorn | vertexai | - | - | - |
+| textembedding-gecko | vertexai | - | - | - |
+
+
+### XAI (20)
+
+| Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
+| :-- | :-- | --: | --: | :-- |
+| grok-2-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-image-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-image-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-vision-1212 | xai | 32768 | - | In: $2.00, Out: $10.00 |
+| grok-2-vision-1212 | xai | 32768 | - | In: $2.00, Out: $10.00 |
+| grok-3 | xai | 131072 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-3 | xai | 131072 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-3-fast | xai | 131072 | - | In: $5.00, Out: $25.00, Cache: $1.25 |
+| grok-3-fast | xai | 131072 | - | In: $5.00, Out: $25.00, Cache: $1.25 |
+| grok-3-mini | xai | 131072 | - | In: $0.30, Out: $0.50, Cache: $0.08 |
+| grok-3-mini | xai | 131072 | - | In: $0.30, Out: $0.50, Cache: $0.08 |
+| grok-3-mini-fast | xai | 131072 | - | In: $0.60, Out: $4.00, Cache: $0.15 |
+| grok-3-mini-fast | xai | 131072 | - | In: $0.60, Out: $4.00, Cache: $0.15 |
+| grok-4-0709 | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709 | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709-eu | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709-eu | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-code-fast-1 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-code-fast-1 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+
+
+## Models by Capability
+
+### Function Calling (468)
+
+| Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
+| :-- | :-- | --: | --: | :-- |
+| claude-3-5-haiku-20241022 | anthropic | 200000 | 8192 | In: $0.80, Out: $4.00 |
+| anthropic.claude-3-haiku-20240307-v1:0:200k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-haiku-20240307-v1:0 | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-haiku-20240307-v1:0:48k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
-| anthropic.claude-3-haiku-20240307-v1:0:200k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
-| anthropic.claude-3-sonnet-20240229-v1:0:28k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-sonnet-20240229-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
+| anthropic.claude-3-sonnet-20240229-v1:0:28k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-sonnet-20240229-v1:0:200k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-5-haiku-20241022-v1:0 | bedrock | 200000 | 4096 | In: $0.80, Out: $4.00 |
 | us.anthropic.claude-3-7-sonnet-20250219-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
@@ -630,50 +814,113 @@ redirect_from:
 | us.anthropic.claude-sonnet-4-5-20250929-v1:0 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
 | us.anthropic.claude-sonnet-4-6 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
 | deepseek-chat | deepseek | 128000 | 8000 | In: $0.28, Out: $0.42, Cache: $0.03 |
-| deepseek-reasoner | deepseek | 128000 | 64000 | In: $0.28, Out: $0.42, Cache: $0.03 |
-| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| deepseek-reasoner | deepseek | - | 64000 | - |
 | gemini-2.0-flash | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.0-flash-exp-image-generation | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
 | gemini-2.0-flash-lite | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.0-pro-exp | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.0-pro-exp-02-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-computer-use-preview-10-2025 | gemini | 131072 | 65536 | In: $0.08, Out: $0.30 |
 | gemini-2.5-flash | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
-| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.0-flash-thinking-exp | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-1219 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-01-21 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
 | gemini-2.5-flash-lite | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | gemini-2.5-pro | gemini | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gemini-3-flash-preview | gemini | 1048576 | 65536 | In: $0.50, Out: $3.00, Cache: $0.05 |
-| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $2.00, Out: $12.00, Cache: $0.20 |
-| gpt-4-turbo | openai | 128000 | 4096 | In: $10.00, Out: $30.00 |
+| gemini-2.5-pro-preview-06-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-03-25 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-05-06 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
+| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-embedding-exp | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-embedding-exp-03-07 | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-exp-1206 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-pro-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-robotics-er-1.5-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| learnlm-2.0-flash-experimental | gemini | 1048576 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image-preview | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| codestral-2501 | mistral | 32768 | 8192 | - |
+| codestral-2411-rc5 | mistral | 32768 | 8192 | - |
+| codestral-2412 | mistral | 32768 | 8192 | - |
+| codestral-2508 | mistral | 32768 | 8192 | - |
+| codestral-latest | mistral | 32768 | 8192 | - |
+| devstral-medium-2507 | mistral | 32768 | 8192 | - |
+| devstral-medium-latest | mistral | 32768 | 8192 | - |
+| devstral-small-2505 | mistral | 32768 | 8192 | - |
+| devstral-small-2507 | mistral | 32768 | 8192 | - |
+| devstral-small-latest | mistral | 32768 | 8192 | - |
+| magistral-medium-2506 | mistral | 32768 | 8192 | - |
+| magistral-medium-2507 | mistral | 32768 | 8192 | - |
+| magistral-medium-2509 | mistral | 32768 | 8192 | - |
+| magistral-medium-latest | mistral | 32768 | 8192 | - |
+| magistral-small-2506 | mistral | 32768 | 8192 | - |
+| magistral-small-2507 | mistral | 32768 | 8192 | - |
+| magistral-small-2509 | mistral | 32768 | 8192 | - |
+| magistral-small-latest | mistral | 32768 | 8192 | - |
+| ministral-3b-latest | mistral | 32768 | 8192 | - |
+| ministral-3b-2410 | mistral | 32768 | 8192 | - |
+| ministral-8b-2410 | mistral | 32768 | 8192 | - |
+| ministral-8b-latest | mistral | 32768 | 8192 | - |
+| mistral-large-2411 | mistral | 32768 | 8192 | - |
+| mistral-large-pixtral-2411 | mistral | 32768 | 8192 | - |
+| mistral-large-latest | mistral | 32768 | 8192 | - |
+| mistral-medium-latest | mistral | 32768 | 8192 | - |
+| mistral-medium | mistral | 32768 | 8192 | - |
+| mistral-medium-2505 | mistral | 32768 | 8192 | - |
+| mistral-medium-2508 | mistral | 32768 | 8192 | - |
+| mistral-small-2506 | mistral | 32768 | 8192 | - |
+| mistral-small-latest | mistral | 32768 | 8192 | - |
+| mistral-small-2503 | mistral | 32768 | 8192 | - |
+| mistral-small-2501 | mistral | 32768 | 8192 | - |
+| mistral-small-2409 | mistral | 32768 | 8192 | - |
+| mistral-tiny | mistral | 32768 | 8192 | - |
+| mistral-tiny-2407 | mistral | 32768 | 8192 | - |
+| mistral-tiny-latest | mistral | 32768 | 8192 | - |
+| open-mistral-7b | mistral | 32768 | 8192 | - |
+| open-mistral-nemo | mistral | 32768 | 8192 | - |
+| open-mistral-nemo-2407 | mistral | 32768 | 8192 | - |
+| pixtral-12b | mistral | 32768 | 8192 | - |
+| pixtral-12b-2409 | mistral | 32768 | 8192 | - |
+| pixtral-12b-latest | mistral | 32768 | 8192 | - |
+| pixtral-large-latest | mistral | 32768 | 8192 | - |
+| pixtral-large-2411 | mistral | 32768 | 8192 | - |
 | gpt-4-turbo-2024-04-09 | openai | 128000 | 4096 | In: $10.00, Out: $30.00 |
-| gpt-4.1 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
+| gpt-4-turbo | openai | 128000 | 4096 | In: $10.00, Out: $30.00 |
 | gpt-4.1-2025-04-14 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
+| gpt-4.1 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | gpt-4.1-mini | openai | 1047576 | 32768 | In: $0.40, Out: $1.60, Cache: $0.10 |
 | gpt-4.1-mini-2025-04-14 | openai | 1047576 | 32768 | In: $0.40, Out: $1.60, Cache: $0.10 |
 | gpt-4.1-nano | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gpt-4.1-nano-2025-04-14 | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gpt-4.5-preview | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
 | gpt-4.5-preview-2025-02-27 | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
+| gpt-4.5-preview | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
 | gpt-4o | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
 | gpt-4o-2024-08-06 | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
 | gpt-4o-2024-05-13 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-2024-11-20 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-audio-preview | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-realtime-preview | openai | 32000 | 4096 | In: $5.00, Out: $20.00, Cache: $2.50 |
-| gpt-4o-mini | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
 | gpt-4o-mini-2024-07-18 | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
-| gpt-4o-mini-audio-preview-2024-12-17 | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
+| gpt-4o-mini | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
 | gpt-4o-mini-audio-preview | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
-| gpt-4o-mini-realtime-preview | openai | 16000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.30 |
+| gpt-4o-mini-audio-preview-2024-12-17 | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
 | gpt-4o-mini-realtime-preview-2024-12-17 | openai | 16000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.30 |
-| gpt-5-2025-08-07 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
+| gpt-4o-mini-realtime-preview | openai | 16000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.30 |
 | gpt-5 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
+| gpt-5-2025-08-07 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-chat-latest | openai | 128000 | 16384 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-search-api | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-search-api-2025-10-14 | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-mini-2025-08-07 | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
 | gpt-5-mini | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
-| gpt-5-nano | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
 | gpt-5-nano-2025-08-07 | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
+| gpt-5-nano | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
 | gpt-5-pro | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
 | gpt-5-pro-2025-10-06 | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
 | gpt-5-codex | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
@@ -700,10 +947,10 @@ redirect_from:
 | gpt-5.4-pro | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.4-pro-2026-03-05 | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | codex-mini-latest | openai | 200000 | 100000 | In: $1.50, Out: $6.00, Cache: $0.38 |
-| computer-use-preview-2025-03-11 | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
 | computer-use-preview | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
-| gpt-audio-2025-08-28 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
+| computer-use-preview-2025-03-11 | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
 | gpt-audio | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
+| gpt-audio-2025-08-28 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-audio-mini | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
 | gpt-audio-mini-2025-10-06 | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
 | gpt-oss-120b | openai | 131072 | 131072 | - |
@@ -714,18 +961,18 @@ redirect_from:
 | gpt-realtime-mini-2025-10-06 | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
 | o1 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-2024-12-17 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
-| o1-preview | openai | 128000 | 32768 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-preview-2024-09-12 | openai | 128000 | 32768 | In: $15.00, Out: $60.00, Cache: $7.50 |
-| o1-pro | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
+| o1-preview | openai | 128000 | 32768 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-pro-2025-03-19 | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
+| o1-pro | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
 | o3 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | o3-2025-04-16 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
-| o3-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
 | o3-mini-2025-01-31 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
+| o3-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
 | o3-pro | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o3-pro-2025-06-10 | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
-| o4-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
 | o4-mini-2025-04-16 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
+| o4-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
 | ai21/jamba-large-1.7 | openrouter | 256000 | 4096 | In: $2.00, Out: $8.00 |
 | allenai/olmo-3.1-32b-instruct | openrouter | 65536 | - | In: $0.20, Out: $0.60 |
 | amazon/nova-2-lite-v1 | openrouter | 1000000 | 65535 | In: $0.30, Out: $2.50 |
@@ -772,7 +1019,7 @@ redirect_from:
 | deepseek/deepseek-r1-0528 | openrouter | 163840 | - | In: $0.50, Out: $2.15, Cache: $0.35 |
 | essentialai/rnj-1-instruct | openrouter | 32768 | - | In: $0.15, Out: $0.15 |
 | openrouter/free | openrouter | 200000 | - | - |
-| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -976,47 +1223,152 @@ redirect_from:
 | x-ai/grok-4.1-fast | openrouter | 2000000 | 30000 | In: $0.20, Out: $0.50, Cache: $0.05 |
 | x-ai/grok-4.20 | openrouter | 2000000 | - | In: $2.00, Out: $6.00, Cache: $0.20 |
 | x-ai/grok-code-fast-1 | openrouter | 256000 | 10000 | In: $0.20, Out: $1.50, Cache: $0.02 |
+| gemini-2.0-flash | vertexai | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.5-flash | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-lite | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-pro | vertexai | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
+| gemini-1.5-flash | vertexai | - | - | - |
+| gemini-1.5-flash-002 | vertexai | - | - | - |
+| gemini-1.5-flash-8b | vertexai | - | - | - |
+| gemini-1.5-pro | vertexai | - | - | - |
+| gemini-1.5-pro-002 | vertexai | - | - | - |
+| gemini-2.0-flash-001 | vertexai | - | - | - |
+| gemini-2.0-flash-exp | vertexai | - | - | - |
+| gemini-2.0-flash-lite-001 | vertexai | - | - | - |
+| gemini-embedding-001 | vertexai | - | - | - |
+| gemini-exp-1121 | vertexai | - | - | - |
+| gemini-exp-1206 | vertexai | - | - | - |
+| gemini-pro | vertexai | - | - | - |
+| gemini-pro-vision | vertexai | - | - | - |
+| text-embedding-004 | vertexai | - | - | - |
+| text-embedding-005 | vertexai | - | - | - |
+| text-multilingual-embedding-002 | vertexai | - | - | - |
+| grok-2-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-image-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-image-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-vision-1212 | xai | 32768 | - | In: $2.00, Out: $10.00 |
+| grok-2-vision-1212 | xai | 32768 | - | In: $2.00, Out: $10.00 |
+| grok-3 | xai | 131072 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-3 | xai | 131072 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-3-fast | xai | 131072 | - | In: $5.00, Out: $25.00, Cache: $1.25 |
+| grok-3-fast | xai | 131072 | - | In: $5.00, Out: $25.00, Cache: $1.25 |
+| grok-3-mini | xai | 131072 | - | In: $0.30, Out: $0.50, Cache: $0.08 |
+| grok-3-mini | xai | 131072 | - | In: $0.30, Out: $0.50, Cache: $0.08 |
+| grok-3-mini-fast | xai | 131072 | - | In: $0.60, Out: $4.00, Cache: $0.15 |
+| grok-3-mini-fast | xai | 131072 | - | In: $0.60, Out: $4.00, Cache: $0.15 |
+| grok-4-0709 | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709 | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709-eu | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709-eu | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-code-fast-1 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-code-fast-1 | xai | 131072 | - | In: $2.00, Out: $10.00 |
 
 
-### Structured Output (354)
+### Structured Output (443)
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
 | deepseek-chat | deepseek | 128000 | 8000 | In: $0.28, Out: $0.42, Cache: $0.03 |
-| deepseek-reasoner | deepseek | 128000 | 64000 | In: $0.28, Out: $0.42, Cache: $0.03 |
-| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| deepseek-reasoner | deepseek | - | 64000 | - |
 | gemini-2.0-flash | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.0-flash-exp-image-generation | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
 | gemini-2.0-flash-lite | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.0-pro-exp | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.0-pro-exp-02-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-computer-use-preview-10-2025 | gemini | 131072 | 65536 | In: $0.08, Out: $0.30 |
 | gemini-2.5-flash | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.0-flash-thinking-exp-1219 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-01-21 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
 | gemini-2.5-flash-lite | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
-| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
 | gemini-2.5-pro | gemini | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gemini-3-flash-preview | gemini | 1048576 | 65536 | In: $0.50, Out: $3.00, Cache: $0.05 |
-| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $2.00, Out: $12.00, Cache: $0.20 |
-| gpt-4.1 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
+| gemini-2.5-pro-preview-06-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-03-25 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-05-06 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
+| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-embedding-exp | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-embedding-exp-03-07 | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-exp-1206 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-lite-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-pro-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-robotics-er-1.5-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| learnlm-2.0-flash-experimental | gemini | 1048576 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image-preview | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| codestral-2501 | mistral | 32768 | 8192 | - |
+| codestral-2411-rc5 | mistral | 32768 | 8192 | - |
+| codestral-2412 | mistral | 32768 | 8192 | - |
+| codestral-2508 | mistral | 32768 | 8192 | - |
+| codestral-latest | mistral | 32768 | 8192 | - |
+| devstral-medium-2507 | mistral | 32768 | 8192 | - |
+| devstral-medium-latest | mistral | 32768 | 8192 | - |
+| devstral-small-2505 | mistral | 32768 | 8192 | - |
+| devstral-small-2507 | mistral | 32768 | 8192 | - |
+| devstral-small-latest | mistral | 32768 | 8192 | - |
+| magistral-medium-2506 | mistral | 32768 | 8192 | - |
+| magistral-medium-2507 | mistral | 32768 | 8192 | - |
+| magistral-medium-2509 | mistral | 32768 | 8192 | - |
+| magistral-medium-latest | mistral | 32768 | 8192 | - |
+| magistral-small-2506 | mistral | 32768 | 8192 | - |
+| magistral-small-2507 | mistral | 32768 | 8192 | - |
+| magistral-small-2509 | mistral | 32768 | 8192 | - |
+| magistral-small-latest | mistral | 32768 | 8192 | - |
+| ministral-3b-2410 | mistral | 32768 | 8192 | - |
+| ministral-3b-latest | mistral | 32768 | 8192 | - |
+| ministral-8b-2410 | mistral | 32768 | 8192 | - |
+| ministral-8b-latest | mistral | 32768 | 8192 | - |
+| mistral-large-2411 | mistral | 32768 | 8192 | - |
+| mistral-large-latest | mistral | 32768 | 8192 | - |
+| mistral-large-pixtral-2411 | mistral | 32768 | 8192 | - |
+| mistral-medium-latest | mistral | 32768 | 8192 | - |
+| mistral-medium | mistral | 32768 | 8192 | - |
+| mistral-medium-2505 | mistral | 32768 | 8192 | - |
+| mistral-medium-2508 | mistral | 32768 | 8192 | - |
+| mistral-small-2409 | mistral | 32768 | 8192 | - |
+| mistral-small-2501 | mistral | 32768 | 8192 | - |
+| mistral-small-2503 | mistral | 32768 | 8192 | - |
+| mistral-small-2506 | mistral | 32768 | 8192 | - |
+| mistral-small-latest | mistral | 32768 | 8192 | - |
+| mistral-tiny | mistral | 32768 | 8192 | - |
+| mistral-tiny-2407 | mistral | 32768 | 8192 | - |
+| mistral-tiny-latest | mistral | 32768 | 8192 | - |
+| open-mistral-7b | mistral | 32768 | 8192 | - |
+| open-mistral-nemo | mistral | 32768 | 8192 | - |
+| open-mistral-nemo-2407 | mistral | 32768 | 8192 | - |
+| pixtral-12b | mistral | 32768 | 8192 | - |
+| pixtral-12b-2409 | mistral | 32768 | 8192 | - |
+| pixtral-12b-latest | mistral | 32768 | 8192 | - |
+| pixtral-large-2411 | mistral | 32768 | 8192 | - |
+| pixtral-large-latest | mistral | 32768 | 8192 | - |
 | gpt-4.1-2025-04-14 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
+| gpt-4.1 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | gpt-4.1-mini | openai | 1047576 | 32768 | In: $0.40, Out: $1.60, Cache: $0.10 |
 | gpt-4.1-mini-2025-04-14 | openai | 1047576 | 32768 | In: $0.40, Out: $1.60, Cache: $0.10 |
 | gpt-4.1-nano-2025-04-14 | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gpt-4.1-nano | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gpt-4.5-preview | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
 | gpt-4.5-preview-2025-02-27 | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
+| gpt-4.5-preview | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
 | gpt-4o-2024-08-06 | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
 | gpt-4o | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
 | gpt-4o-2024-05-13 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-2024-11-20 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
-| gpt-4o-search-preview | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-search-preview-2025-03-11 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
+| gpt-4o-search-preview | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-transcribe | openai | 16000 | 2000 | In: $2.50, Out: $10.00 |
-| gpt-4o-mini | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
 | gpt-4o-mini-2024-07-18 | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
-| gpt-4o-mini-search-preview-2025-03-11 | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
+| gpt-4o-mini | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
 | gpt-4o-mini-search-preview | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
-| gpt-4o-mini-transcribe | openai | 16000 | 2000 | - |
+| gpt-4o-mini-search-preview-2025-03-11 | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
 | gpt-4o-mini-transcribe-2025-12-15 | openai | 16000 | 2000 | - |
+| gpt-4o-mini-transcribe | openai | 16000 | 2000 | - |
 | gpt-5 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-2025-08-07 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-chat-latest | openai | 128000 | 16384 | In: $1.25, Out: $10.00, Cache: $0.12 |
@@ -1024,13 +1376,13 @@ redirect_from:
 | gpt-5-search-api-2025-10-14 | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-mini-2025-08-07 | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
 | gpt-5-mini | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
-| gpt-5-nano-2025-08-07 | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
 | gpt-5-nano | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
+| gpt-5-nano-2025-08-07 | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
 | gpt-5-pro | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
 | gpt-5-pro-2025-10-06 | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
 | gpt-5-codex | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gpt-5.1-2025-11-13 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
+| gpt-5.1-2025-11-13 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1-chat-latest | openai | 128000 | 16384 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1-codex | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1-codex-mini | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
@@ -1056,14 +1408,14 @@ redirect_from:
 | o1-2024-12-17 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-preview | openai | 128000 | 32768 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-preview-2024-09-12 | openai | 128000 | 32768 | In: $15.00, Out: $60.00, Cache: $7.50 |
-| o1-pro | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
 | o1-pro-2025-03-19 | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
-| o3 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
+| o1-pro | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
 | o3-2025-04-16 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
+| o3 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | o3-mini-2025-01-31 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
 | o3-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
-| o3-pro-2025-06-10 | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o3-pro | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
+| o3-pro-2025-06-10 | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o4-mini-2025-04-16 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
 | o4-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
 | ai21/jamba-large-1.7 | openrouter | 256000 | 4096 | In: $2.00, Out: $8.00 |
@@ -1106,7 +1458,7 @@ redirect_from:
 | essentialai/rnj-1-instruct | openrouter | 32768 | - | In: $0.15, Out: $0.15 |
 | openrouter/free | openrouter | 200000 | - | - |
 | alpindale/goliath-120b | openrouter | 6144 | 1024 | In: $3.75, Out: $7.50 |
-| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -1336,12 +1688,37 @@ redirect_from:
 | x-ai/grok-4.20 | openrouter | 2000000 | - | In: $2.00, Out: $6.00, Cache: $0.20 |
 | x-ai/grok-4.20-multi-agent | openrouter | 2000000 | - | In: $2.00, Out: $6.00, Cache: $0.20 |
 | x-ai/grok-code-fast-1 | openrouter | 256000 | 10000 | In: $0.20, Out: $1.50, Cache: $0.02 |
+| gemini-2.0-flash | vertexai | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.5-flash | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-lite | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-pro | vertexai | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
+| grok-2-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-image-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-image-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-vision-1212 | xai | 32768 | - | In: $2.00, Out: $10.00 |
+| grok-2-vision-1212 | xai | 32768 | - | In: $2.00, Out: $10.00 |
+| grok-3 | xai | 131072 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-3 | xai | 131072 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-3-fast | xai | 131072 | - | In: $5.00, Out: $25.00, Cache: $1.25 |
+| grok-3-fast | xai | 131072 | - | In: $5.00, Out: $25.00, Cache: $1.25 |
+| grok-3-mini | xai | 131072 | - | In: $0.30, Out: $0.50, Cache: $0.08 |
+| grok-3-mini | xai | 131072 | - | In: $0.30, Out: $0.50, Cache: $0.08 |
+| grok-3-mini-fast | xai | 131072 | - | In: $0.60, Out: $4.00, Cache: $0.15 |
+| grok-3-mini-fast | xai | 131072 | - | In: $0.60, Out: $4.00, Cache: $0.15 |
+| grok-4-0709 | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709 | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709-eu | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709-eu | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-code-fast-1 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-code-fast-1 | xai | 131072 | - | In: $2.00, Out: $10.00 |
 
 
-### Streaming (410)
+### Streaming (562)
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
+| claude-3-5-haiku-20241022 | anthropic | 200000 | 8192 | In: $0.80, Out: $4.00 |
 | claude-haiku-4-5-20251001 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-opus-4-20250514 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-opus-4-1-20250805 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
@@ -1351,8 +1728,8 @@ redirect_from:
 | claude-sonnet-4-20250514 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-sonnet-4-5-20250929 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-sonnet-4-6 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
-| anthropic.claude-3-haiku-20240307-v1:0 | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-haiku-20240307-v1:0:200k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
+| anthropic.claude-3-haiku-20240307-v1:0 | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-haiku-20240307-v1:0:48k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-sonnet-20240229-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-sonnet-20240229-v1:0:200k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
@@ -1368,6 +1745,101 @@ redirect_from:
 | us.anthropic.claude-sonnet-4-20250514-v1:0 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
 | us.anthropic.claude-sonnet-4-5-20250929-v1:0 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
 | us.anthropic.claude-sonnet-4-6 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
+| embedding-001 | gemini | 2048 | 1 | - |
+| embedding-gecko-001 | gemini | 1024 | 1 | - |
+| gemini-2.0-flash-exp-image-generation | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-lite-preview | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-lite-preview-02-05 | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-pro-exp | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.0-pro-exp-02-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-computer-use-preview-10-2025 | gemini | 131072 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-thinking-exp | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-01-21 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-1219 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-06-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-03-25 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-05-06 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
+| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-embedding-001 | gemini | 2048 | 1 | - |
+| gemini-embedding-exp | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-embedding-exp-03-07 | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-exp-1206 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-lite-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-pro-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-robotics-er-1.5-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemma-3-12b-it | gemini | 32768 | 8192 | In: $0.08, Out: $0.30 |
+| gemma-3-1b-it | gemini | 32768 | 8192 | In: $0.08, Out: $0.30 |
+| gemma-3-27b-it | gemini | 131072 | 8192 | In: $0.08, Out: $0.30 |
+| gemma-3-4b-it | gemini | 32768 | 8192 | In: $0.08, Out: $0.30 |
+| gemma-3n-e2b-it | gemini | 8192 | 2048 | In: $0.08, Out: $0.30 |
+| gemma-3n-e4b-it | gemini | 8192 | 2048 | In: $0.08, Out: $0.30 |
+| imagen-4.0-generate-001 | gemini | 480 | 8192 | - |
+| imagen-4.0-generate-preview-06-06 | gemini | 480 | 8192 | - |
+| imagen-4.0-ultra-generate-001 | gemini | 480 | 8192 | - |
+| imagen-4.0-ultra-generate-preview-06-06 | gemini | 480 | 8192 | - |
+| learnlm-2.0-flash-experimental | gemini | 1048576 | 32768 | In: $0.08, Out: $0.30 |
+| aqa | gemini | 7168 | 1024 | - |
+| gemini-2.5-flash-image | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image-preview | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| text-embedding-004 | gemini | 2048 | 1 | - |
+| codestral-latest | mistral | 32768 | 8192 | - |
+| codestral-2508 | mistral | 32768 | 8192 | - |
+| codestral-2501 | mistral | 32768 | 8192 | - |
+| codestral-2412 | mistral | 32768 | 8192 | - |
+| codestral-2411-rc5 | mistral | 32768 | 8192 | - |
+| devstral-medium-2507 | mistral | 32768 | 8192 | - |
+| devstral-medium-latest | mistral | 32768 | 8192 | - |
+| devstral-small-2505 | mistral | 32768 | 8192 | - |
+| devstral-small-2507 | mistral | 32768 | 8192 | - |
+| devstral-small-latest | mistral | 32768 | 8192 | - |
+| magistral-medium-2506 | mistral | 32768 | 8192 | - |
+| magistral-medium-2507 | mistral | 32768 | 8192 | - |
+| magistral-medium-2509 | mistral | 32768 | 8192 | - |
+| magistral-medium-latest | mistral | 32768 | 8192 | - |
+| magistral-small-2506 | mistral | 32768 | 8192 | - |
+| magistral-small-2507 | mistral | 32768 | 8192 | - |
+| magistral-small-2509 | mistral | 32768 | 8192 | - |
+| magistral-small-latest | mistral | 32768 | 8192 | - |
+| ministral-3b-latest | mistral | 32768 | 8192 | - |
+| ministral-3b-2410 | mistral | 32768 | 8192 | - |
+| ministral-8b-2410 | mistral | 32768 | 8192 | - |
+| ministral-8b-latest | mistral | 32768 | 8192 | - |
+| mistral-large-pixtral-2411 | mistral | 32768 | 8192 | - |
+| mistral-large-2411 | mistral | 32768 | 8192 | - |
+| mistral-large-latest | mistral | 32768 | 8192 | - |
+| mistral-medium-2505 | mistral | 32768 | 8192 | - |
+| mistral-medium | mistral | 32768 | 8192 | - |
+| mistral-medium-2508 | mistral | 32768 | 8192 | - |
+| mistral-medium-latest | mistral | 32768 | 8192 | - |
+| mistral-small-latest | mistral | 32768 | 8192 | - |
+| mistral-small-2506 | mistral | 32768 | 8192 | - |
+| mistral-small-2501 | mistral | 32768 | 8192 | - |
+| mistral-small-2503 | mistral | 32768 | 8192 | - |
+| mistral-small-2409 | mistral | 32768 | 8192 | - |
+| mistral-tiny | mistral | 32768 | 8192 | - |
+| mistral-tiny-2312 | mistral | 32768 | 8192 | - |
+| mistral-tiny-2407 | mistral | 32768 | 8192 | - |
+| mistral-tiny-latest | mistral | 32768 | 8192 | - |
+| open-mistral-7b | mistral | 32768 | 8192 | - |
+| open-mistral-nemo | mistral | 32768 | 8192 | - |
+| open-mistral-nemo-2407 | mistral | 32768 | 8192 | - |
+| pixtral-12b-latest | mistral | 32768 | 8192 | - |
+| pixtral-12b-2409 | mistral | 32768 | 8192 | - |
+| pixtral-12b | mistral | 32768 | 8192 | - |
+| pixtral-large-2411 | mistral | 32768 | 8192 | - |
+| pixtral-large-latest | mistral | 32768 | 8192 | - |
+| voxtral-mini-2507 | mistral | 32768 | 8192 | - |
+| voxtral-mini-latest | mistral | 32768 | 8192 | - |
+| voxtral-small-2507 | mistral | 32768 | 8192 | - |
+| voxtral-small-latest | mistral | 32768 | 8192 | - |
 | gpt-3.5-turbo-0125 | openai | 16385 | 4096 | In: $0.50, Out: $1.50 |
 | gpt-3.5-turbo-1106 | openai | 16385 | 4096 | In: $0.50, Out: $1.50 |
 | gpt-3.5-turbo-16k | openai | 16385 | 4096 | In: $0.50, Out: $1.50 |
@@ -1470,7 +1942,7 @@ redirect_from:
 | essentialai/rnj-1-instruct | openrouter | 32768 | - | In: $0.15, Out: $0.15 |
 | openrouter/free | openrouter | 200000 | - | - |
 | alpindale/goliath-120b | openrouter | 6144 | 1024 | In: $3.75, Out: $7.50 |
-| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -1752,59 +2224,178 @@ redirect_from:
 | x-ai/grok-4.20 | openrouter | 2000000 | - | In: $2.00, Out: $6.00, Cache: $0.20 |
 | x-ai/grok-4.20-multi-agent | openrouter | 2000000 | - | In: $2.00, Out: $6.00, Cache: $0.20 |
 | x-ai/grok-code-fast-1 | openrouter | 256000 | 10000 | In: $0.20, Out: $1.50, Cache: $0.02 |
+| sonar | perplexity | 128000 | 4096 | In: $1.00, Out: $1.00 |
+| sonar-deep-research | perplexity | 128000 | 4096 | In: $2.00, Out: $8.00 |
+| sonar-pro | perplexity | 200000 | 8192 | In: $3.00, Out: $15.00 |
+| sonar-reasoning | perplexity | 128000 | 4096 | In: $1.00, Out: $5.00 |
+| sonar-reasoning-pro | perplexity | 128000 | 8192 | In: $2.00, Out: $8.00 |
+| chat-bison | vertexai | - | - | - |
+| code-bison | vertexai | - | - | - |
+| code-gecko | vertexai | - | - | - |
+| codechat-bison | vertexai | - | - | - |
+| gemini-1.5-flash | vertexai | - | - | - |
+| gemini-1.5-flash-002 | vertexai | - | - | - |
+| gemini-1.5-flash-8b | vertexai | - | - | - |
+| gemini-1.5-pro | vertexai | - | - | - |
+| gemini-1.5-pro-002 | vertexai | - | - | - |
+| gemini-2.0-flash-001 | vertexai | - | - | - |
+| gemini-2.0-flash-exp | vertexai | - | - | - |
+| gemini-2.0-flash-lite-001 | vertexai | - | - | - |
+| gemini-embedding-001 | vertexai | - | - | - |
+| gemini-exp-1121 | vertexai | - | - | - |
+| gemini-exp-1206 | vertexai | - | - | - |
+| gemini-pro | vertexai | - | - | - |
+| gemini-pro-vision | vertexai | - | - | - |
+| image-segmentation-001 | vertexai | - | - | - |
+| imagegeneration | vertexai | - | - | - |
+| imagen-3.0-capability-002 | vertexai | - | - | - |
+| imagen-4.0-fast-generate-001 | vertexai | - | - | - |
+| imagen-4.0-generate-001 | vertexai | - | - | - |
+| imagen-4.0-ultra-generate-001 | vertexai | - | - | - |
+| imagetext | vertexai | - | - | - |
+| multimodalembedding | vertexai | - | - | - |
+| text-bison | vertexai | - | - | - |
+| text-embedding-004 | vertexai | - | - | - |
+| text-embedding-005 | vertexai | - | - | - |
+| text-multilingual-embedding-002 | vertexai | - | - | - |
+| text-unicorn | vertexai | - | - | - |
+| textembedding-gecko | vertexai | - | - | - |
+| grok-2-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-image-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-image-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-vision-1212 | xai | 32768 | - | In: $2.00, Out: $10.00 |
+| grok-2-vision-1212 | xai | 32768 | - | In: $2.00, Out: $10.00 |
+| grok-3 | xai | 131072 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-3 | xai | 131072 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-3-fast | xai | 131072 | - | In: $5.00, Out: $25.00, Cache: $1.25 |
+| grok-3-fast | xai | 131072 | - | In: $5.00, Out: $25.00, Cache: $1.25 |
+| grok-3-mini | xai | 131072 | - | In: $0.30, Out: $0.50, Cache: $0.08 |
+| grok-3-mini | xai | 131072 | - | In: $0.30, Out: $0.50, Cache: $0.08 |
+| grok-3-mini-fast | xai | 131072 | - | In: $0.60, Out: $4.00, Cache: $0.15 |
+| grok-3-mini-fast | xai | 131072 | - | In: $0.60, Out: $4.00, Cache: $0.15 |
+| grok-4-0709 | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709 | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709-eu | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709-eu | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-code-fast-1 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-code-fast-1 | xai | 131072 | - | In: $2.00, Out: $10.00 |
 
 
-### Batch Processing (66)
+### Batch Processing (133)
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
+| claude-3-5-haiku-20241022 | anthropic | 200000 | 8192 | In: $0.80, Out: $4.00 |
 | us.anthropic.claude-3-7-sonnet-20250219-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
+| embedding-001 | gemini | 2048 | 1 | - |
+| embedding-gecko-001 | gemini | 1024 | 1 | - |
 | gemini-2.0-flash | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.0-flash-exp-image-generation | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
 | gemini-2.0-flash-lite | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-lite-preview | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-lite-preview-02-05 | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | gemini-2.5-flash | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
-| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.0-flash-thinking-exp | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-01-21 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-1219 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
 | gemini-2.5-flash-lite | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
-| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
 | gemini-2.5-pro | gemini | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gemini-3-flash-preview | gemini | 1048576 | 65536 | In: $0.50, Out: $3.00, Cache: $0.05 |
-| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $2.00, Out: $12.00, Cache: $0.20 |
+| gemini-embedding-001 | gemini | 2048 | 1 | - |
+| gemini-embedding-exp | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-embedding-exp-03-07 | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-flash-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-lite-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| learnlm-2.0-flash-experimental | gemini | 1048576 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image-preview | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| text-embedding-004 | gemini | 2048 | 1 | - |
+| codestral-2412 | mistral | 32768 | 8192 | - |
+| codestral-2501 | mistral | 32768 | 8192 | - |
+| codestral-2508 | mistral | 32768 | 8192 | - |
+| codestral-latest | mistral | 32768 | 8192 | - |
+| codestral-2411-rc5 | mistral | 32768 | 8192 | - |
+| devstral-medium-2507 | mistral | 32768 | 8192 | - |
+| devstral-medium-latest | mistral | 32768 | 8192 | - |
+| devstral-small-2505 | mistral | 32768 | 8192 | - |
+| devstral-small-2507 | mistral | 32768 | 8192 | - |
+| devstral-small-latest | mistral | 32768 | 8192 | - |
+| magistral-medium-2506 | mistral | 32768 | 8192 | - |
+| magistral-medium-2507 | mistral | 32768 | 8192 | - |
+| magistral-medium-2509 | mistral | 32768 | 8192 | - |
+| magistral-medium-latest | mistral | 32768 | 8192 | - |
+| magistral-small-2506 | mistral | 32768 | 8192 | - |
+| magistral-small-2507 | mistral | 32768 | 8192 | - |
+| magistral-small-2509 | mistral | 32768 | 8192 | - |
+| magistral-small-latest | mistral | 32768 | 8192 | - |
+| ministral-3b-2410 | mistral | 32768 | 8192 | - |
+| ministral-3b-latest | mistral | 32768 | 8192 | - |
+| ministral-8b-2410 | mistral | 32768 | 8192 | - |
+| ministral-8b-latest | mistral | 32768 | 8192 | - |
+| mistral-large-pixtral-2411 | mistral | 32768 | 8192 | - |
+| mistral-large-2411 | mistral | 32768 | 8192 | - |
+| mistral-large-latest | mistral | 32768 | 8192 | - |
+| mistral-medium-2508 | mistral | 32768 | 8192 | - |
+| mistral-medium-latest | mistral | 32768 | 8192 | - |
+| mistral-medium-2505 | mistral | 32768 | 8192 | - |
+| mistral-medium | mistral | 32768 | 8192 | - |
+| mistral-small-2503 | mistral | 32768 | 8192 | - |
+| mistral-small-2506 | mistral | 32768 | 8192 | - |
+| mistral-small-latest | mistral | 32768 | 8192 | - |
+| mistral-small-2409 | mistral | 32768 | 8192 | - |
+| mistral-small-2501 | mistral | 32768 | 8192 | - |
+| mistral-tiny | mistral | 32768 | 8192 | - |
+| mistral-tiny-2312 | mistral | 32768 | 8192 | - |
+| mistral-tiny-2407 | mistral | 32768 | 8192 | - |
+| mistral-tiny-latest | mistral | 32768 | 8192 | - |
+| open-mistral-7b | mistral | 32768 | 8192 | - |
+| open-mistral-nemo | mistral | 32768 | 8192 | - |
+| open-mistral-nemo-2407 | mistral | 32768 | 8192 | - |
+| pixtral-12b | mistral | 32768 | 8192 | - |
+| pixtral-12b-latest | mistral | 32768 | 8192 | - |
+| pixtral-12b-2409 | mistral | 32768 | 8192 | - |
+| pixtral-large-2411 | mistral | 32768 | 8192 | - |
+| pixtral-large-latest | mistral | 32768 | 8192 | - |
 | gpt-3.5-turbo | openai | 16385 | 4096 | In: $0.50, Out: $1.50 |
 | gpt-4 | openai | 8192 | 8192 | In: $30.00, Out: $60.00 |
 | gpt-4-turbo-2024-04-09 | openai | 128000 | 4096 | In: $10.00, Out: $30.00 |
 | gpt-4-turbo | openai | 128000 | 4096 | In: $10.00, Out: $30.00 |
-| gpt-4.1 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | gpt-4.1-2025-04-14 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
+| gpt-4.1 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | gpt-4.1-mini-2025-04-14 | openai | 1047576 | 32768 | In: $0.40, Out: $1.60, Cache: $0.10 |
 | gpt-4.1-mini | openai | 1047576 | 32768 | In: $0.40, Out: $1.60, Cache: $0.10 |
-| gpt-4.1-nano | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gpt-4.1-nano-2025-04-14 | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gpt-4.5-preview-2025-02-27 | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
+| gpt-4.1-nano | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gpt-4.5-preview | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
-| gpt-4o | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
+| gpt-4.5-preview-2025-02-27 | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
 | gpt-4o-2024-08-06 | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
-| gpt-4o-mini-2024-07-18 | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
+| gpt-4o | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
 | gpt-4o-mini | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
+| gpt-4o-mini-2024-07-18 | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
 | gpt-5 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-2025-08-07 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gpt-5-mini | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
 | gpt-5-mini-2025-08-07 | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
+| gpt-5-mini | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
 | gpt-5-nano | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
 | gpt-5-nano-2025-08-07 | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
 | gpt-5-pro | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
 | gpt-5-pro-2025-10-06 | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
-| gpt-5.1-2025-11-13 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gpt-5.2 | openai | 400000 | 128000 | In: $1.75, Out: $14.00, Cache: $0.18 |
+| gpt-5.1-2025-11-13 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.2-2025-12-11 | openai | 400000 | 128000 | In: $1.75, Out: $14.00, Cache: $0.18 |
+| gpt-5.2 | openai | 400000 | 128000 | In: $1.75, Out: $14.00, Cache: $0.18 |
 | computer-use-preview | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
 | computer-use-preview-2025-03-11 | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
 | gpt-oss-120b | openai | 131072 | 131072 | - |
 | gpt-oss-20b | openai | 131072 | 131072 | - |
-| o1 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-2024-12-17 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
+| o1 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-pro-2025-03-19 | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
 | o1-pro | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
 | o3 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
@@ -1813,8 +2404,8 @@ redirect_from:
 | o3-deep-research-2025-06-26 | openai | 200000 | 100000 | In: $10.00, Out: $40.00, Cache: $2.50 |
 | o3-mini-2025-01-31 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
 | o3-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
-| o3-pro-2025-06-10 | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o3-pro | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
+| o3-pro-2025-06-10 | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o4-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
 | o4-mini-2025-04-16 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
 | o4-mini-deep-research-2025-06-26 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
@@ -1824,16 +2415,21 @@ redirect_from:
 | text-embedding-3-large | openai | - | - | In: $0.13 |
 | text-embedding-3-small | openai | - | - | In: $0.02 |
 | text-embedding-ada-002 | openai | - | - | In: $0.10 |
+| gemini-2.0-flash | vertexai | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.5-flash | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-lite | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-pro | vertexai | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
 
 
 ## Models by Modality
 
-### Vision Models (271)
+### Vision Models (317)
 
 Models that can process images:
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
+| claude-3-5-haiku-20241022 | anthropic | 200000 | 8192 | In: $0.80, Out: $4.00 |
 | claude-haiku-4-5-20251001 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-opus-4-20250514 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-opus-4-1-20250805 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
@@ -1843,12 +2439,12 @@ Models that can process images:
 | claude-sonnet-4-20250514 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-sonnet-4-5-20250929 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-sonnet-4-6 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
-| anthropic.claude-3-haiku-20240307-v1:0 | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-haiku-20240307-v1:0:200k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-haiku-20240307-v1:0:48k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
+| anthropic.claude-3-haiku-20240307-v1:0 | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
+| anthropic.claude-3-sonnet-20240229-v1:0:28k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-sonnet-20240229-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-sonnet-20240229-v1:0:200k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
-| anthropic.claude-3-sonnet-20240229-v1:0:28k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-5-haiku-20241022-v1:0 | bedrock | 200000 | 4096 | In: $0.80, Out: $4.00 |
 | us.anthropic.claude-3-7-sonnet-20250219-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | us.anthropic.claude-haiku-4-5-20251001-v1:0 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
@@ -1861,39 +2457,72 @@ Models that can process images:
 | us.anthropic.claude-sonnet-4-5-20250929-v1:0 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
 | us.anthropic.claude-sonnet-4-6 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
 | gemini-2.0-flash | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.0-flash-exp-image-generation | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
 | gemini-2.0-flash-lite | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-lite-preview | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-lite-preview-02-05 | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-pro-exp | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.0-pro-exp-02-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-computer-use-preview-10-2025 | gemini | 131072 | 65536 | In: $0.08, Out: $0.30 |
 | gemini-2.5-flash | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
-| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.0-flash-thinking-exp-01-21 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-1219 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
 | gemini-2.5-flash-lite | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
-| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
 | gemini-2.5-pro | gemini | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gemini-3-flash-preview | gemini | 1048576 | 65536 | In: $0.50, Out: $3.00, Cache: $0.05 |
-| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $2.00, Out: $12.00, Cache: $0.20 |
+| gemini-2.5-pro-preview-06-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-03-25 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-05-06 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
+| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-embedding-exp | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-embedding-exp-03-07 | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-exp-1206 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-lite-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-pro-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-robotics-er-1.5-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| imagen-4.0-generate-001 | gemini | 480 | 8192 | - |
+| imagen-4.0-generate-preview-06-06 | gemini | 480 | 8192 | - |
+| imagen-4.0-ultra-generate-001 | gemini | 480 | 8192 | - |
+| imagen-4.0-ultra-generate-preview-06-06 | gemini | 480 | 8192 | - |
+| learnlm-2.0-flash-experimental | gemini | 1048576 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image-preview | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| mistral-large-pixtral-2411 | mistral | 32768 | 8192 | - |
+| pixtral-12b | mistral | 32768 | 8192 | - |
+| pixtral-12b-2409 | mistral | 32768 | 8192 | - |
+| pixtral-12b-latest | mistral | 32768 | 8192 | - |
+| pixtral-large-latest | mistral | 32768 | 8192 | - |
+| pixtral-large-2411 | mistral | 32768 | 8192 | - |
 | chatgpt-4o-latest | openai | 128000 | 16384 | In: $5.00, Out: $15.00 |
 | gpt-image-1 | openai | - | - | In: $5.00, Out: $40.00, Cache: $1.25 |
-| gpt-image-1.5 | openai | - | - | In: $5.00, Out: $10.00, Cache: $1.25 |
 | gpt-image-1.5-2025-12-16 | openai | - | - | In: $5.00, Out: $10.00, Cache: $1.25 |
-| gpt-4-turbo-2024-04-09 | openai | 128000 | 4096 | In: $10.00, Out: $30.00 |
+| gpt-image-1.5 | openai | - | - | In: $5.00, Out: $10.00, Cache: $1.25 |
 | gpt-4-turbo | openai | 128000 | 4096 | In: $10.00, Out: $30.00 |
+| gpt-4-turbo-2024-04-09 | openai | 128000 | 4096 | In: $10.00, Out: $30.00 |
 | gpt-4.1-2025-04-14 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | gpt-4.1 | openai | 1047576 | 32768 | In: $2.00, Out: $8.00, Cache: $0.50 |
-| gpt-4.1-mini-2025-04-14 | openai | 1047576 | 32768 | In: $0.40, Out: $1.60, Cache: $0.10 |
 | gpt-4.1-mini | openai | 1047576 | 32768 | In: $0.40, Out: $1.60, Cache: $0.10 |
+| gpt-4.1-mini-2025-04-14 | openai | 1047576 | 32768 | In: $0.40, Out: $1.60, Cache: $0.10 |
 | gpt-4.1-nano-2025-04-14 | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gpt-4.1-nano | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gpt-4.5-preview-2025-02-27 | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
 | gpt-4.5-preview | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
-| gpt-4o-2024-08-06 | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
 | gpt-4o | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
+| gpt-4o-2024-08-06 | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
 | gpt-4o-2024-05-13 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-2024-11-20 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-mini | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
 | gpt-4o-mini-2024-07-18 | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
-| gpt-5-2025-08-07 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
+| gpt-5-2025-08-07 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-chat-latest | openai | 128000 | 16384 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-search-api | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-search-api-2025-10-14 | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
@@ -1901,11 +2530,11 @@ Models that can process images:
 | gpt-5-mini-2025-08-07 | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
 | gpt-5-nano | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
 | gpt-5-nano-2025-08-07 | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
-| gpt-5-pro | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
 | gpt-5-pro-2025-10-06 | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
+| gpt-5-pro | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
 | gpt-5-codex | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gpt-5.1 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1-2025-11-13 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
+| gpt-5.1 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1-chat-latest | openai | 128000 | 16384 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1-codex | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1-codex-mini | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
@@ -1914,8 +2543,8 @@ Models that can process images:
 | gpt-5.2-2025-12-11 | openai | 400000 | 128000 | In: $1.75, Out: $14.00, Cache: $0.18 |
 | gpt-5.2-chat-latest | openai | 128000 | 16384 | In: $1.75, Out: $14.00, Cache: $0.18 |
 | gpt-5.2-codex | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gpt-5.2-pro | openai | 400000 | 128000 | In: $21.00, Out: $168.00 |
 | gpt-5.2-pro-2025-12-11 | openai | 400000 | 128000 | In: $21.00, Out: $168.00 |
+| gpt-5.2-pro | openai | 400000 | 128000 | In: $21.00, Out: $168.00 |
 | gpt-5.3-chat-latest | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.3-codex | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.4 | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
@@ -1935,20 +2564,20 @@ Models that can process images:
 | computer-use-preview-2025-03-11 | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
 | computer-use-preview | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
 | gpt-image-1-mini | openai | - | - | In: $2.00, Out: $8.00, Cache: $0.20 |
-| gpt-realtime-2025-08-28 | openai | 32000 | 4096 | In: $4.00, Out: $16.00, Cache: $0.40 |
 | gpt-realtime | openai | 32000 | 4096 | In: $4.00, Out: $16.00, Cache: $0.40 |
+| gpt-realtime-2025-08-28 | openai | 32000 | 4096 | In: $4.00, Out: $16.00, Cache: $0.40 |
 | gpt-realtime-mini-2025-10-06 | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
 | gpt-realtime-mini | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
 | o1-2024-12-17 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
-| o1-pro-2025-03-19 | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
 | o1-pro | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
+| o1-pro-2025-03-19 | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
 | o3 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | o3-2025-04-16 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | o3-deep-research | openai | 200000 | 100000 | In: $10.00, Out: $40.00, Cache: $2.50 |
 | o3-deep-research-2025-06-26 | openai | 200000 | 100000 | In: $10.00, Out: $40.00, Cache: $2.50 |
-| o3-pro-2025-06-10 | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o3-pro | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
+| o3-pro-2025-06-10 | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o4-mini-2025-04-16 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
 | o4-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
 | o4-mini-deep-research | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
@@ -1984,7 +2613,7 @@ Models that can process images:
 | bytedance-seed/seed-2.0-mini | openrouter | 262144 | 131072 | In: $0.10, Out: $0.40 |
 | bytedance/ui-tars-1.5-7b | openrouter | 128000 | 2048 | In: $0.10, Out: $0.20, Cache: $0.10 |
 | openrouter/free | openrouter | 200000 | - | - |
-| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -2105,36 +2734,41 @@ Models that can process images:
 | x-ai/grok-4.1-fast | openrouter | 2000000 | 30000 | In: $0.20, Out: $0.50, Cache: $0.05 |
 | x-ai/grok-4.20 | openrouter | 2000000 | - | In: $2.00, Out: $6.00, Cache: $0.20 |
 | x-ai/grok-4.20-multi-agent | openrouter | 2000000 | - | In: $2.00, Out: $6.00, Cache: $0.20 |
+| gemini-2.0-flash | vertexai | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.5-flash | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-lite | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-pro | vertexai | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
+| grok-2-image-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-image-1212 | xai | 131072 | - | In: $2.00, Out: $10.00 |
+| grok-2-vision-1212 | xai | 32768 | - | In: $2.00, Out: $10.00 |
+| grok-2-vision-1212 | xai | 32768 | - | In: $2.00, Out: $10.00 |
+| grok-4-0709 | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709 | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709-eu | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
+| grok-4-0709-eu | xai | 256000 | - | In: $3.00, Out: $15.00, Cache: $0.75 |
 
 
-### Audio Input Models (58)
+### Audio Input Models (55)
 
 Models that can process audio:
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
 | gemini-2.0-flash | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gemini-2.0-flash-lite | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gemini-2.5-flash | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
-| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | gemini-2.5-flash-lite | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
-| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | gemini-2.5-pro | gemini | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gemini-3-flash-preview | gemini | 1048576 | 65536 | In: $0.50, Out: $3.00, Cache: $0.05 |
-| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $2.00, Out: $12.00, Cache: $0.20 |
 | gpt-4o-audio-preview | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-realtime-preview | openai | 32000 | 4096 | In: $5.00, Out: $20.00, Cache: $2.50 |
 | gpt-4o-transcribe | openai | 16000 | 2000 | In: $2.50, Out: $10.00 |
 | gpt-4o-transcribe-diarize | openai | 16000 | 2000 | In: $2.50, Out: $10.00 |
-| gpt-4o-mini-audio-preview-2024-12-17 | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
 | gpt-4o-mini-audio-preview | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
+| gpt-4o-mini-audio-preview-2024-12-17 | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
 | gpt-4o-mini-realtime-preview | openai | 16000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.30 |
 | gpt-4o-mini-realtime-preview-2024-12-17 | openai | 16000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.30 |
-| gpt-4o-mini-transcribe-2025-12-15 | openai | 16000 | 2000 | - |
 | gpt-4o-mini-transcribe | openai | 16000 | 2000 | - |
+| gpt-4o-mini-transcribe-2025-12-15 | openai | 16000 | 2000 | - |
 | gpt-4o-audio-preview-2024-12-17 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-audio-preview-2025-06-03 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-mini-transcribe-2025-03-20 | openai | 16000 | 2000 | In: $1.25, Out: $5.00 |
@@ -2148,12 +2782,12 @@ Models that can process audio:
 | gpt-audio-2025-08-28 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-audio-mini | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
 | gpt-audio-mini-2025-10-06 | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
-| gpt-realtime-2025-08-28 | openai | 32000 | 4096 | In: $4.00, Out: $16.00, Cache: $0.40 |
 | gpt-realtime | openai | 32000 | 4096 | In: $4.00, Out: $16.00, Cache: $0.40 |
-| gpt-realtime-mini-2025-10-06 | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
+| gpt-realtime-2025-08-28 | openai | 32000 | 4096 | In: $4.00, Out: $16.00, Cache: $0.40 |
 | gpt-realtime-mini | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
+| gpt-realtime-mini-2025-10-06 | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
 | openrouter/auto | openrouter | 2000000 | - | - |
-| google/gemini-2.0-flash-001 | openrouter | 1000000 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| google/gemini-2.0-flash-001 | openrouter | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | google/gemini-2.0-flash-lite-001 | openrouter | 1048576 | 8192 | In: $0.08, Out: $0.30 |
 | google/gemini-2.5-flash | openrouter | 1048576 | 65535 | In: $0.30, Out: $2.50, Cache: $0.03 |
 | google/gemini-2.5-flash-lite | openrouter | 1048576 | 65535 | In: $0.10, Out: $0.40, Cache: $0.01 |
@@ -2171,14 +2805,19 @@ Models that can process audio:
 | openai/gpt-4o-audio-preview | openrouter | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | xiaomi/mimo-v2-omni | openrouter | 262144 | 65536 | In: $0.40, Out: $2.00, Cache: $0.08 |
 | xiaomi/mimo-v2.5 | openrouter | 1048576 | 131072 | In: $0.40, Out: $2.00, Cache: $0.08 |
+| gemini-2.0-flash | vertexai | 1048576 | 8192 | In: $0.10, Out: $0.40, Cache: $0.02 |
+| gemini-2.5-flash | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-flash-lite | vertexai | 1048576 | 65536 | In: $0.30, Out: $2.50, Cache: $0.03 |
+| gemini-2.5-pro | vertexai | 1048576 | 65536 | In: $1.25, Out: $10.00, Cache: $0.12 |
 
 
-### PDF Models (41)
+### PDF Models (76)
 
 Models that can process PDF documents:
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
+| claude-3-5-haiku-20241022 | anthropic | 200000 | 8192 | In: $0.80, Out: $4.00 |
 | claude-haiku-4-5-20251001 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-opus-4-20250514 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-opus-4-1-20250805 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
@@ -2188,11 +2827,11 @@ Models that can process PDF documents:
 | claude-sonnet-4-20250514 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-sonnet-4-5-20250929 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | claude-sonnet-4-6 | anthropic | 200000 | 4096 | In: $3.00, Out: $15.00 |
+| anthropic.claude-3-haiku-20240307-v1:0:48k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-haiku-20240307-v1:0 | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
 | anthropic.claude-3-haiku-20240307-v1:0:200k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
-| anthropic.claude-3-haiku-20240307-v1:0:48k | bedrock | 200000 | 4096 | In: $0.25, Out: $1.25 |
-| anthropic.claude-3-sonnet-20240229-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-sonnet-20240229-v1:0:200k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
+| anthropic.claude-3-sonnet-20240229-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-sonnet-20240229-v1:0:28k | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
 | anthropic.claude-3-5-haiku-20241022-v1:0 | bedrock | 200000 | 4096 | In: $0.80, Out: $4.00 |
 | us.anthropic.claude-3-7-sonnet-20250219-v1:0 | bedrock | 200000 | 4096 | In: $3.00, Out: $15.00 |
@@ -2205,6 +2844,40 @@ Models that can process PDF documents:
 | us.anthropic.claude-sonnet-4-20250514-v1:0 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
 | us.anthropic.claude-sonnet-4-5-20250929-v1:0 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
 | us.anthropic.claude-sonnet-4-6 | bedrock | 200000 | 4096 | In: $0.10, Out: $0.20 |
+| gemini-2.0-flash-exp-image-generation | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-001 | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-exp | gemini | 1048576 | 8192 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-lite-001 | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-lite-preview | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-lite-preview-02-05 | gemini | 1048576 | 8192 | In: $0.08, Out: $0.30 |
+| gemini-2.0-pro-exp | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.0-pro-exp-02-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-computer-use-preview-10-2025 | gemini | 131072 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.0-flash-thinking-exp | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-01-21 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.0-flash-thinking-exp-1219 | gemini | 1048576 | 65536 | In: $0.10, Out: $0.40 |
+| gemini-2.5-flash-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-lite-preview-09-2025 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-06-05 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-03-25 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-05-06 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-2.5-pro-preview-tts | gemini | 8192 | 16384 | In: $0.08, Out: $0.30 |
+| gemini-3-pro-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-embedding-exp | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-embedding-exp-03-07 | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-exp-1206 | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-flash-lite-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-pro-latest | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| gemini-robotics-er-1.5-preview | gemini | 1048576 | 65536 | In: $0.08, Out: $0.30 |
+| imagen-4.0-generate-001 | gemini | 480 | 8192 | - |
+| imagen-4.0-generate-preview-06-06 | gemini | 480 | 8192 | - |
+| imagen-4.0-ultra-generate-001 | gemini | 480 | 8192 | - |
+| imagen-4.0-ultra-generate-preview-06-06 | gemini | 480 | 8192 | - |
+| learnlm-2.0-flash-experimental | gemini | 1048576 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image-preview | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
+| gemini-2.5-flash-image | gemini | 32768 | 32768 | In: $0.08, Out: $0.30 |
 | gpt-4o-2024-05-13 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-2024-11-20 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-5-search-api | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
@@ -2222,18 +2895,28 @@ Models that can process PDF documents:
 | gpt-5.4-pro-2026-03-05 | openai | 128000 | 400000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 
 
-### Embedding Models (111)
+### Embedding Models (121)
 
 Models that generate embeddings:
 
 | Model | Provider | Context | Max Output | Standard Pricing (per 1M tokens) |
 | :-- | :-- | --: | --: | :-- |
+| embedding-001 | gemini | 2048 | 1 | - |
+| embedding-gecko-001 | gemini | 1024 | 1 | - |
+| gemini-embedding-001 | gemini | 2048 | 1 | - |
+| gemini-embedding-exp | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| gemini-embedding-exp-03-07 | gemini | 8192 | 1 | In: $0.00, Out: $0.00 |
+| text-embedding-004 | gemini | 2048 | 1 | - |
+| codestral-embed | mistral | 32768 | 8192 | - |
+| codestral-embed-2505 | mistral | 32768 | 8192 | - |
+| mistral-embed | mistral | 32768 | 8192 | - |
+| mistral-embed-2312 | mistral | 32768 | 8192 | - |
 | chatgpt-4o-latest | openai | 128000 | 16384 | In: $5.00, Out: $15.00 |
 | dall-e-2 | openai | - | - | - |
 | dall-e-3 | openai | - | - | - |
 | gpt-image-1 | openai | - | - | In: $5.00, Out: $40.00, Cache: $1.25 |
-| gpt-image-1.5-2025-12-16 | openai | - | - | In: $5.00, Out: $10.00, Cache: $1.25 |
 | gpt-image-1.5 | openai | - | - | In: $5.00, Out: $10.00, Cache: $1.25 |
+| gpt-image-1.5-2025-12-16 | openai | - | - | In: $5.00, Out: $10.00, Cache: $1.25 |
 | gpt-3.5-turbo | openai | 16385 | 4096 | In: $0.50, Out: $1.50 |
 | gpt-4 | openai | 8192 | 8192 | In: $30.00, Out: $60.00 |
 | gpt-4-turbo-2024-04-09 | openai | 128000 | 4096 | In: $10.00, Out: $30.00 |
@@ -2245,18 +2928,18 @@ Models that generate embeddings:
 | gpt-4.1-mini | openai | 1047576 | 32768 | In: $0.40, Out: $1.60, Cache: $0.10 |
 | gpt-4.1-nano | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
 | gpt-4.1-nano-2025-04-14 | openai | 1047576 | 32768 | In: $0.10, Out: $0.40, Cache: $0.02 |
-| gpt-4.5-preview-2025-02-27 | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
 | gpt-4.5-preview | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
-| gpt-4o | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
+| gpt-4.5-preview-2025-02-27 | openai | 128000 | 16384 | In: $75.00, Out: $150.00, Cache: $37.50 |
 | gpt-4o-2024-08-06 | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
+| gpt-4o | openai | 128000 | 16384 | In: $2.50, Out: $10.00, Cache: $1.25 |
 | gpt-4o-audio-preview | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-realtime-preview | openai | 32000 | 4096 | In: $5.00, Out: $20.00, Cache: $2.50 |
 | gpt-4o-search-preview-2025-03-11 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-search-preview | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-4o-transcribe | openai | 16000 | 2000 | In: $2.50, Out: $10.00 |
 | gpt-4o-transcribe-diarize | openai | 16000 | 2000 | In: $2.50, Out: $10.00 |
-| gpt-4o-mini-2024-07-18 | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
 | gpt-4o-mini | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
+| gpt-4o-mini-2024-07-18 | openai | 128000 | 16384 | In: $0.15, Out: $0.60, Cache: $0.08 |
 | gpt-4o-mini-audio-preview | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
 | gpt-4o-mini-audio-preview-2024-12-17 | openai | 128000 | 16384 | In: $0.15, Out: $0.60 |
 | gpt-4o-mini-realtime-preview | openai | 16000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.30 |
@@ -2270,12 +2953,12 @@ Models that generate embeddings:
 | gpt-5-2025-08-07 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5-chat-latest | openai | 128000 | 16384 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gpt-5-mini-2025-08-07 | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
 | gpt-5-mini | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
-| gpt-5-nano-2025-08-07 | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
+| gpt-5-mini-2025-08-07 | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
 | gpt-5-nano | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
-| gpt-5-pro-2025-10-06 | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
+| gpt-5-nano-2025-08-07 | openai | 400000 | 128000 | In: $0.05, Out: $0.40, Cache: $0.01 |
 | gpt-5-pro | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
+| gpt-5-pro-2025-10-06 | openai | 400000 | 272000 | In: $15.00, Out: $120.00 |
 | gpt-5-codex | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1-2025-11-13 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1 | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
@@ -2283,8 +2966,8 @@ Models that generate embeddings:
 | gpt-5.1-codex | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
 | gpt-5.1-codex-mini | openai | 400000 | 128000 | In: $0.25, Out: $2.00, Cache: $0.02 |
 | gpt-5.1-codex-max | openai | 400000 | 128000 | In: $1.25, Out: $10.00, Cache: $0.12 |
-| gpt-5.2 | openai | 400000 | 128000 | In: $1.75, Out: $14.00, Cache: $0.18 |
 | gpt-5.2-2025-12-11 | openai | 400000 | 128000 | In: $1.75, Out: $14.00, Cache: $0.18 |
+| gpt-5.2 | openai | 400000 | 128000 | In: $1.75, Out: $14.00, Cache: $0.18 |
 | gpt-5.2-chat-latest | openai | 128000 | 16384 | In: $1.75, Out: $14.00, Cache: $0.18 |
 | gpt-5.2-pro | openai | 400000 | 128000 | In: $21.00, Out: $168.00 |
 | gpt-5.2-pro-2025-12-11 | openai | 400000 | 128000 | In: $21.00, Out: $168.00 |
@@ -2298,20 +2981,20 @@ Models that generate embeddings:
 | babbage-002 | openai | - | 16384 | In: $0.40, Out: $0.40 |
 | chatgpt-image-latest | openai | - | - | In: $5.00, Out: $10.00, Cache: $1.25 |
 | codex-mini-latest | openai | 200000 | 100000 | In: $1.50, Out: $6.00, Cache: $0.38 |
-| computer-use-preview | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
 | computer-use-preview-2025-03-11 | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
+| computer-use-preview | openai | 8192 | 1024 | In: $3.00, Out: $12.00 |
 | davinci-002 | openai | - | 16384 | In: $2.00, Out: $2.00 |
 | gpt-audio-2025-08-28 | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
 | gpt-audio | openai | 128000 | 16384 | In: $2.50, Out: $10.00 |
-| gpt-audio-mini-2025-10-06 | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
 | gpt-audio-mini | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
+| gpt-audio-mini-2025-10-06 | openai | 128000 | 16384 | In: $0.60, Out: $2.40 |
 | gpt-image-1-mini | openai | - | - | In: $2.00, Out: $8.00, Cache: $0.20 |
 | gpt-oss-120b | openai | 131072 | 131072 | - |
 | gpt-oss-20b | openai | 131072 | 131072 | - |
 | gpt-realtime-2025-08-28 | openai | 32000 | 4096 | In: $4.00, Out: $16.00, Cache: $0.40 |
 | gpt-realtime | openai | 32000 | 4096 | In: $4.00, Out: $16.00, Cache: $0.40 |
-| gpt-realtime-mini-2025-10-06 | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
 | gpt-realtime-mini | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
+| gpt-realtime-mini-2025-10-06 | openai | 32000 | 4096 | In: $0.60, Out: $2.40, Cache: $0.06 |
 | o1-2024-12-17 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1 | openai | 200000 | 100000 | In: $15.00, Out: $60.00, Cache: $7.50 |
 | o1-preview-2024-09-12 | openai | 128000 | 32768 | In: $15.00, Out: $60.00, Cache: $7.50 |
@@ -2322,10 +3005,10 @@ Models that generate embeddings:
 | o1-pro-2025-03-19 | openai | 200000 | 100000 | In: $150.00, Out: $600.00 |
 | o3-2025-04-16 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
 | o3 | openai | 200000 | 100000 | In: $2.00, Out: $8.00, Cache: $0.50 |
-| o3-deep-research | openai | 200000 | 100000 | In: $10.00, Out: $40.00, Cache: $2.50 |
 | o3-deep-research-2025-06-26 | openai | 200000 | 100000 | In: $10.00, Out: $40.00, Cache: $2.50 |
-| o3-mini-2025-01-31 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
+| o3-deep-research | openai | 200000 | 100000 | In: $10.00, Out: $40.00, Cache: $2.50 |
 | o3-mini | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
+| o3-mini-2025-01-31 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.55 |
 | o3-pro-2025-06-10 | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o3-pro | openai | 200000 | 100000 | In: $20.00, Out: $80.00 |
 | o4-mini-2025-04-16 | openai | 200000 | 100000 | In: $1.10, Out: $4.40, Cache: $0.28 |
