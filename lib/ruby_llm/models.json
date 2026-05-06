@@ -6298,7 +6298,7 @@
     "family": "claude-2",
     "created_at": "2025-09-29 00:00:00 UTC",
     "context_window": 200000,
-    "max_output_tokens": 4096,
+    "max_output_tokens": 64000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -6335,7 +6335,7 @@
     "family": "claude-2",
     "created_at": "2026-02-17 00:00:00 UTC",
     "context_window": 200000,
-    "max_output_tokens": 4096,
+    "max_output_tokens": 64000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -7124,7 +7124,7 @@
     "family": "other",
     "created_at": null,
     "context_window": 200000,
-    "max_output_tokens": 4096,
+    "max_output_tokens": 64000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -7174,7 +7174,7 @@
     "family": "other",
     "created_at": null,
     "context_window": 200000,
-    "max_output_tokens": 4096,
+    "max_output_tokens": 64000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -14378,7 +14378,7 @@
     "family": "anthropic",
     "created_at": "2026-02-17 08:43:10 -0700",
     "context_window": 1000000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 64000,
     "knowledge_cutoff": null,
     "modalities": {
       "input": [
@@ -14419,7 +14419,7 @@
       },
       "top_provider": {
         "context_length": 1000000,
-        "max_completion_tokens": 128000,
+        "max_completion_tokens": 64000,
         "is_moderated": true
       },
       "per_request_limits": null,
